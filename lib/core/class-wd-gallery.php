@@ -9,6 +9,7 @@ class WD_Gallery {
 		spl_autoload_register(array($this, 'my_autoloader'));
 
 		new WD_Gallery_CPT;
+		new WD_Gallery_MB;
 	}
 
 	public function my_autoloader($class_name) {

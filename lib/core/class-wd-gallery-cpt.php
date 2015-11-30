@@ -18,4 +18,6 @@ class WD_Gallery_CPT {
 			)
 		);
 	}
+
+// class end
 }
