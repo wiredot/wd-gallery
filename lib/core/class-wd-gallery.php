@@ -19,7 +19,5 @@ class WD_Gallery {
 		}
 	}
 
-
-
 // class end	
 }
