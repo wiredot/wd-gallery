@@ -4,15 +4,14 @@ class WD_Gallery_Shortcode {
 
 	public function __construct() {
 		add_shortcode( 'wd_gallery', array($this, 'show_shortcode' ) );
-		
 		add_action('admin_init', array($this, 'shortcode_button'));
 		add_action('admin_footer', array($this, 'get_galleries'));
 	}
 
 	public function show_shortcode($atts) {
 		if (is_array($atts) && array_key_exists('id', $atts)) {
-			$WD_Gallery_List = new WD_Gallery_List;
-			return $WD_Gallery_List->show_list();
+			$WD_Gallery_Single = new WD_Gallery_Single;
+			return $WD_Gallery_Single->show_single();
 		} else {
 			$WD_Gallery_List = new WD_Gallery_List;
 			return $WD_Gallery_List->show_list();
@@ -39,8 +38,7 @@ class WD_Gallery_Shortcode {
 		return $buttons;
 	}
 
-	public function get_galleries()
-	{
+	public function get_galleries() {
 		global $wpdb;
 
 		echo '<script type="text/javascript">';
@@ -54,9 +52,7 @@ class WD_Gallery_Shortcode {
 			echo "shortcodes_button_wd_gallery.push({text:'".str_replace("'", "\'", $post->post_title)."',value:'{$post->ID}'});";   
 		}
 
-
 		echo '</script>';
-
 	}
 
 // class end
