@@ -2,9 +2,10 @@
 
 class WD_Gallery {
 
-	var $plugin_file = '';
-	var $plugin_basename = '';
+	var $plugin_file;
+	var $plugin_basename;
 	var $plugin_dir;
+	var $plugin_url;
 	var $menu_slug = 'wd-gallery-menu';
 
 	public function __construct($plugin_file = '', $option_name = null) {
@@ -12,6 +13,7 @@ class WD_Gallery {
 		$this->plugin_file = $plugin_file;
 		$this->plugin_basename = plugin_basename($this->plugin_file);
 		$this->plugin_dir = dirname($plugin_file);
+		$this->plugin_url = plugin_dir_url( $plugin_file );
 
 		// add activation & deactivation actions
 		add_action('activate_' . $this->plugin_basename, array($this, 'activate'));
@@ -19,6 +21,8 @@ class WD_Gallery {
 
 		// intialize settings menu
 		add_action('admin_menu', array($this, 'admin_menu'));
+
+		add_action( 'admin_enqueue_scripts', array($this, 'admin_css') );
 
 		// add setting link on plugin page
 		add_filter('plugin_action_links', array($this, 'action_links'), 10, 2);
@@ -28,7 +32,7 @@ class WD_Gallery {
 		// load composer components
 		require $this->plugin_dir . '/lib/composer/vendor/autoload.php';
 
-		add_filter( 'single_template', array($this, 'get_custom_post_type_template' ));
+		//add_filter( 'single_template', array($this, 'get_custom_post_type_template' ));
 	}
 
 	public function activate() {
@@ -43,7 +47,6 @@ class WD_Gallery {
 	}
 
 	public function deactivate() {
-
 	}
 
 	public function admin_menu() {
@@ -55,6 +58,11 @@ class WD_Gallery {
 			$this->menu_slug, 
 			array($this, 'template_options_page')
 		);
+	}
+
+	public function admin_css() {
+		// Location of your custom-tinymce-plugin.css file
+		wp_enqueue_style( 'custom_tinymce_plugin', $this->plugin_url . 'assets/css/wd_gallery.css' );
 	}
 
 	function template_options_page() {
@@ -101,12 +109,6 @@ class WD_Gallery {
 		if (file_exists($this->plugin_dir.'/lib/core/'.$class_filename)) {
 			include_once $this->plugin_dir.'/lib/core/'.$class_filename;
 		}
-	}
-
-	public function test() {
-		global $WD_Gallery_Smarty;
-
-		echo $WD_Gallery_Smarty->smarty->fetch('wd-gallery-single.html');
 	}
 
 // class end	

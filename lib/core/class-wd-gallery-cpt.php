@@ -3,19 +3,22 @@
 class WD_Gallery_CPT {
 
 	public function __construct() {
-		add_action( 'init', array( $this, 'create_post_type' ) );
 
-		add_filter( 'post_updated_messages', array( $this, 'updated_messages' ) );
+		if (is_admin()) {
+			add_action( 'init', array( $this, 'create_post_type' ) );
+			
+			add_filter( 'post_updated_messages', array( $this, 'updated_messages' ) );
 
-		add_action( 'contextual_help', array( $this, 'help_text'), 10, 3 );
+			add_action( 'contextual_help', array( $this, 'help_text'), 10, 3 );
 
-		add_action('admin_head', array( $this, 'help_tab'));
+			add_action('admin_head', array( $this, 'help_tab'));
 
-		add_filter('pre_get_posts', array($this, 'set_list_views_order'));
-		
-		add_action('manage_posts_custom_column', array($this, 'custom_columns'), 10, 2);
+			add_filter('pre_get_posts', array($this, 'set_list_views_order'));
+			
+			add_action('manage_posts_custom_column', array($this, 'custom_columns'), 10, 2);
 
-		add_filter('manage_edit-wd_gallery_columns', array($this, 'modify_list_view'));
+			add_filter('manage_edit-wd_gallery_columns', array($this, 'modify_list_view'));
+		}
 	}
 
 	public function create_post_type() {

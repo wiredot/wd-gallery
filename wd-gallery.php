@@ -15,3 +15,4 @@ $WD_Gallery = new WD_Gallery(__FILE__, 'wd_gallery');
 $WD_Gallery_CPT = new WD_Gallery_CPT();
 $WD_Gallery_MB = new WD_Gallery_MB();
 $WD_Gallery_Smarty = new WD_Gallery_Smarty();
+$WD_Gallery_Shortcode = new WD_Gallery_Shortcode();
