@@ -172,18 +172,17 @@ class WD_Gallery_CPT {
 				break;
 			case 'featured_image':
 				$post_thumbnail_id = get_post_thumbnail_id($post_id);
-				echo $post_thumbnail_id;
-				// if ($post_thumbnail_id) {
-				// 	global $CP_Imageold;
-				// 	$params = array(
-				// 		'id' => $post_thumbnail_id,
-				// 		'w' => 50,
-				// 		'h' => 50,
-				// 		'zc' => 1,
-				// 		'q' => 70
-				// 	);
-				// 	echo $CP_Imageold->image($params);
-				// }
+				$WD_Gallery_Image = new WD_Gallery_Image;
+				$params = array(
+					'w' => 50,
+					'h' => 50,
+					'q' => 95,
+					'zc' => 1
+				);
+				$attr = array(
+					'echo' => true,
+				);
+				echo $WD_Gallery_Image->get_image($post_thumbnail_id, $params, $attr);
 				break;
 			default:
 				$value = get_post_meta($post_id, $column, 1);
