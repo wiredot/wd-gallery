@@ -23,6 +23,7 @@ class WD_Gallery {
 		add_action('admin_menu', array($this, 'admin_menu'));
 
 		add_action( 'admin_enqueue_scripts', array($this, 'admin_css') );
+		add_action( 'admin_enqueue_scripts', array($this, 'admin_js') );
 
 		// add setting link on plugin page
 		add_filter('plugin_action_links', array($this, 'action_links'), 10, 2);
@@ -61,8 +62,11 @@ class WD_Gallery {
 	}
 
 	public function admin_css() {
-		// Location of your custom-tinymce-plugin.css file
-		wp_enqueue_style( 'custom_tinymce_plugin', $this->plugin_url . 'assets/css/wd_gallery.css' );
+		wp_enqueue_style( 'wd_gallery', $this->plugin_url . 'assets/css/wd_gallery.css' );
+	}
+
+	public function admin_js() {
+		wp_enqueue_script( 'wd_gallery', $this->plugin_url . 'assets/js/wd_gallery.js', array('jquery'), '1.0.0', true );
 	}
 
 	function template_options_page() {
