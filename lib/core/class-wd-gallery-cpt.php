@@ -147,19 +147,18 @@ class WD_Gallery_CPT {
 	}
 
 	public function set_list_views_order($wp_query) {
-		$post_type = $wp_query->query['post_type'];
+		if (isset($wp_query->query['post_type']) && $wp_query->query['post_type'] == 'wd_gallery') {
 
-		$order = 'ASC';
-		if (isset($_GET['order'])) {
-			$order = $_GET['order'];
-		}
+			$order = 'ASC';
+			if (isset($_GET['order'])) {
+				$order = $_GET['order'];
+			}
 
-		$orderby = 'menu_order';
-		if (isset($_GET['orderby'])) {
-			$orderby = $_GET['orderby'];
-		}
+			$orderby = 'menu_order';
+			if (isset($_GET['orderby'])) {
+				$orderby = $_GET['orderby'];
+			}
 
-		if ($post_type == 'wd_gallery') {
 			$wp_query->set('orderby', $orderby);
 			$wp_query->set('order', $order);
 		}

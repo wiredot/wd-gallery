@@ -5,17 +5,17 @@ class WD_Gallery_Single {
 	public function __construct() {
 	}
 
-	public function show_single() {
-		global $WD_Gallery_Smarty, $post, $posts;
+	public function show_single($gallery_id) {
+		global $WD_Gallery_Smarty, $wd_gallery_query;
 
-		$old_post = $post;
+		$args = array(
+			'post_type' => 'wd_gallery', 
+			'p'=> $gallery_id
+		);
 
-		$args = array( 'post_type' => 'wd_gallery', 'posts_per_page' => -1, 'orderby'=> 'title', 'order' => 'ASC');
-		$posts = get_posts( $args );
-
+		$wd_gallery_query = new WP_Query( $args );
+		
 		$return = $WD_Gallery_Smarty->smarty->fetch('wd-gallery-single.html');
-		$post = $old_post;
-
 		return $return;
 	}
 

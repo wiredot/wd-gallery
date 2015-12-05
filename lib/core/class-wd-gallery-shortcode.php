@@ -11,7 +11,7 @@ class WD_Gallery_Shortcode {
 	public function show_shortcode($atts) {
 		if (is_array($atts) && array_key_exists('id', $atts)) {
 			$WD_Gallery_Single = new WD_Gallery_Single;
-			return $WD_Gallery_Single->show_single();
+			return $WD_Gallery_Single->show_single($atts['id']);
 		} else {
 			$WD_Gallery_List = new WD_Gallery_List;
 			return $WD_Gallery_List->show_list();
