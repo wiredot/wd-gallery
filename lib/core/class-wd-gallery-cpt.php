@@ -3,9 +3,9 @@
 class WD_Gallery_CPT {
 
 	public function __construct() {
-
+		add_action( 'init', array( $this, 'create_post_type' ) );
+		
 		if (is_admin()) {
-			add_action( 'init', array( $this, 'create_post_type' ) );
 			
 			add_filter( 'post_updated_messages', array( $this, 'updated_messages' ) );
 
@@ -18,6 +18,8 @@ class WD_Gallery_CPT {
 			add_action('manage_posts_custom_column', array($this, 'custom_columns'), 10, 2);
 
 			add_filter('manage_edit-wd_gallery_columns', array($this, 'modify_list_view'));
+
+			add_action('save_post', array($this, 'add_shortcode'), 10, 2);
 		}
 	}
 
@@ -54,7 +56,7 @@ class WD_Gallery_CPT {
 				'menu_icon' => 'dashicons-format-gallery',
 				'capability_type' => 'page',
 				'hierarchical' => false,
-				'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'page-attributes'),
+				'supports' => array('title', 'thumbnail', 'revisions', 'page-attributes'),
 				'rewrite' => array('slug' => 'gallery'),
 				'has_archive' => true,
 			)
@@ -102,7 +104,7 @@ class WD_Gallery_CPT {
 		return $messages;
 	}
 
-	function help_text( $contextual_help, $screen_id, $screen ) {
+	public function help_text( $contextual_help, $screen_id, $screen ) {
 		//$contextual_help .= var_dump( $screen ); // use this to help determine $screen->id
 		if ( 'wd_gallery' == $screen->id ) {
 		$contextual_help =
@@ -126,7 +128,7 @@ class WD_Gallery_CPT {
 		return $contextual_help;
 	}
 
-	function help_tab() {
+	public function help_tab() {
 
 		$screen = get_current_screen();
 
@@ -203,6 +205,22 @@ class WD_Gallery_CPT {
 		$new_columns['date'] = __('Date', 'wd-gallery');
 		
 		return $new_columns;
+	}
+
+	public function add_shortcode($post_id, $post) {
+		if ($post->post_type == 'wd_gallery') {
+			global $wpdb;
+			
+			$wpdb->update(
+				$wpdb->posts,
+				array(
+					'post_content' => '[wd_gallery ID='.$post_id.']'
+				),
+				array(
+					'ID' => $post_id
+				)
+			);
+		}
 	}
 
 // class end

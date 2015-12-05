@@ -3,6 +3,7 @@
 class WD_Gallery_Single {
 
 	public function __construct() {
+		add_filter( 'the_content', array($this, 'add_gallery') );
 	}
 
 	public function show_single($gallery_id) {
@@ -17,6 +18,11 @@ class WD_Gallery_Single {
 		
 		$return = $WD_Gallery_Smarty->smarty->fetch('wd-gallery-single.html');
 		return $return;
+	}
+
+	public function add_gallery($content) {
+		echo 'asda';
+		return $content.'arghhh';
 	}
 
 // class end
