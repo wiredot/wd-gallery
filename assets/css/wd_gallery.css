@@ -12,5 +12,28 @@ i.mce-i-icon {
   margin-bottom: 10px;
   border: 1px solid #ddd;
   padding: 10px; }
+  .wd_gallery_mb > div::after {
+    clear: both;
+    content: "";
+    display: table; }
 .wd_gallery_mb .img, .wd_gallery_mb .details {
   float: left; }
+.wd_gallery_mb .img {
+  width: 20%; }
+  .wd_gallery_mb .img img {
+    width: 100%;
+    cursor: ns-resize; }
+.wd_gallery_mb .details {
+  width: 60%;
+  padding-left: 2%; }
+.wd_gallery_mb label, .wd_gallery_mb input {
+  display: block;
+  float: left;
+  width: 20%; }
+.wd_gallery_mb label {
+  text-align: right;
+  padding-right: 2%;
+  line-height: 30px; }
+.wd_gallery_mb input {
+  width: 70%;
+  margin-bottom: 10px; }

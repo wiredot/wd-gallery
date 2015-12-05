@@ -1,8 +1,6 @@
 <?php
 
-
 global $CP_Smarty;
-// register the prefilter
 
 function smarty_block_loop($params, $content, $template, &$repeat) {
 	global $WD_Gallery_Smarty, $wd_gallery_query, $post, $page;

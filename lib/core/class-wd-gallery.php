@@ -30,7 +30,7 @@ class WD_Gallery {
 		spl_autoload_register(array($this, 'class_autoloader'));
 
 		// load composer components
-		require $this->plugin_dir . '/lib/composer/vendor/autoload.php';
+		require $this->plugin_dir . '/lib/composer/autoload.php';
 
 		//add_filter( 'single_template', array($this, 'get_custom_post_type_template' ));
 	}
