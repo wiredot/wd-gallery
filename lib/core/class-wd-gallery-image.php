@@ -5,7 +5,7 @@ class WD_Gallery_Image {
 	public function __construct() {
 	}
 
-	public function get_image($id, $params, $attr) {
+	public function get_image($id, $params, $attr = array()) {
 		$default_params = array(
 			'w' => 100
 		);
@@ -125,7 +125,7 @@ class WD_Gallery_Image {
 			$tag.= ' width="'.$params['w'].'"';
 		}
 
-		if ($params['h']) {
+		if (isset($params['h']) && $params['h']) {
 			$tag.= ' height="'.$params['h'].'"';
 		}
 		
