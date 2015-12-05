@@ -1,9 +1,7 @@
 {loop}
 <div>
-	<div>asd</div>
-	<div>sadaasd</div>
-	<div>assvxcvfv</div>
-	<div>sdwerwe </div>
-	<div>vwewe</div>
+	{foreach from=$photos item=photo}
+		<div><a href="{the_permalink id=$photo}">{img id=$photo w=200}</a></div>
+	{/foreach}
 </div>
 {/loop}

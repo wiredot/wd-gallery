@@ -13,7 +13,7 @@
  * Purpose:  print out a bloginfo information
  *
  */
-function smarty_function_the_permalink($params, $template) {
+function smarty_function_post_thumbnail_id($params, $template) {
 	// default params
 	$default_params = array(
 		'id' => null
@@ -22,5 +22,5 @@ function smarty_function_the_permalink($params, $template) {
     // merge default params with the provided ones
 	$params = array_merge($default_params, $params);
 
-	return get_permalink($params['id']);	
+	return get_post_thumbnail_id($params['id']);	
 }

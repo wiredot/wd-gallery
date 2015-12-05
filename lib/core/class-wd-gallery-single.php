@@ -15,7 +15,10 @@ class WD_Gallery_Single {
 		);
 
 		$wd_gallery_query = new WP_Query( $args );
+
+		$photos = get_post_meta( $gallery_id, 'photos', true);
 		
+		$WD_Gallery_Smarty->smarty->assign('photos', $photos);
 		$return = $WD_Gallery_Smarty->smarty->fetch('wd-gallery-single.html');
 		return $return;
 	}
