@@ -56,7 +56,7 @@ class WD_Gallery_CPT {
 				'menu_icon' => 'dashicons-format-gallery',
 				'capability_type' => 'page',
 				'hierarchical' => false,
-				'supports' => array('title', 'thumbnail', 'revisions', 'page-attributes'),
+				'supports' => array('title', 'thumbnail', 'page-attributes'),
 				'rewrite' => array('slug' => 'gallery'),
 				'has_archive' => true,
 			)

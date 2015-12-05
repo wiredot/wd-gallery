@@ -1,8 +1,8 @@
 <div class="wd_gallery_mb">
 {foreach from=$photos item=photo key=key}
-	<div>
-		<div class="img">{img id=$photo w=200}</div>
-		<div class="details">
+	<div class="wd_gallery_photo">
+		<div class="wd_gallery_img">{img id=$photo w=200}</div>
+		<div class="wd_gallery_details">
 			<label for="wd_gallery_title_{$key}">Title</label>
 			<input type="text" id="wd_gallery_title_{$key}" name="wd_gallery_title[]" value="{the_title id=$photo}">
 			
@@ -13,7 +13,7 @@
 			<input type="text" id="wd_gallery_alt{$key}" name="wd_gallery_alt[]" value="{alt id=$photo}">
 		</div>
 		<input type="hidden" name="wd_gallery_photo[]" value="{$photo}">
-		<a href="#" class="button">Remove Photo</a>
+		<a href="#" class="button wd_gallery_remove">Remove Photo</a>
 	</div>
 {/foreach}
 </div>

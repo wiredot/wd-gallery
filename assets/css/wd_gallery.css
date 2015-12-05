@@ -17,14 +17,14 @@ i.mce-i-icon {
     clear: both;
     content: "";
     display: table; }
-.wd_gallery_mb .img, .wd_gallery_mb .details {
+.wd_gallery_mb .wd_gallery_img, .wd_gallery_mb .wd_gallery_details {
   float: left; }
-.wd_gallery_mb .img {
+.wd_gallery_mb .wd_gallery_img {
   width: 20%; }
-  .wd_gallery_mb .img img {
+  .wd_gallery_mb .wd_gallery_img img {
     width: 100%;
     cursor: ns-resize; }
-.wd_gallery_mb .details {
+.wd_gallery_mb .wd_gallery_details {
   width: 60%;
   padding-left: 2%; }
 .wd_gallery_mb label, .wd_gallery_mb input {
