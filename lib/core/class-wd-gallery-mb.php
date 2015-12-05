@@ -25,6 +25,9 @@ class WD_Gallery_MB {
 		global $WD_Gallery_Smarty;
 
 		$photos = get_post_meta( $post->ID, 'photos', true);
+		if ( ! is_array($photos) ) {
+			$photos = null;
+		}
 		//update_post_meta( $post->ID, 'photos', array(138, 136, 119) );
 
 		$WD_Gallery_Smarty->smarty->assign('photos', $photos);
