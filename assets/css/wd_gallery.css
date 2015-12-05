@@ -7,3 +7,10 @@ i.mce-i-icon {
   -moz-osx-font-smoothing: grayscale;
   margin-left: -2px;
   padding-right: 2px; }
+
+.wd_gallery_mb > div {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 10px; }
+.wd_gallery_mb .img, .wd_gallery_mb .details {
+  float: left; }

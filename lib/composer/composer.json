@@ -1,6 +1,0 @@
-{
-    "require": {
-        "smarty/smarty": "3.x",
-        "james-heinrich/phpthumb": "1.7.x"
-    }
-}

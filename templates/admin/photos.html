@@ -1,14 +1,14 @@
-<div>
+<div class="wd_gallery_mb">
 {foreach from=$photos item=photo}
-<div>
-	<div>{img id=$photo w=200}</div>
 	<div>
-		<label for="">Title</label><input type="text" name="" value="{the_title id=$photo}">
-		<label for="">Caption</label><input type="text" name="" value="{the_excerpt id=$photo}">
-		<label for="">Alt Text</label><input type="text" name="" value="{alt id=$photo}">
-		<a href="#" class="button">Remove Photo</a>
+		<div class="img">{img id=$photo w=200}</div>
+		<div class="details">
+			<label for="">Title</label><input type="text" name="" value="{the_title id=$photo}">
+			<label for="">Caption</label><input type="text" name="" value="{the_excerpt id=$photo}">
+			<label for="">Alt Text</label><input type="text" name="" value="{alt id=$photo}">
+			<a href="#" class="button">Remove Photo</a>
+		</div>
 	</div>
-</div>
 {/foreach}
 </div>
 <a href="#" class="button">Add Photos</a>
