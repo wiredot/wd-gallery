@@ -56,8 +56,62 @@ class WD_Gallery_MB {
 
 	    if (isset($_POST['wd_gallery_photo'])) {
 	        $wd_gallery_photo = $_POST['wd_gallery_photo'];
-	    }   
+	    }
+
+	    if (isset($_POST['wd_gallery_title'])) {
+	        $wd_gallery_title = $_POST['wd_gallery_title'];
+	    }
+
+	    if (isset($_POST['wd_gallery_caption'])) {
+	        $wd_gallery_caption = $_POST['wd_gallery_caption'];
+	    }
+
+	    if (isset($_POST['wd_gallery_alt'])) {
+	        $wd_gallery_alt = $_POST['wd_gallery_alt'];
+	    }
+
+	    foreach ($_POST['wd_gallery_photo'] as $key => $photo_id) {
+			$title = '';
+			$caption = '';
+			$alt = '';
+
+			if (isset($wd_gallery_title[$key])) {
+				$title = $wd_gallery_title[$key];
+			}
+			
+			if (isset($wd_gallery_caption[$key])) {
+				$caption = $wd_gallery_caption[$key];
+			}
+
+			if (isset($wd_gallery_alt[$key])) {
+				$alt = $wd_gallery_alt[$key];
+			}
+
+			$this->update_image_data($photo_id, $title, $caption, $alt);
+		}
+
 	    update_post_meta($post_id, 'photos', $wd_gallery_photo);
+	}
+
+	public function update_image_data($id, $title, $caption, $alt = '') {
+		global $wpdb;
+
+		$wpdb->update(
+			$wpdb->posts,
+			array(
+				'post_title' => $title,
+				'post_excerpt' => $caption
+			),
+			array(
+				'ID' => $id
+			)
+		);
+
+		if ($alt) {
+			update_post_meta( $id, '_wp_attachment_image_alt', $alt );
+		} else {
+			delete_post_meta( $id, '_wp_attachment_image_alt' );
+		}
 	}
 
 // class end
