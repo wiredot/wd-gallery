@@ -17,10 +17,20 @@ class WD_Gallery_Image {
 			'mode' => 'tag',
 			'echo' => false,
 			'class' => null,
+			'alt' => null,
+			'title' => null,
 			'id' => null
 		);
 
 		$attr = array_merge($default_attr, $attr);
+
+		if (isset($params['alt'])) {
+			$attr['alt'] = $params['alt'];
+		}
+
+		if (isset($params['title'])) {
+			$attr['title'] = $params['title'];
+		}
 
 		$image_details = $this->get_image_details($id, $params);
 		if ( ! is_array($image_details) ) {
@@ -112,13 +122,21 @@ class WD_Gallery_Image {
 		$tag = '<img src="'; 
 		$tag.= $image_details['upload_url'].$image_details['filename'];
 		$tag.= '"';
-		
+
 		if ($attr['class']) {
 			$tag.= ' class="'.$attr['class'].'"';
 		}
 		
 		if ($attr['id']) {
 			$tag.= ' id="'.$attr['id'].'"';
+		}
+		
+		if (isset($params['alt']) && $attr['alt']) {
+			$tag.= ' alt="'.$attr['alt'].'"';
+		}
+
+		if (isset($params['title']) && $attr['title']) {
+			$tag.= ' title="'.$attr['title'].'"';
 		}
 		
 		if ($params['w']) {

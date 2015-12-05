@@ -23,10 +23,10 @@ class WD_Gallery_MB {
 
 	public function show_meta_box($post, $meta_box) {
 		global $WD_Gallery_Smarty;
-		new dBug($post);
+
 		$photos = get_post_meta( $post->ID, 'photos', true);
 		//update_post_meta( $post->ID, 'photos', array(138, 136, 119) );
-		new dBug($photos);
+
 		$WD_Gallery_Smarty->smarty->assign('photos', $photos);
 		echo $WD_Gallery_Smarty->smarty->fetch('admin/photos.html');
 	}
