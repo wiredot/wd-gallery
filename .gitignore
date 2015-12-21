@@ -1,2 +1,4 @@
 _development/scss/lib
 lib/composer
+vendor
+composer.lock

@@ -1,5 +1,7 @@
 <?php
 
+namespace WD_Gallery;
+
 class WD_Gallery {
 
 	var $plugin_file;
@@ -8,32 +10,33 @@ class WD_Gallery {
 	var $plugin_url;
 	var $menu_slug = 'wd-gallery-menu';
 
-	public function __construct($plugin_file = '', $option_name = null) {
+	public function __construct() {
 
-		$this->plugin_file = $plugin_file;
-		$this->plugin_basename = plugin_basename($this->plugin_file);
-		$this->plugin_dir = dirname($plugin_file);
-		$this->plugin_url = plugin_dir_url( $plugin_file );
+		// $this->plugin_file = $plugin_file;
+		// $this->plugin_basename = plugin_basename($this->plugin_file);
+		// $this->plugin_dir = dirname($plugin_file);
+		// $this->plugin_url = plugin_dir_url( $plugin_file );
 
-		// add activation & deactivation actions
-		add_action('activate_' . $this->plugin_basename, array($this, 'activate'));
-		add_action('deactivate_' . $this->plugin_basename, array($this, 'deactivate'));
+		// // add activation & deactivation actions
+		// add_action('activate_' . $this->plugin_basename, array($this, 'activate'));
+		// add_action('deactivate_' . $this->plugin_basename, array($this, 'deactivate'));
 
-		// intialize settings menu
-		add_action('admin_menu', array($this, 'admin_menu'));
+		// // intialize settings menu
+		// add_action('admin_menu', array($this, 'admin_menu'));
 
-		add_action( 'admin_enqueue_scripts', array($this, 'admin_css') );
-		add_action( 'admin_enqueue_scripts', array($this, 'admin_js') );
+		// add_action( 'admin_enqueue_scripts', array($this, 'admin_css') );
+		// add_action( 'admin_enqueue_scripts', array($this, 'admin_js') );
 
-		// add setting link on plugin page
-		add_filter('plugin_action_links', array($this, 'action_links'), 10, 2);
+		// // add setting link on plugin page
+		// add_filter('plugin_action_links', array($this, 'action_links'), 10, 2);
 
-		spl_autoload_register(array($this, 'class_autoloader'));
-
-		// load composer components
-		require $this->plugin_dir . '/lib/composer/autoload.php';
+		// spl_autoload_register(array($this, 'class_autoloader'));
 
 		//add_filter( 'single_template', array($this, 'get_custom_post_type_template' ));
+	}
+
+	public static function run() {
+
 	}
 
 	public function activate() {
