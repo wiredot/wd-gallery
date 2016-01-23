@@ -1,6 +1,7 @@
 <?php
 
-$wdg_config['theme']['zurich'] = array(
+$wdg_theme_config = array(
+	'name' => 'Zurich',
 	'css' => array(
 		'zurich' => 'css/zurich.css'
 	),

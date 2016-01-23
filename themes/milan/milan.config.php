@@ -1,6 +1,7 @@
 <?php
 
-$wdg_config['theme']['milan'] = array(
+$wdg_theme_config = array(
+	'name' => '',
 	'css' => array(
 		'milan' => 'css/milan.css'
 	),

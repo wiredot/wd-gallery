@@ -2,9 +2,6 @@
 
 namespace WD_Gallery;
 
-use WD_Gallery\WD_Gallery_Admin;
-use WD_Gallery\WD_Gallery_CPT;
-
 class WD_Gallery {
 
 	private static $instance = null;
@@ -17,6 +14,11 @@ class WD_Gallery {
 		$WD_Gallery_CPT = new WD_Gallery_CPT();
 		$WD_Gallery_MB = new WD_Gallery_MB();
 		new WD_Gallery_Shortcode();
+		new WD_Gallery_Theme_Directory();
+
+		new WD_Gallery_Theme('zurich');
+
+		exit;
 
 		// // add activation & deactivation actions
 		// add_action('activate_' . $this->plugin_basename, array($this, 'activate'));
