@@ -15,6 +15,7 @@ class WD_Gallery {
 		}
 
 		$WD_Gallery_CPT = new WD_Gallery_CPT();
+		$WD_Gallery_MB = new WD_Gallery_MB();
 
 		// // add activation & deactivation actions
 		// add_action('activate_' . $this->plugin_basename, array($this, 'activate'));
@@ -36,9 +37,9 @@ class WD_Gallery {
 		flush_rewrite_rules();
 
 		$this->init_directory(WP_CONTENT_DIR.'/cache');
-		$this->init_directory(WP_CONTENT_DIR.'/cache/wd_gallery');
-		$this->init_directory(WP_CONTENT_DIR.'/cache/wd_gallery/templates_c');
-		$this->init_directory(WP_CONTENT_DIR.'/cache/wd_gallery/smarty');
+		$this->init_directory(WP_CONTENT_DIR.'/cache/wd-gallery');
+		$this->init_directory(WP_CONTENT_DIR.'/cache/wd-gallery/templates_c');
+		$this->init_directory(WP_CONTENT_DIR.'/cache/wd-gallery/smarty');
 	}
 
 	public function deactivate() {

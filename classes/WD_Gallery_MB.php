@@ -1,5 +1,9 @@
 <?php
 
+namespace WD_Gallery;
+
+use WD_Gallery\WD_Gallery_Smarty;
+
 class WD_Gallery_MB {
 
 	public function __construct() {
@@ -22,16 +26,15 @@ class WD_Gallery_MB {
 	}
 
 	public function show_meta_box($post, $meta_box) {
-		global $WD_Gallery_Smarty;
-
 		$photos = get_post_meta( $post->ID, 'photos', true);
 		if ( ! is_array($photos) ) {
 			$photos = null;
 		}
 		//update_post_meta( $post->ID, 'photos', array(138, 136, 119) );
 
-		$WD_Gallery_Smarty->smarty->assign('photos', $photos);
-		echo $WD_Gallery_Smarty->smarty->fetch('admin/photos.html');
+		$smarty = (new WD_Gallery_Smarty())->get_smarty();
+		$smarty->assign('photos', $photos);
+		echo $smarty->fetch('admin/photos.html');
 	}
 
 	public function save_meta_boxes($post_id, $post, $update) {

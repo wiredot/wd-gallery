@@ -1,4 +1,7 @@
 <?php
+
+use WD_Gallery\WD_Gallery_Image;
+
 /**
  * Smarty plugin
  * @package Smarty
@@ -20,6 +23,6 @@ function smarty_function_img($params, $template) {
 	}
 	$post_thumbnail_id = $params['id'];
 
-	$WD_Gallery_Image = new WD_Gallery_Image;
-	return $WD_Gallery_Image->get_image($post_thumbnail_id, $params);
+	$WD_Gallery_Image = new WD_Gallery_Image($post_thumbnail_id, $params);
+	return $WD_Gallery_Image->get_image();
 }
