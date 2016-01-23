@@ -1,5 +1,7 @@
 <?php
 
+namespace WD_Gallery;
+
 class WD_Gallery_Shortcode {
 
 	public function __construct() {

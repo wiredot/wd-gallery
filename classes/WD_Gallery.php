@@ -16,6 +16,7 @@ class WD_Gallery {
 
 		$WD_Gallery_CPT = new WD_Gallery_CPT();
 		$WD_Gallery_MB = new WD_Gallery_MB();
+		new WD_Gallery_Shortcode();
 
 		// // add activation & deactivation actions
 		// add_action('activate_' . $this->plugin_basename, array($this, 'activate'));

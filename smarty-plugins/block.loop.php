@@ -1,9 +1,9 @@
 <?php
 
-global $CP_Smarty;
+use WD_Gallery\WD_Gallery_Smarty;
 
 function smarty_block_loop($params, $content, $template, &$repeat) {
-	global $WD_Gallery_Smarty, $wd_gallery_query, $post, $page;
+	global $wd_gallery_query, $post, $page;
 
 	$old_page = $page;
 	$old_post = $post;
@@ -15,9 +15,9 @@ function smarty_block_loop($params, $content, $template, &$repeat) {
 	if ( $wd_gallery_query->have_posts() ) {
 		while ( $wd_gallery_query->have_posts() ) {
 			$wd_gallery_query->the_post();
-			$WD_Gallery_Smarty->smarty->assign('key', $key);
-			$return.= $WD_Gallery_Smarty->smarty->fetch('string:'.$content);
-			$key++;
+			$smarty = (new WD_Gallery_Smarty)->get_smarty();
+			$smarty->assign('key', $key);
+			$return.= $smarty->fetch('string:'.$content);
 		}
 	}
 

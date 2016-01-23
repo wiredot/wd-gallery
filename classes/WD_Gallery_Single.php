@@ -1,5 +1,9 @@
 <?php
 
+namespace WD_Gallery;
+
+use WP_Query;
+
 class WD_Gallery_Single {
 
 	public function __construct() {
@@ -17,8 +21,9 @@ class WD_Gallery_Single {
 
 		$photos = get_post_meta( $gallery_id, 'photos', true);
 		
-		$WD_Gallery_Smarty->smarty->assign('photos', $photos);
-		$return = $WD_Gallery_Smarty->smarty->fetch('wd-gallery-single.html');
+		$smarty = (new WD_Gallery_Smarty)->get_smarty();
+		$smarty->assign('photos', $photos);
+		$return = $smarty->fetch('wd-gallery-single.html');
 		return $return;
 	}
 
