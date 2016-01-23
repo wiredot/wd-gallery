@@ -17,6 +17,11 @@ if ( ! defined( 'WPINC' ) ) {
 // load composer libraries
 require __DIR__ . '/vendor/autoload.php';
 
+define( 'WD_GALLERY_PATH', dirname( __FILE__ ) );
+define( 'WD_GALLERY_URL', plugin_dir_url( __FILE__ ) );
+define( 'WD_GALLERY_BASENAME', plugin_basename( __FILE__ ) );
+define( 'WD_GALLERY_NAME', dirname( plugin_basename( __FILE__ ) ) );
+
 use WD_Gallery\WD_Gallery;
 
 function WD_Gallery() {
