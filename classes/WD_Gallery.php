@@ -3,6 +3,7 @@
 namespace WD_Gallery;
 
 use WD_Gallery\WD_Gallery_Admin;
+use WD_Gallery\WD_Gallery_CPT;
 
 class WD_Gallery {
 
@@ -12,6 +13,8 @@ class WD_Gallery {
 		if (is_admin()) {
 			$WD_Gallery_Admin = new WD_Gallery_Admin();
 		}
+
+		$WD_Gallery_CPT = new WD_Gallery_CPT();
 
 		// // add activation & deactivation actions
 		// add_action('activate_' . $this->plugin_basename, array($this, 'activate'));
