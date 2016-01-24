@@ -16,16 +16,17 @@ class WD_Gallery_Admin {
 
 	public function admin_menu() {
 		// add options page
-		add_options_page(
-			_x( 'wd Gallery', 'post type general name', 'wd-gallery' ), 
-			_x( 'wd Gallery', 'admin menu', 'wd-gallery' ), 
-			'edit_users', 
-			WD_GALLERY_NAME.'-menu', 
-			array($this, 'template_options_page')
+		add_submenu_page( 
+			'edit.php?post_type=wd_gallery', 
+			'themesss', 
+			__( 'Themes', 'wd-gallery' ),
+			'read', 
+			'themes', 
+			array($this, 'template_themes_page')
 		);
 	}
 
-	public function template_options_page() {
+	public function template_themes_page() {
 		
 		echo 'asd';
 	}
@@ -40,15 +41,9 @@ class WD_Gallery_Admin {
 
 	public function action_links($links, $file) {
 		// run for this plugin
-		echo $file;
-		//exit;
 		if ($file == WD_GALLERY_BASENAME) {
-			
 			// settings link
-			$settings_link = "<a href='options-general.php?page=" . WD_GALLERY_NAME . "-menu'>" . __('Settings') . "</a>";
-			
-			// add settings link to plugin info section
-			array_unshift($links, $settings_link);
+			$links[] = "<a href='edit.php?post_type=wd_gallery&page=themes'>" . __('Themes', 'wd-gallery') . "</a>";
 		}
 		return $links;
 	}

@@ -12,7 +12,7 @@ class WD_Gallery_Theme_Directory {
 		$this->themes = $this->find_themes();
 		$this->active_theme = $this->find_active_theme();
 
-		print_r($this);
+		//print_r($this);
 	}
 
 	public function find_themes() {

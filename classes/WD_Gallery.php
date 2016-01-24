@@ -16,9 +16,9 @@ class WD_Gallery {
 		new WD_Gallery_Shortcode();
 		new WD_Gallery_Theme_Directory();
 
-		new WD_Gallery_Theme('zurich');
+//		new WD_Gallery_Theme('zurich');
 
-		exit;
+		// exit;
 
 		// // add activation & deactivation actions
 		// add_action('activate_' . $this->plugin_basename, array($this, 'activate'));
