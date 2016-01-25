@@ -6,8 +6,8 @@ class WD_Gallery_Shortcode {
 
 	public function __construct() {
 		add_shortcode( 'wd_gallery', array($this, 'show_shortcode' ) );
-		add_action('admin_init', array($this, 'shortcode_button'));
-		add_action('admin_footer', array($this, 'get_galleries'));
+		add_action('media_buttons', array($this, 'add_media_button'), 999);
+		add_action('admin_footer', array($this, 'add_media_content'));
 	}
 
 	public function show_shortcode($atts) {
@@ -20,41 +20,15 @@ class WD_Gallery_Shortcode {
 		}
 	}
 
-	public function shortcode_button() {
-		if ( current_user_can('edit_posts') &&  current_user_can('edit_pages') ) {
-			add_filter( 'mce_external_plugins', array($this, 'add_buttons' ));
-			add_filter( 'mce_buttons', array($this, 'register_buttons' ));
-		}
+	public function add_media_button() {
+		echo '<a href="#TB_inline?width=480&amp;inlineId=wd_gallery_media_content&amp;width=753&amp;height=657" class="thickbox button" id="" title="Add wd Gallery"><span class=""></span> Add wd Gallery</a>';
 	}
 
-	public function add_buttons( $plugin_array ) {
-		global $WD_Gallery;
-
-		$plugin_array['wd_gallery'] = $WD_Gallery->plugin_url. 'assets/js/shortcode-tinymce-button.js';
-
-		return $plugin_array;
-	}
-
-	public function register_buttons( $buttons ) {
-		array_push( $buttons, 'separator', 'wd_gallery' );
-		return $buttons;
-	}
-
-	public function get_galleries() {
-		global $wpdb;
-
-		echo '<script type="text/javascript">';
-
-		$args = array( 'post_type' => 'wd_gallery', 'posts_per_page' => -1, 'orderby'=> 'title', 'order' => 'ASC');
-		$posts = get_posts( $args );
-		echo "\n";
-		echo 'var shortcodes_button_wd_gallery = [];';
-		foreach($posts as $post) {
-			echo "\n";
-			echo "shortcodes_button_wd_gallery.push({text:'".str_replace("'", "\'", $post->post_title)."',value:'{$post->ID}'});";   
-		}
-
-		echo '</script>';
+	public function add_media_content() {
+		echo '<div id="wd_gallery_media_content" style="display:none;">
+			<div class="wrap">
+                media_contentmedia_content
+        	</div>';
 	}
 
 // class end
