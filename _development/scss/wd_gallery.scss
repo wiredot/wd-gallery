@@ -57,3 +57,16 @@ i.mce-i-icon {
 		margin-bottom: 10px;
 	}
 }
+
+.column-featured_image {
+	width: 60px;
+}
+
+.locale-pl-pl {
+
+	.fixed .column-date {
+		width: 11%;
+	}
+}
+
+@import 'lib/wd-gallery-themes.scss';

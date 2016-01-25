@@ -73,25 +73,27 @@ class WD_Gallery_MB {
 	        $wd_gallery_alt = $_POST['wd_gallery_alt'];
 	    }
 
-	    foreach ($_POST['wd_gallery_photo'] as $key => $photo_id) {
-			$title = '';
-			$caption = '';
-			$alt = '';
+	    if (isset($_POST['wd_gallery_photo'])) {
+		    foreach ($_POST['wd_gallery_photo'] as $key => $photo_id) {
+				$title = '';
+				$caption = '';
+				$alt = '';
 
-			if (isset($wd_gallery_title[$key])) {
-				$title = $wd_gallery_title[$key];
-			}
-			
-			if (isset($wd_gallery_caption[$key])) {
-				$caption = $wd_gallery_caption[$key];
-			}
+				if (isset($wd_gallery_title[$key])) {
+					$title = $wd_gallery_title[$key];
+				}
+				
+				if (isset($wd_gallery_caption[$key])) {
+					$caption = $wd_gallery_caption[$key];
+				}
 
-			if (isset($wd_gallery_alt[$key])) {
-				$alt = $wd_gallery_alt[$key];
-			}
+				if (isset($wd_gallery_alt[$key])) {
+					$alt = $wd_gallery_alt[$key];
+				}
 
-			$this->update_image_data($photo_id, $title, $caption, $alt);
-		}
+				$this->update_image_data($photo_id, $title, $caption, $alt);
+			}
+	    }
 
 	    update_post_meta($post_id, 'photos', $wd_gallery_photo);
 	}

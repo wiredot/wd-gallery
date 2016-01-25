@@ -1,0 +1,37 @@
+<div class="wrap wd-gallery-themes">
+	<h1>{__('wd Gallery Themes', 'wd-gallery')}</h1>
+	<div class="theme-browser rendered">
+		<div class="themes">
+			{foreach from=$themes item=theme}
+			{if $theme.id == $active_theme}
+			<div class="theme active" tabindex="0" aria-describedby="{$theme.id}-action {$theme.id}-name">
+				<div class="theme-screenshot">
+					{if $theme.screenshot}
+					<img src="{$theme.screenshot}" alt="">
+					{/if}
+				</div>
+				<h2 class="theme-name" id="{$theme.id}-name">
+					<span>Aktywny:</span> {$theme.name}
+				</h2>
+			</div>
+			{/if}
+			{/foreach}
+			{foreach from=$themes item=theme}
+			{if $theme.id != $active_theme}
+			<div class="theme" tabindex="0" aria-describedby="{$theme.id}-action {$theme.id}-name">
+				<div class="theme-screenshot">
+					{if $theme.screenshot}
+					<img src="{$theme.screenshot}" alt="">
+					{/if}
+				</div>
+				<h2 class="theme-name" id="{$theme.id}-name">{$theme.name}</h2>
+				<div class="theme-actions">
+					<a class="button button-secondary activate" href="{wp_nonce_url("?post_type=wd_gallery&page=themes&action=activate&theme={$theme.id}", "wd-gallery-activate-theme-{$theme.id}")}">Włącz</a>
+				</div>
+			</div>
+			{/if}
+			{/foreach}
+		</div>
+		<br class="clear">
+	</div>
+</div>

@@ -31,7 +31,7 @@ class WD_Gallery_CPT {
 			'singular_name'      => _x( 'wd Gallery', 'post type singular name', 'wd-gallery' ),
 			'menu_name'          => _x( 'wd Gallery', 'admin menu', 'wd-gallery' ),
 			'name_admin_bar'     => _x( 'wd Gallery', 'add new on admin bar', 'wd-gallery' ),
-			'add_new'            => _x( 'Add New', 'add new gallery', 'wd-gallery' ),
+			'add_new'            => _x( 'Add New Gallery', 'add new gallery', 'wd-gallery' ),
 			'add_new_item'       => __( 'Add New Gallery', 'wd-gallery' ),
 			'new_item'           => __( 'New Gallery', 'wd-gallery' ),
 			'edit_item'          => __( 'Edit Gallery', 'wd-gallery' ),
@@ -170,9 +170,6 @@ class WD_Gallery_CPT {
 
 	public function custom_columns($column, $post_id) {
 		switch($column) {
-			case 'shortcode':
-				echo '[wd_gallery ID='.$post_id.']';
-				break;
 			case 'featured_image':
 				$post_thumbnail_id = get_post_thumbnail_id($post_id);
 				
@@ -206,7 +203,6 @@ class WD_Gallery_CPT {
 
 		$new_columns['featured_image'] = __('Cover', 'wd-gallery');
 		$new_columns['title'] = __('Title', 'wd-gallery');
-		$new_columns['shortcode'] = __('Shortcode', 'wd-gallery');
 		$new_columns['date'] = __('Date', 'wd-gallery');
 		
 		return $new_columns;
