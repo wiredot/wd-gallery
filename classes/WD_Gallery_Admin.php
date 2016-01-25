@@ -18,7 +18,6 @@ class WD_Gallery_Admin {
 
 	public function admin_js() {
 		wp_enqueue_script( 'wd_gallery', WD_GALLERY_URL . 'assets/js/wd_gallery.js', array('jquery'), '1.0.0', true );
-		wp_enqueue_script( 'wd_gallery_media_button', WD_GALLERY_URL . 'assets/js/wd_gallery_media_button.js', array('jquery'), '1.0.0', true );
 	}
 
 	public function add_action_links($links, $file) {

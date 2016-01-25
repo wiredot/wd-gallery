@@ -21,7 +21,7 @@ class WD_Gallery_Shortcode {
 	}
 
 	public function add_media_button() {
-		echo '<a href="#TB_inline?width=480&amp;inlineId=wd_gallery_media_content&amp;width=753&amp;height=657" class="thickbox button" id="" title="Add wd Gallery"><span class=""></span> Add wd Gallery</a>';
+		echo '<a href="#TB_inline?width=400&amp;inlineId=wd_gallery_media_content&amp;width=753&amp;height=657" class="thickbox button" id="" title="Add wd Gallery"><span class=""></span> Add wd Gallery</a>';
 	}
 
 	public function add_media_content() {

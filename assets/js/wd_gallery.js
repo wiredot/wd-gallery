@@ -177,3 +177,12 @@ function newPhotoTemplate(id, title, caption, alt, photo) {
 
 	return template;
 }
+
+function wdGalleryInsertForm(galleryID) {
+	if (galleryID > 0) {
+		window.send_to_editor("[wd_gallery ID="+galleryID+"]");
+	} else {
+		window.send_to_editor("[wd_gallery]");
+	}
+	
+}
