@@ -25,10 +25,10 @@ class WD_Gallery_Shortcode {
 	}
 
 	public function add_media_content() {
-		echo '<div id="wd_gallery_media_content" style="display:none;">
-			<div class="wrap">
-                media_contentmedia_content
-        	</div>';
+		global $wd_gallery_query;
+		$wd_gallery_query = (new WD_Gallery_List)->get_list();
+		$smarty = (new WD_Gallery_Smarty)->get_smarty();
+		$smarty->display('admin/media-button-content.html');
 	}
 
 // class end

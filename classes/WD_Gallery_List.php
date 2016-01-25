@@ -9,6 +9,13 @@ class WD_Gallery_List {
 	public function show_list() {
 		global $wd_gallery_query;
 
+		$wd_gallery_query = $this->get_list();
+
+		$smarty = (new WD_Gallery_Smarty)->get_smarty();
+		return $smarty->fetch('wd-gallery-list.html');
+	}
+
+	public function get_list() {
 		$args = array(
 			'post_type' => 'wd_gallery',
 			'order' => 'ASC',
@@ -16,10 +23,7 @@ class WD_Gallery_List {
 			'posts_per_page' => '-1',
 		);
 
-		$wd_gallery_query = new WP_Query( $args );
-
-		$smarty = (new WD_Gallery_Smarty)->get_smarty();
-		return $smarty->fetch('wd-gallery-list.html');
+		return new WP_Query( $args );
 	}
 
 // class end
