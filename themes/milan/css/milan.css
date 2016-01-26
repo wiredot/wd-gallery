@@ -1,8 +1,7 @@
-html {
+.wd-gallery {
   box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
+  .wd-gallery *, .wd-gallery *::after, .wd-gallery *::before {
+    box-sizing: inherit; }
 
 .wd-gallery.gallery-list.milan {
   max-width: 1150px;

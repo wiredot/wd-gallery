@@ -2,6 +2,14 @@
 @import 'variables';
 @import '../../lib/neat/app/assets/stylesheets/neat';
 
+.wd-gallery {
+	box-sizing: border-box;
+
+	*, *::after, *::before {
+		box-sizing: inherit;
+	}
+}
+
 .wd-gallery.gallery-list.milan {
 	@include outer-container();
 

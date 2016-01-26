@@ -17,7 +17,7 @@ class WD_Gallery_List {
 
 		$wd_gallery_query = $this->get_list();
 
-		$smarty = (new WD_Gallery_Smarty($this->active_theme->get_path().'templates/'))->get_smarty();
+		$smarty = (new WD_Gallery_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();
 		return $smarty->fetch('wd-gallery-list.html');
 	}
 

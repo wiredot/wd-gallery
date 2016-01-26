@@ -16,8 +16,8 @@ class WD_Gallery_Theme {
 
 	public function __construct($name) {
 		$this->name = $name;
-		$this->path = WD_GALLERY_PATH.'/themes/'.$name.'/';
-		$this->url = WD_GALLERY_URL.'/themes/'.$name.'/';
+		$this->path = WD_GALLERY_PATH.'/themes/'.$name;
+		$this->url = WD_GALLERY_URL.'themes/'.$name;
 		$this->get_theme_config();
 
 		add_filter( 'wp_enqueue_scripts', array($this, 'add_css') );
