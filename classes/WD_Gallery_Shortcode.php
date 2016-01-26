@@ -4,7 +4,11 @@ namespace WD_Gallery;
 
 class WD_Gallery_Shortcode {
 
-	public function __construct() {
+	private $active_theme;
+
+	public function __construct($active_theme) {
+		$this->active_theme = $active_theme;
+
 		add_shortcode( 'wd_gallery', array($this, 'show_shortcode' ) );
 		add_action('media_buttons', array($this, 'add_media_button'), 999);
 		add_action('admin_footer', array($this, 'add_media_content'));
@@ -12,10 +16,10 @@ class WD_Gallery_Shortcode {
 
 	public function show_shortcode($atts) {
 		if (is_array($atts) && array_key_exists('id', $atts)) {
-			$WD_Gallery_Single = new WD_Gallery_Single;
+			$WD_Gallery_Single = new WD_Gallery_Single($this->active_theme);
 			return $WD_Gallery_Single->show_single($atts['id']);
 		} else {
-			$WD_Gallery_List = new WD_Gallery_List;
+			$WD_Gallery_List = new WD_Gallery_List($this->active_theme);
 			return $WD_Gallery_List->show_list();
 		}
 	}

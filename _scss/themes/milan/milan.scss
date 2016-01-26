@@ -1,0 +1,37 @@
+@import '../../lib/bourbon/app/assets/stylesheets/bourbon';
+@import 'variables';
+@import '../../lib/neat/app/assets/stylesheets/neat';
+
+.wd-gallery.gallery-list.milan {
+	@include outer-container();
+
+	li {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 $gutter 0;
+		@include span-columns(6);
+		@include omega(2n);
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.wd-gallery.gallery-single.milan {
+	@include outer-container();
+
+	li {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 $gutter 0;
+		@include span-columns(4);
+		@include omega(3n);
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

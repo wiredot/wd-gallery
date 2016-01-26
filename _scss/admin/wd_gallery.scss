@@ -1,4 +1,4 @@
-@import 'lib/bourbon/app/assets/stylesheets/bourbon';
+@import '../lib/bourbon/app/assets/stylesheets/bourbon';
 
 i.mce-i-icon {
 	font: normal 20px/1 'dashicons';
@@ -69,5 +69,5 @@ i.mce-i-icon {
 	}
 }
 
-@import 'lib/wd-gallery-themes.scss';
-@import 'lib/wd-gallery-media.scss';
+@import 'styles/wd-gallery-themes';
+@import 'styles/wd-gallery-media';

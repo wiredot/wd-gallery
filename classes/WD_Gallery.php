@@ -6,18 +6,29 @@ class WD_Gallery {
 
 	private static $instance = null;
 
+	private $active_theme_name;
+
+	public $active_theme;
+
 	private function __construct() {
 		if (is_admin()) {
-			$WD_Gallery_Admin = new WD_Gallery_Admin();
+			// init all admin functionality
+			new WD_Gallery_Admin();
 		}
 
-		$WD_Gallery_CPT = new WD_Gallery_CPT();
-		$WD_Gallery_MB = new WD_Gallery_MB();
-		new WD_Gallery_Shortcode();
-		new WD_Gallery_Theme_Directory();
+		// init Custom Post Type
+		new WD_Gallery_CPT();
 
-//		new WD_Gallery_Theme('zurich');
+		// init Meta Boxes
+		new WD_Gallery_MB();
+		
+		$WD_Gallery_Theme_Directory = new WD_Gallery_Theme_Directory();
+		$this->active_theme_name = $WD_Gallery_Theme_Directory->get_active_theme();
 
+		$this->active_theme = new WD_Gallery_Theme($this->active_theme_name);
+
+		// init shortcodes
+		new WD_Gallery_Shortcode($this->active_theme);
 		// exit;
 
 		// // add activation & deactivation actions
@@ -25,6 +36,11 @@ class WD_Gallery {
 		// add_action('deactivate_' . $this->plugin_basename, array($this, 'deactivate'));
 
 		//add_filter( 'single_template', array($this, 'get_custom_post_type_template' ));
+	}
+
+	public function get_active_theme() {
+		return 'aa';
+		return $this->active_theme_name;
 	}
 
 	public static function run() {

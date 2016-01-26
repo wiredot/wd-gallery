@@ -19,7 +19,7 @@ class WD_Gallery_Theme_Directory {
 		}
 	}
 
-	public function find_themes() {
+	private function find_themes() {
 		return $this->find_themes_in_directory(WD_GALLERY_PATH.'/themes/');
 	}
 
@@ -55,7 +55,7 @@ class WD_Gallery_Theme_Directory {
 		return $this->active_theme;
 	}
 
-	public function find_active_theme() {
+	private function find_active_theme() {
 		$active_theme = get_option( 'wd-gallery-active-theme' );
 		if ( $active_theme ) {
 			return $active_theme;

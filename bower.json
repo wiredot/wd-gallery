@@ -1,6 +1,7 @@
 {
     "name":  "wd-gallery",
     "dependencies": {
-        "bourbon": "latest"
+        "bourbon": "latest",
+        "neat": "latest"
     }
 }
