@@ -8,7 +8,7 @@ class WD_Gallery_List {
 
 	private $active_theme;
 
-	public function __construct($active_theme) {
+	public function __construct($active_theme = 'admin') {
 		$this->active_theme = $active_theme;
 	}
 

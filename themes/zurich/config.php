@@ -4,9 +4,12 @@ $wdg_theme_config = array(
 	'id' => 'zurich',
 	'name' => 'Zurich',
 	'css' => array(
-		'zurich' => 'css/zurich.css'
+		'fresco' => 'assets/fresco/css/fresco/fresco.css',
+		'zurich' => 'assets/css/zurich.css'
 	),
 	'js' => array(
+		'fresco' => 'assets/fresco/js/fresco/fresco.js',
+		'zurich' => 'assets/js/zurich.js'
 	),
 	'author' => 'wiredot'
 );

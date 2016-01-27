@@ -1,0 +1,5 @@
+<ul class="wd-gallery gallery-single zurich">
+	{foreach from=$photos item=photo}
+		<li><a href="{img id=$photo w=1024 q=95 link=1}" class="fresco" data-fresco-group="wd-gallery-{the_ID}" data-fresco-caption="Caption below the image">{img id=$photo w=200 h=200 zc=1 q=90 title={the_title id=$photo} alt={alt id=$photo}}</a></li>
+	{/foreach}
+</ul>

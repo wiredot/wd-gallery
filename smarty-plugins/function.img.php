@@ -24,5 +24,10 @@ function smarty_function_img($params, $template) {
 	$post_thumbnail_id = $params['id'];
 
 	$WD_Gallery_Image = new WD_Gallery_Image($post_thumbnail_id, $params);
+
+	if (isset($params['link']) && $params['link']) {
+		return $WD_Gallery_Image->get_url();
+	}
+	
 	return $WD_Gallery_Image->get_image();
 }

@@ -3,43 +3,15 @@
   .wd-gallery *, .wd-gallery *::after, .wd-gallery *::before {
     box-sizing: inherit; }
 
-.wd-gallery.gallery-list.milan {
+.wd-gallery.gallery-list.zurich {
   max-width: 1150px;
   margin-left: auto;
   margin-right: auto; }
-  .wd-gallery.gallery-list.milan::after {
+  .wd-gallery.gallery-list.zurich::after {
     clear: both;
     content: "";
     display: table; }
-  .wd-gallery.gallery-list.milan li {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 50px 0;
-    float: left;
-    display: block;
-    margin-right: 4.34783%;
-    width: 47.82609%; }
-    .wd-gallery.gallery-list.milan li:last-child {
-      margin-right: 0; }
-    .wd-gallery.gallery-list.milan li:nth-child(2n) {
-      margin-right: 0; }
-    .wd-gallery.gallery-list.milan li:nth-child(2n+1) {
-      clear: left; }
-    .wd-gallery.gallery-list.milan li img {
-      width: 100%;
-      height: auto; }
-    .wd-gallery.gallery-list.milan li h2 {
-      margin-top: 20px; }
-
-.wd-gallery.gallery-single.milan {
-  max-width: 1150px;
-  margin-left: auto;
-  margin-right: auto; }
-  .wd-gallery.gallery-single.milan::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .wd-gallery.gallery-single.milan li {
+  .wd-gallery.gallery-list.zurich li {
     list-style: none;
     padding: 0;
     margin: 0 0 50px 0;
@@ -47,12 +19,40 @@
     display: block;
     margin-right: 4.34783%;
     width: 30.43478%; }
-    .wd-gallery.gallery-single.milan li:last-child {
+    .wd-gallery.gallery-list.zurich li:last-child {
       margin-right: 0; }
-    .wd-gallery.gallery-single.milan li:nth-child(3n) {
+    .wd-gallery.gallery-list.zurich li:nth-child(3n) {
       margin-right: 0; }
-    .wd-gallery.gallery-single.milan li:nth-child(3n+1) {
+    .wd-gallery.gallery-list.zurich li:nth-child(3n+1) {
       clear: left; }
-    .wd-gallery.gallery-single.milan li img {
+    .wd-gallery.gallery-list.zurich li img {
+      width: 100%;
+      height: auto; }
+    .wd-gallery.gallery-list.zurich li h2 {
+      margin-top: 20px; }
+
+.wd-gallery.gallery-single.zurich {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto; }
+  .wd-gallery.gallery-single.zurich::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .wd-gallery.gallery-single.zurich li {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 50px 0;
+    float: left;
+    display: block;
+    margin-right: 4.34783%;
+    width: 21.73913%; }
+    .wd-gallery.gallery-single.zurich li:last-child {
+      margin-right: 0; }
+    .wd-gallery.gallery-single.zurich li:nth-child(4n) {
+      margin-right: 0; }
+    .wd-gallery.gallery-single.zurich li:nth-child(4n+1) {
+      clear: left; }
+    .wd-gallery.gallery-single.zurich li img {
       width: 100%;
       height: auto; }

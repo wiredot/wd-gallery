@@ -10,15 +10,15 @@
 	}
 }
 
-.wd-gallery.gallery-list.milan {
+.wd-gallery.gallery-list.zurich {
 	@include outer-container();
 
 	li {
 		list-style: none;
 		padding: 0;
 		margin: 0 0 $gutter 0;
-		@include span-columns(6);
-		@include omega(2n);
+		@include span-columns(4);
+		@include omega(3n);
 
 		img {
 			width: 100%;
@@ -31,15 +31,15 @@
 	}
 }
 
-.wd-gallery.gallery-single.milan {
+.wd-gallery.gallery-single.zurich {
 	@include outer-container();
 
 	li {
 		list-style: none;
 		padding: 0;
 		margin: 0 0 $gutter 0;
-		@include span-columns(4);
-		@include omega(3n);
+		@include span-columns(3);
+		@include omega(4n);
 
 		img {
 			width: 100%;

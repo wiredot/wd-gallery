@@ -10,7 +10,7 @@ class WD_Gallery_Image {
 	
 	private $params = array(
 		'w' => 100,
-		'h' => 100,
+		'h' => null,
 		'q' => 95,
 		'zc' => 1
 	);

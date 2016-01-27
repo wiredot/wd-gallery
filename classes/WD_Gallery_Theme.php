@@ -47,8 +47,8 @@ class WD_Gallery_Theme {
 	}
 
 	public function add_js() {
-		foreach ($this->js as $key => $css) {
-			wp_enqueue_script( $key, $this->url . '/' . $js, array(), '1.0.0', true );
+		foreach ($this->js as $key => $js) {
+			wp_enqueue_script( $key, $this->url . '/' . $js, array('jquery'), '1.0.0', true );
 		}
 	}
 
