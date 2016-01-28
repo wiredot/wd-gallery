@@ -16,9 +16,22 @@
 	li {
 		list-style: none;
 		padding: 0;
-		margin: 0 0 $gutter 0;
-		@include span-columns(4);
-		@include omega(3n);
+		margin-bottom: 60px;
+
+		@include media(801px) {
+			@include span-columns(4);
+			@include omega(3n);
+		}
+
+		@include media(min-width 401px max-width 800px) {
+			@include span-columns(6);
+			@include omega(2n);
+			margin-bottom: 40px;
+		}
+
+		@include media(max-width 400px) {
+			margin-bottom: 40px;
+		}
 
 		img {
 			width: 100%;
@@ -26,7 +39,7 @@
 		}
 
 		h2 {
-			margin-top: 20px;
+			margin: 20px 0 0 0;
 		}
 	}
 }
@@ -37,9 +50,24 @@
 	li {
 		list-style: none;
 		padding: 0;
-		margin: 0 0 $gutter 0;
-		@include span-columns(3);
-		@include omega(4n);
+		margin-bottom: 30px;
+
+		@include media(901px) {
+			@include span-columns(3);
+			@include omega(4n);
+		}
+
+		@include media(min-width 451px max-width 900px) {
+			@include span-columns(4);
+			@include omega(3n);
+			margin-bottom: 20px;
+		}
+
+		@include media(max-width 450px) {
+			margin-bottom: 20px;
+		}
+
+
 
 		img {
 			width: 100%;

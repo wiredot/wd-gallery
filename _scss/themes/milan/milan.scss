@@ -16,9 +16,12 @@
 	li {
 		list-style: none;
 		padding: 0;
-		margin: 0 0 $gutter 0;
-		@include span-columns(6);
-		@include omega(2n);
+		margin-bottom: 50px;
+		
+		@include media(451px) {
+			@include span-columns(6);
+			@include omega(2n);
+		}
 
 		img {
 			width: 100%;
@@ -26,7 +29,7 @@
 		}
 
 		h2 {
-			margin-top: 20px;
+			margin: 20px 0 0 0;
 		}
 	}
 }
@@ -37,9 +40,17 @@
 	li {
 		list-style: none;
 		padding: 0;
-		margin: 0 0 $gutter 0;
-		@include span-columns(4);
-		@include omega(3n);
+		margin-bottom: 20px;
+		
+		@include media(801px) {
+			@include span-columns(4);
+			@include omega(3n);
+		}
+
+		@include media(min-width 401px max-width 800px) {
+			@include span-columns(6);
+			@include omega(2n);
+		}
 
 		img {
 			width: 100%;

@@ -19,7 +19,7 @@ class WD_Gallery_Image {
 		'class' => null,
 		'alt' => null,
 		'title' => null,
-		'id' => null
+		'idtag' => null
 	);
 
 	private $metadata;
@@ -46,15 +46,15 @@ class WD_Gallery_Image {
 			$img.= ' class="'.$this->attributes['class'].'"';
 		}
 		
-		if ($this->attributes['id']) {
-			$img.= ' id="'.$this->attributes['id'].'"';
+		if ($this->attributes['idtag']) {
+			$img.= ' id="'.$this->attributes['idtag'].'"';
 		}
 		
-		if (isset($this->params['alt']) && $this->attributes['alt']) {
+		if ($this->attributes['alt']) {
 			$img.= ' alt="'.$this->attributes['alt'].'"';
 		}
 
-		if (isset($this->params['title']) && $this->attributes['title']) {
+		if ($this->attributes['title']) {
 			$img.= ' title="'.$this->attributes['title'].'"';
 		}
 		
