@@ -1,0 +1,35 @@
+{
+  "name": "wd-gallery",
+  "version": "1.0.0",
+  "description": "wd Gallery WordPress plugin",
+  "main": "wd-gallery.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wiredot/wd-gallery.git"
+  },
+  "keywords": [
+    "gallery",
+    "WordPress",
+    "plugin"
+  ],
+  "author": "WireDot Labs",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/wiredot/wd-gallery/issues"
+  },
+  "homepage": "https://github.com/wiredot/wd-gallery#readme",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svgmin": "^1.2.1",
+    "gulp-svgstore": "^5.0.5",
+    "gulp-tinypng": "^1.0.2",
+    "path": "^0.12.7"
+  }
+}

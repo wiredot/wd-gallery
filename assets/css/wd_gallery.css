@@ -45,6 +45,17 @@ i.mce-i-icon {
 .locale-pl-pl .fixed .column-date {
   width: 11%; }
 
+.wp-media-buttons .wd-gallery-media-button img {
+  width: 16px;
+  height: 16px;
+  padding: 0 2px 0 0;
+  margin-top: -3px; }
+
+.menu-icon-wd_gallery img {
+  width: 20px;
+  height: 20px;
+  margin-top: -2px; }
+
 .wd-gallery-themes h1 {
   margin-bottom: 15px; }
 

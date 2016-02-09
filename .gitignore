@@ -1,4 +1,5 @@
-_scss/lib
+src/bower
 lib/composer
 vendor
 composer.lock
+node_modules
