@@ -17,24 +17,30 @@ i.mce-i-icon {
     clear: both;
     content: "";
     display: table; }
+
 .wd_gallery_mb .wd_gallery_img, .wd_gallery_mb .wd_gallery_details {
   float: left; }
+
 .wd_gallery_mb .wd_gallery_img {
   width: 20%; }
   .wd_gallery_mb .wd_gallery_img img {
     width: 100%;
     cursor: ns-resize; }
+
 .wd_gallery_mb .wd_gallery_details {
   width: 60%;
   padding-left: 2%; }
+
 .wd_gallery_mb label, .wd_gallery_mb input {
   display: block;
   float: left;
   width: 20%; }
+
 .wd_gallery_mb label {
   text-align: right;
   padding-right: 2%;
   line-height: 30px; }
+
 .wd_gallery_mb input {
   width: 70%;
   margin-bottom: 10px; }
@@ -81,3 +87,5 @@ i.mce-i-icon {
     float: right;
     margin-top: 10px;
     display: block; }
+
+/*# sourceMappingURL=wd-gallery.css.map */

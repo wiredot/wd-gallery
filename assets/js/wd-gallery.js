@@ -186,3 +186,4 @@ function wdGalleryInsertForm(galleryID) {
 	}
 	
 }
+//# sourceMappingURL=wd-gallery.js.map
