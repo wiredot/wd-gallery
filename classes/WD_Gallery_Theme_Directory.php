@@ -92,9 +92,8 @@ class WD_Gallery_Theme_Directory {
 		$smarty = (new WD_Gallery_Smarty)->get_smarty();
 		$smarty->assign('active_theme', $this->get_active_theme());
 		$smarty->assign('themes', $this->get_themes());
-		$smarty->display('admin/themes.html');
+		$smarty->display('themes.html');
 	}
-
 
 // class end
 }

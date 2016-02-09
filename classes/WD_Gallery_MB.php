@@ -34,7 +34,7 @@ class WD_Gallery_MB {
 
 		$smarty = (new WD_Gallery_Smarty())->get_smarty();
 		$smarty->assign('photos', $photos);
-		echo $smarty->fetch('admin/photos.html');
+		echo $smarty->fetch('photos.html');
 	}
 
 	public function save_meta_boxes($post_id, $post, $update) {

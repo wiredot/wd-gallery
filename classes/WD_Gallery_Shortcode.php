@@ -32,7 +32,7 @@ class WD_Gallery_Shortcode {
 		global $wd_gallery_query;
 		$wd_gallery_query = (new WD_Gallery_List)->get_list();
 		$smarty = (new WD_Gallery_Smarty)->get_smarty();
-		$smarty->display('admin/media-button-content.html');
+		$smarty->display('media-button-content.html');
 	}
 
 // class end

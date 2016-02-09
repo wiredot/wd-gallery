@@ -184,5 +184,4 @@ function wdGalleryInsertForm(galleryID) {
 	} else {
 		window.send_to_editor("[wd_gallery]");
 	}
-	
 }

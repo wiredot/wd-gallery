@@ -34,7 +34,7 @@ gulp.task('scss', function() {
 });
 
 gulp.task('svg', function() {
-	return gulp.src( options.src + '/images/wd-gallery.svg')
+	return gulp.src( options.src + '/images/*.svg')
 		.pipe(svgmin(function (file) {
 			var prefix = path.basename(file.relative, path.extname(file.relative));
 			return {
@@ -49,9 +49,10 @@ gulp.task('svg', function() {
 		.pipe(gulp.dest( options.assets + '/images'));
 });
 
-
 gulp.task('default', ['scss', 'js', 'svg']);
 
 gulp.task('watch', function() {
-	//gulp.watch( options.src + '/js/*.js', ['js']);
+	gulp.watch( options.src + '/js/*.js', ['js']);
+	gulp.watch( options.src + '/scss/*.scss', ['scss']);
+	gulp.watch( options.src + '/images/*.svg', ['svg']);
 });

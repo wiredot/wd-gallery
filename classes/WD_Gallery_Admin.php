@@ -13,11 +13,11 @@ class WD_Gallery_Admin {
 	}
 
 	public function admin_css() {
-		wp_enqueue_style( 'wd_gallery', WD_GALLERY_URL . 'assets/css/wd_gallery.css' );
+		wp_enqueue_style( 'wd_gallery', WD_GALLERY_URL . 'assets/css/wd-gallery.css' );
 	}
 
 	public function admin_js() {
-		wp_enqueue_script( 'wd_gallery', WD_GALLERY_URL . 'assets/js/wd_gallery.js', array('jquery'), '1.0.0', true );
+		wp_enqueue_script( 'wd_gallery', WD_GALLERY_URL . 'assets/js/wd-gallery.js', array('jquery'), '1.0.0', true );
 	}
 
 	public function add_action_links($links, $file) {
