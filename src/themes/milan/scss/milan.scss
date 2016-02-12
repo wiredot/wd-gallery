@@ -1,6 +1,15 @@
-@import '../../lib/bourbon/app/assets/stylesheets/bourbon';
-@import 'variables';
-@import '../../lib/neat/app/assets/stylesheets/neat';
+@import '../../../bower/bourbon/app/assets/stylesheets/bourbon';
+
+@import '../../../bower/neat/app/assets/stylesheets/neat-helpers';
+$border-box-sizing: false;
+
+// --- grid settings ---
+$column: 50px;
+$gutter: 50px;
+$grid-columns: 12;
+$max-width: 1150px;
+
+@import '../../../bower/neat/app/assets/stylesheets/neat';
 
 .wd-gallery {
 	box-sizing: border-box;

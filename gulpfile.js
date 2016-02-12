@@ -9,11 +9,13 @@ var gulp = require('gulp'),
 	svgmin = require('gulp-svgmin'),
 	path = require('path'),
 	imagemin = require('gulp-tinypng'),
+	glob = require('glob'),
 	del = require('del');
 
 var options = {
 	dist: 'dist',
 	assets: 'assets',
+	themes: 'themes',
 	src: 'src'
 }
 
@@ -33,6 +35,22 @@ gulp.task('scss', function() {
 		.pipe(gulp.dest( options.assets + '/css'));
 });
 
+var themes = glob.sync(options.src + '/themes/*').map(function(themeDir) {
+    return path.basename(themeDir);
+});
+
+themes.forEach(function(name) {
+    gulp.task(name+'-scss', function() {
+        return gulp.src(options.src + '/themes/'+name+'/scss/*.scss')
+            .pipe(maps.init())
+			.pipe(sass())
+			.pipe(maps.write('./'))
+            .pipe(gulp.dest(options.themes + '/'+name+'/assets/css'))
+    });
+
+    gulp.task(name+'-theme', [name+'-scss']);
+});
+
 gulp.task('svg', function() {
 	return gulp.src( options.src + '/images/*.svg')
 		.pipe(svgmin(function (file) {
@@ -49,7 +67,8 @@ gulp.task('svg', function() {
 		.pipe(gulp.dest( options.assets + '/images'));
 });
 
-gulp.task('default', ['scss', 'js', 'svg']);
+gulp.task('default', ['scss', 'js', 'svg', 'themes']);
+gulp.task('themes', themes.map(function(name){ return name+'-theme'; }));
 
 gulp.task('watch', function() {
 	gulp.watch( options.src + '/js/*.js', ['js']);
