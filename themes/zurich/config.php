@@ -8,8 +8,7 @@ $wdg_theme_config = array(
 		'zurich' => 'assets/css/zurich.css'
 	),
 	'js' => array(
-		'fresco' => 'assets/fresco/js/fresco/fresco.js',
-		'zurich' => 'assets/js/zurich.js'
+		'fresco' => 'assets/fresco/js/fresco/fresco.js'
 	),
 	'author' => 'wiredot'
 );
