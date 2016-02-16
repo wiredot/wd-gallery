@@ -3,23 +3,26 @@
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	maps = require('gulp-sourcemaps'),
-	sass = require('gulp-svgstore'),
 	sass = require('gulp-sass'),
 	svgstore = require('gulp-svgstore'),
 	svgmin = require('gulp-svgmin'),
 	path = require('path'),
 	imagemin = require('gulp-tinypng'),
 	glob = require('glob'),
+	uglify = require('gulp-uglify'),
+	rename = require('gulp-rename'),
+	cssnano = require('gulp-cssnano'),
 	del = require('del');
 
 var options = {
 	dist: 'dist',
 	assets: 'assets',
 	themes: 'themes',
+	dist: 'dist',
 	src: 'src'
 }
 
-gulp.task('js', function() {
+gulp.task('concat_js', function() {
 	return gulp.src( options.src + '/js/*.js')
 		.pipe(maps.init())
 		.pipe(concat('wd-gallery.js'))
@@ -27,12 +30,26 @@ gulp.task('js', function() {
 		.pipe(gulp.dest( options.assets + '/js'));
 });
 
-gulp.task('scss', function() {
+gulp.task('js', ['concat_js'], function() {
+	return gulp.src( options.assets + '/js/wd-gallery.js')
+		.pipe(uglify())
+		.pipe(rename('wd-gallery.min.js'))
+		.pipe(gulp.dest( options.assets + '/js'));
+});
+
+gulp.task('concat_scss', function() {
 	return gulp.src( options.src + '/scss/wd-gallery.scss')
 		.pipe(maps.init())
 		.pipe(sass('wd-gallery.css'))
 		.pipe(maps.write('./'))
 		.pipe(gulp.dest( options.assets + '/css'));
+});
+
+gulp.task('scss', ['concat_scss'], function() {
+	return gulp.src( options.assets + '/css/wd-gallery.css' )
+		.pipe(cssnano())
+		.pipe(rename('wd-gallery.min.css'))
+		.pipe(gulp.dest( options.assets + '/css' ));
 });
 
 var themes = glob.sync(options.src + '/themes/*').map(function(themeDir) {
@@ -67,8 +84,9 @@ gulp.task('svg', function() {
 		.pipe(gulp.dest( options.assets + '/images'));
 });
 
-gulp.task('default', ['scss', 'js', 'svg', 'themes']);
 gulp.task('themes', themes.map(function(name){ return name+'-theme'; }));
+
+gulp.task('default', ['scss', 'js', 'svg', 'themes']);
 
 gulp.task('watch', function() {
 	gulp.watch( options.src + '/js/*.js', ['js']);
@@ -78,3 +96,31 @@ gulp.task('watch', function() {
 		gulp.watch( options.src + '/themes/'+name+'/scss/*.scss', [name + '-scss']);
 	});
 });
+
+// Production
+
+gulp.task('dist_clear', function() {
+	del( options.dist + '/classes' );
+	del( options.dist + '/smarty-plugins' );
+	del( options.dist + '/templates' );
+	del( options.dist + '/vendor' );
+	del( options.dist + '/assets' );
+});
+
+gulp.task('dist_copy', ['dist_clear', 'default'], function() {
+	return gulp.src( [
+			'classes/**/*', 
+			'smarty-plugins/**/*', 
+			'vendor/**/*', 
+			'composer.json', 
+			'readme.txt', 
+			'wd-gallery.php', 
+			'assets/**/*.{css,js,jpg,svg}', 
+			'themes/**/*.{css,js,jpg,svg,png,php}', 
+			'templates/**/*'
+		], {base: './'}
+	)
+	.pipe(gulp.dest( options.dist ));
+});
+
+gulp.task('dist', ['dist_copy']);

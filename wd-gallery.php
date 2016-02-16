@@ -4,7 +4,7 @@
   Plugin URI:  http://wiredot.com/
   Description: Photo Gallery 
   Author: wiredot
-  Version: 1.0.0 a1
+  Version: 1.0.0
   Author URI: http://wiredot.com/
   License: GPLv2 or later
  */

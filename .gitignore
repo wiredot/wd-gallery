@@ -4,3 +4,5 @@ vendor
 composer.lock
 node_modules
 assets/js/wd-gallery.js.map
+dist
+*.svn
