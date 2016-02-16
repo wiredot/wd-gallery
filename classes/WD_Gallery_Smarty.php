@@ -13,7 +13,11 @@ class WD_Gallery_Smarty {
 
 	private $smarty;
 
-	public function __construct($template = WD_GALLERY_PATH . '/templates/') {
+	public function __construct($template = null) {
+		if ( ! $template ) {
+			$template = WD_GALLERY_PATH . '/templates/';
+		}
+		
 		$template_dirs[] = $template;
 		$plugins_dirs[] = WD_GALLERY_PATH . '/smarty-plugins/';
 

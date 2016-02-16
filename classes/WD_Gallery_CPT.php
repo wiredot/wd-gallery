@@ -59,7 +59,7 @@ class WD_Gallery_CPT {
 				'capability_type' => 'page',
 				'hierarchical' => false,
 				'supports' => array('title', 'thumbnail', 'page-attributes'),
-				'rewrite' => array('slug' => 'gallery'),
+				'rewrite' => array('slug' => 'wd-gallery'),
 				'has_archive' => true,
 			)
 		);

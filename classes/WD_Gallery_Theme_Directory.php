@@ -6,7 +6,7 @@ class WD_Gallery_Theme_Directory {
 
 	private $themes;
 
-	private $active_theme = 'milan';
+	private $active_theme = 'zurich';
 
 	public function __construct() {
 		$this->themes = $this->find_themes();

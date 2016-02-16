@@ -4,7 +4,7 @@ Donate link: http://wiredot.com
 Tags: gallery, photo
 Requires at least: 4.4
 Tested up to: 4.4.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,5 +60,11 @@ There are 2 ways of installing the plugin:
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.1 =
+* [changed] changed rewrite slug to wp-gallery
+* [changed] changed default theme to Zurich
+* [changed] reset margin for images
+* [fix] added missing image width properties
+
+= 1.0.0 =
 * Initial Version

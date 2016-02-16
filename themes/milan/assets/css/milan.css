@@ -14,7 +14,7 @@
   .wd-gallery.gallery-list.milan li {
     list-style: none;
     padding: 0;
-    margin-bottom: 50px; }
+    margin: 0 0 50px 0; }
     @media screen and (min-width: 451px) {
       .wd-gallery.gallery-list.milan li {
         float: left;
@@ -44,7 +44,7 @@
   .wd-gallery.gallery-single.milan li {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px; }
+    margin: 0 0 20px 0; }
     @media screen and (min-width: 801px) {
       .wd-gallery.gallery-single.milan li {
         float: left;
