@@ -32,14 +32,14 @@ class WD_Gallery {
 		// exit;
 
 		// // add activation & deactivation actions
-		// add_action('activate_' . $this->plugin_basename, array($this, 'activate'));
-		// add_action('deactivate_' . $this->plugin_basename, array($this, 'deactivate'));
+
+		add_action('activate_' . $this->plugin_basename, array($this, 'activate'));
+		add_action('deactivate_' . $this->plugin_basename, array($this, 'deactivate'));
 
 		//add_filter( 'single_template', array($this, 'get_custom_post_type_template' ));
 	}
 
 	public function get_active_theme() {
-		return 'aa';
 		return $this->active_theme_name;
 	}
 
@@ -50,21 +50,21 @@ class WD_Gallery {
 		return self::$instance;
 	}
 
-	public function activate() {
+	public static function activate() {
 		$WD_Gallery_CPT = new WD_Gallery_CPT;
 		$WD_Gallery_CPT->create_post_type();
 		flush_rewrite_rules();
 
-		$this->init_directory(WP_CONTENT_DIR.'/cache');
-		$this->init_directory(WP_CONTENT_DIR.'/cache/wd-gallery');
-		$this->init_directory(WP_CONTENT_DIR.'/cache/wd-gallery/templates_c');
-		$this->init_directory(WP_CONTENT_DIR.'/cache/wd-gallery/smarty');
+		self::init_directory(WP_CONTENT_DIR.'/cache');
+		self::init_directory(WP_CONTENT_DIR.'/cache/wd-gallery');
+		self::init_directory(WP_CONTENT_DIR.'/cache/wd-gallery/templates_c');
+		self::init_directory(WP_CONTENT_DIR.'/cache/wd-gallery/smarty');
 	}
 
 	public function deactivate() {
 	}
 
-	private function init_directory($dir) {
+	private static function init_directory($dir) {
 		if ( ! file_exists($dir)) {
 			mkdir($dir, 0755);
 		}
