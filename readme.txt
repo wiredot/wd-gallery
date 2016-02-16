@@ -43,6 +43,7 @@ There are 2 ways of installing the plugin:
 8. You’re done!
 
 **Getting started**
+
 1. In your WordPress Back End go to wd Gallery -> Themes
 2. Activate the theme you like
 3. Go to wd Gallery and click ‘Add new Gallery’ button
