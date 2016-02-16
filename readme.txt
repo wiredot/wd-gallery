@@ -16,14 +16,12 @@ wd Gallery is a Simple and Beautiful Photo Gallery plugin for WordPress.
 
 == Installation ==
 
-# How to install
-
 There are 2 ways of installing the plugin:
 
 * From your WordPress Back End
 * By uploading the plugin to server
 
-## From your WordPress Back End
+**From your WordPress Back End**
 
 1. Log in to your WordPress Back End (usually your-domain.com/wp-admin/)
 2. Go to Plugins
@@ -33,7 +31,7 @@ There are 2 ways of installing the plugin:
 6. Activate the plugin
 7. You’re done!
 
-## By uploading the plugin to server
+**By uploading the plugin to server**
 
 1. Go to wd Gallery plugin page on WordPress.org (http://wordpress.org/plugins/wd-gallery
 2. Download the plugin
@@ -44,14 +42,14 @@ There are 2 ways of installing the plugin:
 7. Activate the plugin
 8. You’re done!
 
-# Getting started
+**Getting started**
 1. In your WordPress Back End go to wd Gallery -> Themes
 2. Activate the theme you like
 3. Go to wd Gallery and click ‘Add new Gallery’ button
 4. Type the name of the gallery and add images
 5. Publish and you have a first gallery finished
 
-# Creating gallery list page
+**Creating gallery list page**
 
 1. Create a new page or edit and existing one
 2. Click on ‘Add wd Gallery’ button directly above the Editor
