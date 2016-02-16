@@ -23,7 +23,9 @@ class WD_Gallery_Single {
 		$wd_gallery_query = new WP_Query( $args );
 
 		$photos = get_post_meta( $gallery_id, 'photos', true);
-		
+		if ( ! is_array($photos) || ! count($photos)) {
+			$photos = null;
+		}
 		$smarty = (new WD_Gallery_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();
 		$smarty->assign('photos', $photos);
 		$return = $smarty->fetch('wd-gallery-single.html');

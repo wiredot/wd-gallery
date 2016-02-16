@@ -116,7 +116,7 @@ gulp.task('dist_copy', ['dist_clear', 'default'], function() {
 			'readme.txt', 
 			'wd-gallery.php', 
 			'assets/**/*.{css,js,jpg,svg}', 
-			'themes/**/*.{css,js,jpg,svg,png,php}', 
+			'themes/**/*.{css,js,jpg,svg,png,php,html}', 
 			'templates/**/*'
 		], {base: './'}
 	)
