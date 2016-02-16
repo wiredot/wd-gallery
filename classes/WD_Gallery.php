@@ -29,14 +29,6 @@ class WD_Gallery {
 
 		// init shortcodes
 		new WD_Gallery_Shortcode($this->active_theme);
-		// exit;
-
-		// // add activation & deactivation actions
-
-		add_action('activate_' . $this->plugin_basename, array($this, 'activate'));
-		add_action('deactivate_' . $this->plugin_basename, array($this, 'deactivate'));
-
-		//add_filter( 'single_template', array($this, 'get_custom_post_type_template' ));
 	}
 
 	public function get_active_theme() {
