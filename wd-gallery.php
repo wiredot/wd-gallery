@@ -4,9 +4,9 @@
  * Plugin URI:  http://wiredot.com/wd-gallery
  * Description: Photo Gallery 
  * Author: WireDot Labs
- * Version: 1.0.2
+ * Version: 1.0.3
  * Text Domain: wd-gallery
- * Domain Path: languages
+ * Domain Path: /languages
  * Author URI: http://wiredot.com/
  * License: GPLv2 or later
  */

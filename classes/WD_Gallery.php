@@ -11,6 +11,8 @@ class WD_Gallery {
 	public $active_theme;
 
 	private function __construct() {
+		add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
+
 		if (is_admin()) {
 			// init all admin functionality
 			new WD_Gallery_Admin();
@@ -69,6 +71,14 @@ class WD_Gallery {
 			$single_template = $this->plugin_dir . '/single-wd_gallery.php';
 		}
 		return $single_template;
+	}
+
+	public function load_plugin_textdomain() {
+		load_plugin_textdomain(
+			'wd-gallery',
+			false,
+			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+		);
 	}
 
 // class end	

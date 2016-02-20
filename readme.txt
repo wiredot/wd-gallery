@@ -4,7 +4,7 @@ Donate link: http://wiredot.com
 Tags: gallery, photo
 Requires at least: 4.4
 Tested up to: 4.4.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,6 +59,9 @@ There are 2 ways of installing the plugin:
 5. Save the page and you’re done!
 
 == Changelog ==
+
+= 1.0.3 =
+* [new] POT file
 
 = 1.0.2 =
 * [changed] improved content in help tab
