@@ -11,8 +11,6 @@ class WD_Gallery_CPT {
 			
 			add_filter( 'post_updated_messages', array( $this, 'updated_messages' ) );
 
-			add_action( 'contextual_help', array( $this, 'help_text'), 10, 3 );
-
 			add_action('admin_head', array( $this, 'help_tab'));
 
 			add_filter('pre_get_posts', array($this, 'set_list_views_order'));
@@ -106,30 +104,6 @@ class WD_Gallery_CPT {
 		return $messages;
 	}
 
-	public function help_text( $contextual_help, $screen_id, $screen ) {
-		//$contextual_help .= var_dump( $screen ); // use this to help determine $screen->id
-		if ( 'wd_gallery' == $screen->id ) {
-		$contextual_help =
-		  '<p>' . __('Things to remember when adding or editing a book:', 'wd-gallery') . '</p>' .
-		  '<ul>' .
-		  '<li>' . __('Specify the correct genre such as Mystery, or Historic.', 'wd-gallery') . '</li>' .
-		  '<li>' . __('Specify the correct writer of the book.  Remember that the Author module refers to you, the author of this book review.', 'wd-gallery') . '</li>' .
-		  '</ul>' .
-		  '<p>' . __('If you want to schedule the book review to be published in the future:', 'wd-gallery') . '</p>' .
-		  '<ul>' .
-		  '<li>' . __('Under the Publish module, click on the Edit link next to Publish.', 'wd-gallery') . '</li>' .
-		  '<li>' . __('Change the date to the date to actual publish this article, then click on Ok.', 'wd-gallery') . '</li>' .
-		  '</ul>' .
-		  '<p><strong>' . __('For more information:', 'wd-gallery') . '</strong></p>' .
-		  '<p>' . __('<a href="http://codex.wordpress.org/Posts_Edit_SubPanel" target="_blank">Edit Posts Documentation</a>', 'wd-gallery') . '</p>' .
-		  '<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'wd-gallery') . '</p>' ;
-		} elseif ( 'edit-wd_gallery' == $screen->id ) {
-		$contextual_help =
-		  '<p>' . __('This is the help screen displaying the table of books blah blah blah.', 'wd-gallery') . '</p>' ;
-		}
-		return $contextual_help;
-	}
-
 	public function help_tab() {
 
 		$screen = get_current_screen();
@@ -141,9 +115,36 @@ class WD_Gallery_CPT {
 
 		// Setup help tab args.
 		$args = array(
-			'id'      => 'you_custom_id', //unique id for the tab
-			'title'   => 'Custom Help', //unique visible title for the tab
-			'content' => '<h3>Help Title</h3><p>Help content</p>',  //actual help text
+			'id'      => 'wdg_getting_started', //unique id for the tab
+			'title'   => 'Getting Started', //unique visible title for the tab
+			'content' => '<h3>Getting Started</h3><ol>
+				<li>Go to wd Gallery and click ‘Add new Gallery’ button</li>
+				<li>Type the name of the gallery and add images</li>
+				<li>Publish and you have a just created your first photo gallery</li>
+			</ol>
+			<h4>Creating gallery list page</h4>
+			<ol>
+				<li>Create a new page or edit and existing one</li>
+				<li>Click on ‘Add wd Gallery’ button directly above the Editor</li>
+				<li>Press the ‘Insert Shortcode’ button for Galleries overview</li>
+				<li>You should have a short code in your editor ([wd_gallery])</li>
+				<li>Save the page and you\’re done!</li>
+			</ol>
+			',  //actual help text
+		);
+
+		// Add the help tab.
+		$screen->add_help_tab( $args );
+
+		$contextual_help = '<h3>' . __('Feedback', 'wd-gallery') . '</h3>' ;
+		$contextual_help.= '<p>' . __('Your opinion matters! We would appreciate if you can share what you think about wd Gallery with us. We would love to improve it!', 'wd-gallery') . '</p>' ;
+		$contextual_help.= '<p>' . __('Just shoot us an email at <a href="mailto:labs@wiredot.com">labs@wiredot.com</a>', 'wd-gallery') . '</p>' ;
+
+		// Setup help tab args.
+		$args = array(
+			'id'      => 'wdg_feedback', //unique id for the tab
+			'title'   => 'Feedback', //unique visible title for the tab
+			'content' => $contextual_help,  //actual help text
 		);
 
 		// Add the help tab.

@@ -1,12 +1,14 @@
 <?php
-/*
-  Plugin Name: wd Gallery
-  Plugin URI:  http://wiredot.com/
-  Description: Photo Gallery 
-  Author: wiredot
-  Version: 1.0.0
-  Author URI: http://wiredot.com/
-  License: GPLv2 or later
+/**
+ * Plugin Name: wd Gallery
+ * Plugin URI:  http://wiredot.com/wd-gallery
+ * Description: Photo Gallery 
+ * Author: WireDot Labs
+ * Version: 1.0.2
+ * Text Domain: wd-gallery
+ * Domain Path: languages
+ * Author URI: http://wiredot.com/
+ * License: GPLv2 or later
  */
 
 // If this file is called directly, abort.
