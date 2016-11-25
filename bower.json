@@ -1,6 +1,6 @@
 {
-    "name":  "wd-gallery",
-    "dependencies": {
+    "name":  "wp-photo-gallery",
+    "devDependencies": {
         "bourbon": "latest",
         "neat": "latest"
     }

@@ -25,30 +25,30 @@ var options = {
 gulp.task('concat_js', function() {
 	return gulp.src( options.src + '/js/*.js')
 		.pipe(maps.init())
-		.pipe(concat('wd-gallery.js'))
+		.pipe(concat('wp-photo-gallery.js'))
 		.pipe(maps.write('./'))
 		.pipe(gulp.dest( options.assets + '/js'));
 });
 
 gulp.task('js', ['concat_js'], function() {
-	return gulp.src( options.assets + '/js/wd-gallery.js')
+	return gulp.src( options.assets + '/js/wp-photo-gallery.js')
 		.pipe(uglify())
-		.pipe(rename('wd-gallery.min.js'))
+		.pipe(rename('wp-photo-gallery.min.js'))
 		.pipe(gulp.dest( options.assets + '/js'));
 });
 
 gulp.task('concat_scss', function() {
-	return gulp.src( options.src + '/scss/wd-gallery.scss')
+	return gulp.src( options.src + '/scss/wp-photo-gallery.scss')
 		.pipe(maps.init())
-		.pipe(sass('wd-gallery.css'))
+		.pipe(sass('wp-photo-gallery.css'))
 		.pipe(maps.write('./'))
 		.pipe(gulp.dest( options.assets + '/css'));
 });
 
 gulp.task('scss', ['concat_scss'], function() {
-	return gulp.src( options.assets + '/css/wd-gallery.css' )
+	return gulp.src( options.assets + '/css/wp-photo-gallery.css' )
 		.pipe(cssnano())
-		.pipe(rename('wd-gallery.min.css'))
+		.pipe(rename('wp-photo-gallery.min.css'))
 		.pipe(gulp.dest( options.assets + '/css' ));
 });
 
@@ -114,7 +114,7 @@ gulp.task('dist_copy', ['dist_clear', 'default'], function() {
 			'vendor/**/*', 
 			'composer.json', 
 			'readme.txt', 
-			'wd-gallery.php', 
+			'wp-photo-gallery.php', 
 			'assets/**/*.{css,js,jpg,svg}', 
 			'themes/**/*.{css,js,jpg,svg,png,php,html}', 
 			'templates/**/*'

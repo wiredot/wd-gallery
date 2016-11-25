@@ -1,10 +1,10 @@
 <?php
 
-namespace WD_Gallery;
+namespace WP_PG;
 
 use WP_Query;
 
-class WD_Gallery_Single {
+class WP_PG_Single {
 
 	private $active_theme;
 
@@ -13,22 +13,22 @@ class WD_Gallery_Single {
 	}
 
 	public function show_single($gallery_id) {
-		global $WD_Gallery_Smarty, $wd_gallery_query;
+		global $WP_PG_Smarty, $wp_pg_query;
 
 		$args = array(
-			'post_type' => 'wd_gallery', 
+			'post_type' => 'wp_pg', 
 			'p'=> $gallery_id
 		);
 
-		$wd_gallery_query = new WP_Query( $args );
+		$wp_pg_query = new WP_Query( $args );
 
 		$photos = get_post_meta( $gallery_id, 'photos', true);
 		if ( ! is_array($photos) || ! count($photos)) {
 			$photos = null;
 		}
-		$smarty = (new WD_Gallery_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();
+		$smarty = (new WP_PG_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();
 		$smarty->assign('photos', $photos);
-		$return = $smarty->fetch('wd-gallery-single.html');
+		$return = $smarty->fetch('wp-photo-gallery-single.html');
 		return $return;
 	}
 

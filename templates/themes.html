@@ -1,5 +1,5 @@
-<div class="wrap wd-gallery-themes">
-	<h1>{__('wd Gallery Themes', 'wd-gallery')}</h1>
+<div class="wrap wp-photo-gallery-themes">
+	<h1>{__('WP Photo Gallery Themes', 'wp-photo-gallery')}</h1>
 	<div class="theme-browser rendered">
 		<div class="themes">
 			{foreach from=$themes item=theme}
@@ -26,7 +26,7 @@
 				</div>
 				<h2 class="theme-name" id="{$theme.id}-name">{$theme.name}</h2>
 				<div class="theme-actions">
-					<a class="button button-secondary activate" href="{wp_nonce_url("?post_type=wd_gallery&page=themes&action=activate&theme={$theme.id}", "wd-gallery-activate-theme-{$theme.id}")}">Włącz</a>
+					<a class="button button-secondary activate" href="{wp_nonce_url("?post_type=wp_pg&page=themes&action=activate&theme={$theme.id}", "wp-photo-gallery-activate-theme-{$theme.id}")}">Włącz</a>
 				</div>
 			</div>
 			{/if}

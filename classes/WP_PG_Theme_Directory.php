@@ -1,8 +1,8 @@
 <?php
 
-namespace WD_Gallery;
+namespace WP_PG;
 
-class WD_Gallery_Theme_Directory {
+class WP_PG_Theme_Directory {
 
 	private $themes;
 
@@ -14,13 +14,13 @@ class WD_Gallery_Theme_Directory {
 
 		add_action('admin_menu', array($this, 'add_themes_submenu'));
 
-		if (isset($_GET['action']) && $_GET['action'] == 'activate' && isset($_GET['post_type']) && $_GET['post_type'] == 'wd_gallery' && isset($_GET['page']) && $_GET['page'] == 'themes') {
+		if (isset($_GET['action']) && $_GET['action'] == 'activate' && isset($_GET['post_type']) && $_GET['post_type'] == 'wp_pg' && isset($_GET['page']) && $_GET['page'] == 'themes') {
 			add_action('init', array($this, 'activate_theme'));
 		}
 	}
 
 	private function find_themes() {
-		return $this->find_themes_in_directory(WD_GALLERY_PATH.'/themes/');
+		return $this->find_themes_in_directory(WP_PG_PATH.'/themes/');
 	}
 
 	private function find_themes_in_directory($directory) {
@@ -31,11 +31,11 @@ class WD_Gallery_Theme_Directory {
 			// for each file with .config.php extension
 			while (false !== ($filename = readdir($handle))) {
 
-				if ($filename != '.' && $filename != '..' && is_dir(WD_GALLERY_PATH.'/themes/'.$filename)) {
-					include WD_GALLERY_PATH.'/themes/'.$filename.'/config.php';
-					$themes[$filename] = $wdg_theme_config;
-					if (file_exists(WD_GALLERY_PATH.'/themes/'.$filename.'/screenshot.png')) {
-						$themes[$filename]['screenshot'] = WD_GALLERY_URL.'/themes/'.$filename.'/screenshot.png';
+				if ($filename != '.' && $filename != '..' && is_dir(WP_PG_PATH.'/themes/'.$filename)) {
+					include WP_PG_PATH.'/themes/'.$filename.'/config.php';
+					$themes[$filename] = $wp_pg_theme_config;
+					if (file_exists(WP_PG_PATH.'/themes/'.$filename.'/screenshot.png')) {
+						$themes[$filename]['screenshot'] = WP_PG_URL.'/themes/'.$filename.'/screenshot.png';
 					} else {
 						$themes[$filename]['screenshot'] = '';
 					}
@@ -56,7 +56,7 @@ class WD_Gallery_Theme_Directory {
 	}
 
 	private function find_active_theme() {
-		$active_theme = get_option( 'wd-gallery-active-theme' );
+		$active_theme = get_option( 'wp-photo-gallery-active-theme' );
 		if ( $active_theme ) {
 			return $active_theme;
 		}
@@ -68,20 +68,20 @@ class WD_Gallery_Theme_Directory {
 		$nonce = $_REQUEST['_wpnonce'];
 		$theme = $_GET['theme'];
 
-		if (wp_verify_nonce( $nonce, 'wd-gallery-activate-theme-'.$theme )) {
-			update_option( 'wd-gallery-active-theme', $theme );
+		if (wp_verify_nonce( $nonce, 'wp-photo-gallery-activate-theme-'.$theme )) {
+			update_option( 'wp-photo-gallery-active-theme', $theme );
 		}
 
-		wp_redirect( '?post_type=wd_gallery&page=themes' );
+		wp_redirect( '?post_type=wp_pg&page=themes' );
 		exit;
 	}
 
 	public function add_themes_submenu() {
 		// add options page
 		add_submenu_page( 
-			'edit.php?post_type=wd_gallery', 
-			__( 'Themes', 'wd-gallery' ),
-			__( 'Themes', 'wd-gallery' ),
+			'edit.php?post_type=wp_pg', 
+			__( 'Themes', 'wp-photo-gallery' ),
+			__( 'Themes', 'wp-photo-gallery' ),
 			'read', 
 			'themes', 
 			array($this, 'themes_page')
@@ -89,7 +89,7 @@ class WD_Gallery_Theme_Directory {
 	}
 
 	public function themes_page() {
-		$smarty = (new WD_Gallery_Smarty)->get_smarty();
+		$smarty = (new WP_PG_Smarty)->get_smarty();
 		$smarty->assign('active_theme', $this->get_active_theme());
 		$smarty->assign('themes', $this->get_themes());
 		$smarty->display('themes.html');

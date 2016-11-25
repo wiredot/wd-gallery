@@ -1,10 +1,10 @@
 <?php
 
-namespace WD_Gallery;
+namespace WP_PG;
 
 use phpThumb;
 
-class WD_Gallery_Image {
+class WP_PG_Image {
 
 	private $image_id;
 	

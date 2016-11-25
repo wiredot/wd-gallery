@@ -1,4 +1,4 @@
-{if $photos}<ul class="wd-gallery gallery-single milan">
+{if $photos}<ul class="wp-photo-gallery gallery-single milan">
 	{foreach from=$photos item=photo}
 		<li><a href="{the_permalink id=$photo}">{img id=$photo w=200 h=140 zc=1 title={the_title id=$photo} alt={alt id=$photo}}</a></li>
 	{/foreach}

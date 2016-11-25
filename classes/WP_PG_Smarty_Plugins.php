@@ -1,8 +1,8 @@
 <?php
 
-namespace WD_Gallery;
+namespace WP_PG;
 
-class WD_Gallery_Smarty_Plugins {
+class WP_PG_Smarty_Plugins {
 
 	public function the_title($params, $template) {
 		$default_params = array(
@@ -110,13 +110,13 @@ class WD_Gallery_Smarty_Plugins {
 			}
 		}
 
-		$WD_Gallery_Image = new WD_Gallery_Image($post_thumbnail_id, $params, $attributes);
+		$WP_PG_Image = new WP_PG_Image($post_thumbnail_id, $params, $attributes);
 
 		if (isset($params['link']) && $params['link']) {
-			return $WD_Gallery_Image->get_url();
+			return $WP_PG_Image->get_url();
 		}
 		
-		return $WD_Gallery_Image->get_image();
+		return $WP_PG_Image->get_image();
 	}
 
 	public function alt($params, $template) {
@@ -137,7 +137,7 @@ class WD_Gallery_Smarty_Plugins {
 	}
 
 	public function loop($params, $content, $template, &$repeat) {
-		global $wd_gallery_query, $post, $page;
+		global $wp_pg_query, $post, $page;
 
 		$old_page = $page;
 		$old_post = $post;
@@ -146,10 +146,10 @@ class WD_Gallery_Smarty_Plugins {
 
 		$key = 0;
 
-		if ( $wd_gallery_query->have_posts() ) {
-			while ( $wd_gallery_query->have_posts() ) {
-				$wd_gallery_query->the_post();
-				$smarty = (new WD_Gallery_Smarty)->get_smarty();
+		if ( $wp_pg_query->have_posts() ) {
+			while ( $wp_pg_query->have_posts() ) {
+				$wp_pg_query->the_post();
+				$smarty = (new WP_PG_Smarty)->get_smarty();
 				$smarty->assign('key', $key);
 				$return.= $smarty->fetch('string:'.$content);
 			}

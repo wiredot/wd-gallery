@@ -5,21 +5,21 @@ jQuery(document).ready(function($){
 });
 
 function wdgInitSortable($) {
-	$('.wd_gallery_mb').sortable();
+	$('.wp_pg_mb').sortable();
 }
 
 function wdgInitPhotos($) {
-	$('.wd_gallery_add').click(function(event) {
+	$('.wp_pg_add').click(function(event) {
 		event.preventDefault();
 		media_upload();
 	});
 }
 
 function wdgInitRemove($) {
-	$('.wd_gallery_remove').unbind('click');
-	$('.wd_gallery_remove').click(function(event) {
+	$('.wp_pg_remove').unbind('click');
+	$('.wp_pg_remove').click(function(event) {
 		event.preventDefault();
-		$(this).parent('.wd_gallery_photo').slideUp(300, function(){
+		$(this).parent('.wp_pg_photo').slideUp(300, function(){
 			$(this).remove();
 		});
 	});
@@ -150,7 +150,7 @@ function media_upload() {
 			console.log(media_attachment);
 			jQuery.each(media_attachment, function( key, value ){
 				var template = newPhotoTemplate(value.id, value.title, value.caption, value.alt, value.url);
-				jQuery('.wd_gallery_mb').append(template);
+				jQuery('.wp_pg_mb').append(template);
 			});
 
 			wdgInitRemove(jQuery);
@@ -161,27 +161,27 @@ function media_upload() {
 }
 
 function newPhotoTemplate(id, title, caption, alt, photo) {
-	var template = '<div class="wd_gallery_photo">' +
-	' 	<div class="wd_gallery_img"><img src="'+photo+'"></div>' +
-	'	<div class="wd_gallery_details">' +
-	'		<label for="wd_gallery_title_'+id+'">Title</label>' +
-	'		<input type="text" id="wd_gallery_title_'+id+'" name="wd_gallery_title[]" value="'+title+'">' +
-	'		<label for="wd_gallery_caption'+id+'">Caption</label>' +
-	'		<input type="text" id="wd_gallery_caption'+id+'" name="wd_gallery_caption[]" value="'+caption+'">' +
-	'		<label for="wd_gallery_alt'+id+'">Alt Text</label>' +
-	'		<input type="text" id="wd_gallery_alt'+id+'" name="wd_gallery_alt[]" value="'+alt+'">' +
+	var template = '<div class="wp_pg_photo">' +
+	' 	<div class="wp_pg_img"><img src="'+photo+'"></div>' +
+	'	<div class="wp_pg_details">' +
+	'		<label for="wp_pg_title_'+id+'">Title</label>' +
+	'		<input type="text" id="wp_pg_title_'+id+'" name="wp_pg_title[]" value="'+title+'">' +
+	'		<label for="wp_pg_caption'+id+'">Caption</label>' +
+	'		<input type="text" id="wp_pg_caption'+id+'" name="wp_pg_caption[]" value="'+caption+'">' +
+	'		<label for="wp_pg_alt'+id+'">Alt Text</label>' +
+	'		<input type="text" id="wp_pg_alt'+id+'" name="wp_pg_alt[]" value="'+alt+'">' +
 	'	</div>' +
-	'	<input type="hidden" name="wd_gallery_photo[]" value="'+id+'">' +
-	'	<a href="#" class="button wd_gallery_remove">Remove Photo</a>' +
+	'	<input type="hidden" name="wp_pg_photo[]" value="'+id+'">' +
+	'	<a href="#" class="button wp_pg_remove">Remove Photo</a>' +
 	'</div>';
 
 	return template;
 }
 
-function wdGalleryInsertForm(galleryID) {
+function wpPhotoGalleryInsertForm(galleryID) {
 	if (galleryID > 0) {
-		window.send_to_editor("[wd_gallery ID="+galleryID+"]");
+		window.send_to_editor("[wp_pg ID="+galleryID+"]");
 	} else {
-		window.send_to_editor("[wd_gallery]");
+		window.send_to_editor("[wp_pg]");
 	}
 }
