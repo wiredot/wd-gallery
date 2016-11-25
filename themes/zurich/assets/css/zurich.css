@@ -10,7 +10,7 @@
   .wp-photo-gallery.gallery-list.zurich::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .wp-photo-gallery.gallery-list.zurich li {
     list-style: none;
     padding: 0;
@@ -56,7 +56,7 @@
   .wp-photo-gallery.gallery-single.zurich::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .wp-photo-gallery.gallery-single.zurich li {
     list-style: none;
     padding: 0;

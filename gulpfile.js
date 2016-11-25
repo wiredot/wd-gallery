@@ -37,19 +37,14 @@ gulp.task('js', ['concat_js'], function() {
 		.pipe(gulp.dest( options.assets + '/js'));
 });
 
-gulp.task('concat_scss', function() {
-	return gulp.src( options.src + '/scss/wp-photo-gallery.scss')
+gulp.task('scss', function() {
+	return gulp.src( options.src + '/scss/*.scss')
 		.pipe(maps.init())
-		.pipe(sass('wp-photo-gallery.css'))
+		.pipe(sass(''))
+		.pipe(cssnano())
+		.pipe(rename('wp-photo-gallery-admin.min.css'))
 		.pipe(maps.write('./'))
 		.pipe(gulp.dest( options.assets + '/css'));
-});
-
-gulp.task('scss', ['concat_scss'], function() {
-	return gulp.src( options.assets + '/css/wp-photo-gallery.css' )
-		.pipe(cssnano())
-		.pipe(rename('wp-photo-gallery.min.css'))
-		.pipe(gulp.dest( options.assets + '/css' ));
 });
 
 var themes = glob.sync(options.src + '/themes/*').map(function(themeDir) {

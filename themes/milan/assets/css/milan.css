@@ -10,7 +10,7 @@
   .wp-photo-gallery.gallery-list.milan::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .wp-photo-gallery.gallery-list.milan li {
     list-style: none;
     padding: 0;
@@ -40,7 +40,7 @@
   .wp-photo-gallery.gallery-single.milan::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .wp-photo-gallery.gallery-single.milan li {
     list-style: none;
     padding: 0;
