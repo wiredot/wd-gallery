@@ -29,7 +29,6 @@ use WP_PG\WP_PG;
 register_activation_hook( __FILE__, 'activate_wp_pg' );
 
 function activate_wp_pg() {
-<<<<<<< HEAD
 	return WP_PG::activate();
 }
 
@@ -38,13 +37,3 @@ function WP_PG() {
 }
 
 WP_PG();
-=======
-	return WD_PG::activate();
-}
-
-function WD_PG() {
-	return WD_PG::run();
-}
-
-WD_PG();
->>>>>>> b47225ab15bbe143233396b140be51b755efb807

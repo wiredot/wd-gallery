@@ -14,11 +14,7 @@ class WP_PG {
 	public $active_theme;
 
 	private function __construct() {
-<<<<<<< HEAD
 		$Preamp = Core::run(WP_PG_PATH.'/config/');
-=======
-		$Preamp = Core::run(WD_GALLERY_PATH.'/config/');
->>>>>>> b47225ab15bbe143233396b140be51b755efb807
 		// print_r(get_declared_classes());
 		// add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
 		//$input = new Input('asd');
