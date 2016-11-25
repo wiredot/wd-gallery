@@ -20,7 +20,7 @@ class WP_PG_Theme_Directory {
 	}
 
 	private function find_themes() {
-		return $this->find_themes_in_directory(WP_PG_PATH.'/themes/');
+		return $this->find_themes_in_directory(WD_GALLERY_PATH.'/themes/');
 	}
 
 	private function find_themes_in_directory($directory) {
@@ -31,11 +31,11 @@ class WP_PG_Theme_Directory {
 			// for each file with .config.php extension
 			while (false !== ($filename = readdir($handle))) {
 
-				if ($filename != '.' && $filename != '..' && is_dir(WP_PG_PATH.'/themes/'.$filename)) {
-					include WP_PG_PATH.'/themes/'.$filename.'/config.php';
+				if ($filename != '.' && $filename != '..' && is_dir(WD_GALLERY_PATH.'/themes/'.$filename)) {
+					include WD_GALLERY_PATH.'/themes/'.$filename.'/config.php';
 					$themes[$filename] = $wp_pg_theme_config;
-					if (file_exists(WP_PG_PATH.'/themes/'.$filename.'/screenshot.png')) {
-						$themes[$filename]['screenshot'] = WP_PG_URL.'/themes/'.$filename.'/screenshot.png';
+					if (file_exists(WD_GALLERY_PATH.'/themes/'.$filename.'/screenshot.png')) {
+						$themes[$filename]['screenshot'] = WD_GALLERY_URL.'/themes/'.$filename.'/screenshot.png';
 					} else {
 						$themes[$filename]['screenshot'] = '';
 					}

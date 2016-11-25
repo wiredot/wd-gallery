@@ -13,16 +13,16 @@ class WP_PG_Admin {
 	}
 
 	public function admin_css() {
-		wp_enqueue_style( 'wp_pg', WP_PG_URL . 'assets/css/wp-photo-gallery.css' );
+		wp_enqueue_style( 'wp_pg', WD_GALLERY_URL . 'assets/css/wp-photo-gallery.css' );
 	}
 
 	public function admin_js() {
-		wp_enqueue_script( 'wp_pg', WP_PG_URL . 'assets/js/wp-photo-gallery.js', array('jquery'), '1.0.0', true );
+		wp_enqueue_script( 'wp_pg', WD_GALLERY_URL . 'assets/js/wp-photo-gallery.js', array('jquery'), '1.0.0', true );
 	}
 
 	public function add_action_links($links, $file) {
 		// run for this plugin
-		if ($file == WP_PG_BASENAME) {
+		if ($file == WD_GALLERY_BASENAME) {
 			// settings link
 			$links[] = "<a href='edit.php?post_type=wp_pg&page=themes'>" . __('Themes', 'wp-photo-gallery') . "</a>";
 		}

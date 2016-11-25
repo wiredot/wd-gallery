@@ -25,7 +25,11 @@ class WP_PG_Shortcode {
 	}
 
 	public function add_media_button() {
+<<<<<<< HEAD
 		echo '<a href="#TB_inline?width=400&amp;inlineId=wp_pg_media_content&amp;width=753&amp;height=657" class="thickbox button wp-photo-gallery-media-button" id="" title="Add WP Photo Gallery"><img src="'.WP_PG_URL.'/assets/images/wp-photo-gallery.svg"> Add WP Photo Gallery</a>';
+=======
+		echo '<a href="#TB_inline?width=400&amp;inlineId=wp_pg_media_content&amp;width=753&amp;height=657" class="thickbox button wp-photo-gallery-media-button" id="" title="Add WP Photo Gallery"><img src="'.WD_GALLERY_URL.'/assets/images/wp-photo-gallery.svg"> Add WP Photo Gallery</a>';
+>>>>>>> b47225ab15bbe143233396b140be51b755efb807
 	}
 
 	public function add_media_content() {

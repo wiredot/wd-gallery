@@ -53,7 +53,7 @@ class WP_PG_CPT {
 				'show_in_menu' => true,
 				'show_in_admin_bar' => true,
 				'menu_position' => 80,
-				'menu_icon' => WP_PG_URL.'/assets/images/wp-photo-gallery.svg',
+				'menu_icon' => WD_GALLERY_URL.'/assets/images/wp-photo-gallery.svg',
 				'capability_type' => 'page',
 				'hierarchical' => false,
 				'supports' => array('title', 'thumbnail', 'page-attributes'),
