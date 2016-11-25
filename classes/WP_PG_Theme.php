@@ -1,8 +1,8 @@
 <?php
 
-namespace WD_Gallery;
+namespace WP_PG;
 
-class WD_Gallery_Theme {
+class WP_PG_Theme {
 
 	private $name;
 
@@ -30,12 +30,12 @@ class WD_Gallery_Theme {
 		if (file_exists($config_file)) {
 			require $config_file;
 
-			if (isset($wdg_theme_config['css'])) {
-				$this->css = $wdg_theme_config['css'];
+			if (isset($wp_pg_theme_config['css'])) {
+				$this->css = $wp_pg_theme_config['css'];
 			}
 		
-			if (isset($wdg_theme_config['js'])) {
-				$this->js = $wdg_theme_config['js'];
+			if (isset($wp_pg_theme_config['js'])) {
+				$this->js = $wp_pg_theme_config['js'];
 			}
 		}
 	}

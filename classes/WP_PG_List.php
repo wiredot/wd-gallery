@@ -1,10 +1,10 @@
 <?php
 
-namespace WD_Gallery;
+namespace WP_PG;
 
 use WP_Query;
 
-class WD_Gallery_List {
+class WP_PG_List {
 
 	private $active_theme;
 
@@ -13,17 +13,17 @@ class WD_Gallery_List {
 	}
 
 	public function show_list() {
-		global $wd_gallery_query;
+		global $wp_pg_query;
 
-		$wd_gallery_query = $this->get_list();
+		$wp_pg_query = $this->get_list();
 
-		$smarty = (new WD_Gallery_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();
-		return $smarty->fetch('wd-gallery-list.html');
+		$smarty = (new WP_PG_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();
+		return $smarty->fetch('wp-photo-gallery-list.html');
 	}
 
 	public function get_list() {
 		$args = array(
-			'post_type' => 'wd_gallery',
+			'post_type' => 'wp_pg',
 			'order' => 'ASC',
 			'orderby' => 'menu_order',
 			'posts_per_page' => '-1',

@@ -1,10 +1,10 @@
 <?php
 
-namespace WD_Gallery;
+namespace WP_PG;
 
-use WD_Gallery\WD_Gallery_Smarty;
+use WP_PG\WP_PG_Smarty;
 
-class WD_Gallery_MB {
+class WP_PG_MB {
 
 	public function __construct() {
 		// add meta boxes
@@ -16,10 +16,10 @@ class WD_Gallery_MB {
 
 	public function add_meta_boxes() {
 		add_meta_box(
-			'wd_gallery_mb_images', 
-			__('Photos', 'wd-gallery'), 
+			'wp_pg_mb_images', 
+			__('Photos', 'wp-photo-gallery'), 
 			array($this, 'show_meta_box'), 
-			'wd_gallery', 
+			'wp_pg', 
 			'normal', 
 			'high'
 		);
@@ -32,13 +32,13 @@ class WD_Gallery_MB {
 		}
 		//update_post_meta( $post->ID, 'photos', array(138, 136, 119) );
 
-		$smarty = (new WD_Gallery_Smarty())->get_smarty();
+		$smarty = (new WP_PG_Smarty())->get_smarty();
 		$smarty->assign('photos', $photos);
 		echo $smarty->fetch('photos.html');
 	}
 
 	public function save_meta_boxes($post_id, $post, $update) {
-		if ( ! isset($_POST['wd_gallery_photo_nonce']) || ! wp_verify_nonce($_POST['wd_gallery_photo_nonce'], 'wd_gallery_photo_insert')) {
+		if ( ! isset($_POST['wp_pg_photo_nonce']) || ! wp_verify_nonce($_POST['wp_pg_photo_nonce'], 'wp_pg_photo_insert')) {
 			return;
 		}
 
@@ -50,56 +50,56 @@ class WD_Gallery_MB {
 	        return;
 	    }
 
-	    if ( $post->post_type != 'wd_gallery' ) {
+	    if ( $post->post_type != 'wp_pg' ) {
 	        return;
 	    }
 
-	    if ( isset($_POST['wd_gallery_photo']) && is_array($_POST['wd_gallery_photo']) ) {
+	    if ( isset($_POST['wp_pg_photo']) && is_array($_POST['wp_pg_photo']) ) {
 	    	// validate photo ids
-	    	$wd_gallery_photo = array_map( 'intval', $_POST['wd_gallery_photo'] );
+	    	$wp_pg_photo = array_map( 'intval', $_POST['wp_pg_photo'] );
 	    } else {
 	    	return;
 	    }
 
-	    if ( isset($_POST['wd_gallery_title']) && is_array($_POST['wd_gallery_title']) ) {
-	    	$wd_gallery_title = array_map( 'sanitize_text_field', $_POST['wd_gallery_title'] );
+	    if ( isset($_POST['wp_pg_title']) && is_array($_POST['wp_pg_title']) ) {
+	    	$wp_pg_title = array_map( 'sanitize_text_field', $_POST['wp_pg_title'] );
 	    } else {
 	    	return;
 	    }
 
-	    if ( isset($_POST['wd_gallery_caption']) && is_array($_POST['wd_gallery_caption']) ) {
-	    	$wd_gallery_caption = array_map( 'sanitize_text_field', $_POST['wd_gallery_caption'] );
+	    if ( isset($_POST['wp_pg_caption']) && is_array($_POST['wp_pg_caption']) ) {
+	    	$wp_pg_caption = array_map( 'sanitize_text_field', $_POST['wp_pg_caption'] );
 	    } else {
 	    	return;
 	    }
 
-	    if ( isset($_POST['wd_gallery_alt']) && is_array($_POST['wd_gallery_alt']) ) {
-	    	$wd_gallery_alt = array_map( 'sanitize_text_field', $_POST['wd_gallery_alt'] );
+	    if ( isset($_POST['wp_pg_alt']) && is_array($_POST['wp_pg_alt']) ) {
+	    	$wp_pg_alt = array_map( 'sanitize_text_field', $_POST['wp_pg_alt'] );
 	    } else {
 	    	return;
 	    }
 
-	    foreach ($wd_gallery_photo as $key => $photo_id) {
+	    foreach ($wp_pg_photo as $key => $photo_id) {
 			$title = '';
 			$caption = '';
 			$alt = '';
 
-			if (isset($wd_gallery_title[$key])) {
-				$title = $wd_gallery_title[$key];
+			if (isset($wp_pg_title[$key])) {
+				$title = $wp_pg_title[$key];
 			}
 			
-			if (isset($wd_gallery_caption[$key])) {
-				$caption = $wd_gallery_caption[$key];
+			if (isset($wp_pg_caption[$key])) {
+				$caption = $wp_pg_caption[$key];
 			}
 
-			if (isset($wd_gallery_alt[$key])) {
-				$alt = $wd_gallery_alt[$key];
+			if (isset($wp_pg_alt[$key])) {
+				$alt = $wp_pg_alt[$key];
 			}
 
 			$this->update_image_data($photo_id, $title, $caption, $alt);
 		}
 
-	    update_post_meta($post_id, 'photos', $wd_gallery_photo);
+	    update_post_meta($post_id, 'photos', $wp_pg_photo);
 	}
 
 	public function update_image_data($id, $title, $caption, $alt = '') {

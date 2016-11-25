@@ -1,6 +1,6 @@
 <?php
 
-$wdg_theme_config = array(
+$wp_pg_theme_config = array(
 	'id' => 'zurich',
 	'name' => 'Zurich',
 	'css' => array(
