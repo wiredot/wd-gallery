@@ -11,6 +11,8 @@ var gulp = require('gulp'),
 	glob = require('glob'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
+	plumber = require('gulp-plumber'),
+	notify = require('gulp-notify'),
 	cssnano = require('gulp-cssnano'),
 	del = require('del');
 
@@ -22,29 +24,33 @@ var options = {
 	src: 'src'
 }
 
-gulp.task('concat_js', function() {
+gulp.task('js', function() {
 	return gulp.src( options.src + '/js/*.js')
+		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 		.pipe(maps.init())
 		.pipe(concat('wp-photo-gallery.js'))
+		// .pipe(uglify())
 		.pipe(maps.write('./'))
-		.pipe(gulp.dest( options.assets + '/js'));
-});
-
-gulp.task('js', ['concat_js'], function() {
-	return gulp.src( options.assets + '/js/wp-photo-gallery.js')
-		.pipe(uglify())
-		.pipe(rename('wp-photo-gallery.min.js'))
-		.pipe(gulp.dest( options.assets + '/js'));
+		.pipe(gulp.dest( options.assets + '/js'))
+		.pipe(notify({
+			message: 'all done',
+			title: 'JS'
+		}));
 });
 
 gulp.task('scss', function() {
 	return gulp.src( options.src + '/scss/*.scss')
+		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 		.pipe(maps.init())
 		.pipe(sass(''))
-		.pipe(cssnano())
-		.pipe(rename('wp-photo-gallery-admin.min.css'))
+		// .pipe(cssnano())
+		// .pipe(rename('wp-photo-gallery-admin.min.css'))
 		.pipe(maps.write('./'))
-		.pipe(gulp.dest( options.assets + '/css'));
+		.pipe(gulp.dest( options.assets + '/css'))
+		.pipe(notify({
+			message: 'all done',
+			title: 'SCSS'
+		}));
 });
 
 var themes = glob.sync(options.src + '/themes/*').map(function(themeDir) {

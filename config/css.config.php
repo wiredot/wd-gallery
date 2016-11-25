@@ -6,7 +6,7 @@ $preamp['config']['css']['styles'] = [
 	'media' => 'all',
 	'dependencies' => array(),
 	'files' => array(
-		'wp_pg_admin' => WP_PG_URL . 'assets/css/wp-photo-gallery-admin.min.css'
+		'wp_pg_admin' => WP_PG_URL . 'assets/css/wp-photo-gallery-admin.css'
 	),
 	'dev_files' => array(
 

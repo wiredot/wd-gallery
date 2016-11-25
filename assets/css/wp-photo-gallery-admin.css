@@ -1,0 +1,91 @@
+i.mce-i-icon {
+  font: normal 20px/1 'dashicons';
+  padding: 0;
+  vertical-align: top;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: -2px;
+  padding-right: 2px; }
+
+.wp_pg_mb > div {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff; }
+  .wp_pg_mb > div::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.wp_pg_mb .wp_pg_img, .wp_pg_mb .wp_pg_details {
+  float: left; }
+
+.wp_pg_mb .wp_pg_img {
+  width: 20%; }
+  .wp_pg_mb .wp_pg_img img {
+    width: 100%;
+    cursor: ns-resize; }
+
+.wp_pg_mb .wp_pg_details {
+  width: 60%;
+  padding-left: 2%; }
+
+.wp_pg_mb label, .wp_pg_mb input {
+  display: block;
+  float: left;
+  width: 20%; }
+
+.wp_pg_mb label {
+  text-align: right;
+  padding-right: 2%;
+  line-height: 30px; }
+
+.wp_pg_mb input {
+  width: 70%;
+  margin-bottom: 10px; }
+
+.column-featured_image {
+  width: 60px; }
+
+.locale-pl-pl .fixed .column-date {
+  width: 11%; }
+
+.wp-media-buttons .wp-photo-gallery-media-button img {
+  width: 16px;
+  height: 16px;
+  padding: 0 2px 0 0;
+  margin-top: -3px; }
+
+.menu-icon-wp_pg img {
+  width: 20px;
+  height: 20px;
+  margin-top: -2px; }
+
+.wp-photo-gallery-themes h1 {
+  margin-bottom: 15px; }
+
+.wp_pg_media_content {
+  border-top: 1px solid #ddd; }
+  .wp_pg_media_content li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    margin: 0; }
+    .wp_pg_media_content li::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .wp_pg_media_content li:hover {
+      background-color: #f7f7f7; }
+  .wp_pg_media_content div {
+    float: left;
+    line-height: 50px;
+    height: 50px; }
+  .wp_pg_media_content .img, .wp_pg_media_content .title {
+    margin-right: 20px; }
+  .wp_pg_media_content .button {
+    float: right;
+    margin-top: 10px;
+    display: block; }
+
+/*# sourceMappingURL=wp-photo-gallery-admin.css.map */
