@@ -3,15 +3,10 @@
 namespace WP_PG;
 
 use Wiredot\Preamp\Core;
-use Wiredot\Preamp\Fields\Input;
 
 class WP_PG {
 
 	private static $instance = null;
-
-	private $active_theme_name;
-
-	public $active_theme;
 
 	private function __construct() {
 		$Preamp = Core::run(WP_PG_PATH.'/config/');
@@ -20,10 +15,10 @@ class WP_PG {
 		//$input = new Input('asd');
 
 		// echo $input->html();
-		// if (is_admin()) {
-		// 	// init all admin functionality
-		// 	new WP_PG_Admin();
-		// }
+		if (is_admin()) {
+			// init all admin functionality
+			new WP_PG_Admin();
+		}
 
 		// // init Custom Post Type
 		// new WP_PG_CPT();
@@ -38,10 +33,6 @@ class WP_PG {
 
 		// // init shortcodes
 		// new WP_PG_Shortcode($this->active_theme);
-	}
-
-	public function get_active_theme() {
-		return $this->active_theme_name;
 	}
 
 	public static function run() {
