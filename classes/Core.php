@@ -42,8 +42,7 @@ class Core {
 	}
 
 	public static function activate() {
-		$WPPG_CPT = new WPPG_CPT;
-		$WPPG_CPT->create_post_type();
+		$Preamp = Preamp::run(WPPG_PATH, WPPG_URL);
 		flush_rewrite_rules();
 
 		self::init_directory(WP_CONTENT_DIR.'/cache');
