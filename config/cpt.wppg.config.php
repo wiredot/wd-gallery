@@ -1,6 +1,6 @@
 <?php
 
-$preamp['config']['custom_post_type']['wp_pg'] = array(
+$preamp['config']['custom_post_type']['wppg'] = array(
 	'active' => true,
 	'labels' => array(
 		'name'               => _x( 'WP Photo Gallery', 'post type general name', 'wp-photo-gallery' ),
@@ -40,14 +40,14 @@ $preamp['config']['custom_post_type']['wp_pg'] = array(
 	'query_var' => true,
 	'can_export' => true,
 	'delete_with_user' => true,
-	'menu_icon' => WP_PG_URL.'/assets/images/wp-photo-gallery.svg',
+	'menu_icon' => WPPG_URL.'/assets/images/wp-photo-gallery.svg',
 );
 
 $preamp['config']['meta_box']['photos'] = [
 	'active' => true,
 	'type' => 'post',
 	'name' => __( 'Photos', 'wp-photo-gallery' ),
-	'post_type' => 'wp_pg',
+	'post_type' => array('wppg', 'post'),
 	'context' => 'normal', // normal | advanced | side
 	'priority' => 'high', // high | core | default | low
 	'fields' => array(
@@ -59,9 +59,29 @@ $preamp['config']['meta_box']['photos'] = [
 			'type' => 'email',
 			'label' => __( 'Email field', 'wp-photo-gallery' )
 		),
+		'date_field' => array(
+			'type' => 'date',
+			'label' => __( 'Date field', 'wp-photo-gallery' )
+		),
+		'editor_field' => array(
+			'type' => 'editor',
+			'label' => __( 'Editor field', 'wp-photo-gallery' )
+		),
 		'textarea_field' => array(
 			'type' => 'textarea',
 			'label' => __( 'Textarea field', 'wp-photo-gallery' )
+		),
+		'checkbox_field' => array(
+			'type' => 'checkbox',
+			'label' => __( 'Checkbox', 'wp-photo-gallery' )
+		),
+		'checkboxes_field' => array(
+			'type' => 'checkbox',
+			'label' => __( 'Checkboxes', 'wp-photo-gallery' ),
+			'options' => array(
+				1 => 'no',
+				2 => 'yes'
+			)
 		),
 		'select_field' => array(
 			'type' => 'select',
@@ -70,10 +90,31 @@ $preamp['config']['meta_box']['photos'] = [
 				'multiple' => false,
 			),
 			'options' => array(
-				-1 => '',
+				-1 => '-- select --',
 				1 => 'no',
 				2 => 'yes'
 			)
-		)
+		),
+		'radio_field' => array(
+			'type' => 'radio',
+			'label' => __( 'Radio field', 'wp-photo-gallery' ),
+			'options' => array(
+				1 => 'no',
+				2 => 'yes'
+			)
+		),
+		'upload' => array(
+			'type' => 'upload',
+			'label' => __( 'Upload', 'wp-photo-gallery' ),
+			'labels' => array(
+				'button' => __( 'Add Files', 'wp-photo-gallery' ),
+				'button_window' => __( 'Add Files', 'wp-photo-gallery' ),
+				'title' => __( 'Upload or Choose Files', 'wp-photo-gallery' )
+			),
+			'attributes' => array(
+				'multiple' => true,
+				'filetype' => 'image'
+			)
+		),
 	)
 ];

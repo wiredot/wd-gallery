@@ -16,126 +16,126 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: classes/WP_PG_Admin.php:27 classes/WP_PG_Theme_Directory.php:83
-#: classes/WP_PG_Theme_Directory.php:84
+#: classes/WPPG_Admin.php:27 classes/WPPG_Theme_Directory.php:83
+#: classes/WPPG_Theme_Directory.php:84
 msgid "Themes"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:28 classes/WP_PG_CPT.php:29
-#: classes/WP_PG_CPT.php:30 classes/WP_PG_CPT.php:31
+#: classes/WPPG_CPT.php:28 classes/WPPG_CPT.php:29
+#: classes/WPPG_CPT.php:30 classes/WPPG_CPT.php:31
 msgid "WP Photo Gallery"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:32 classes/WP_PG_CPT.php:33
+#: classes/WPPG_CPT.php:32 classes/WPPG_CPT.php:33
 msgid "Add New Gallery"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:34
+#: classes/WPPG_CPT.php:34
 msgid "New Gallery"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:35
+#: classes/WPPG_CPT.php:35
 msgid "Edit Gallery"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:36 classes/WP_PG_CPT.php:93
+#: classes/WPPG_CPT.php:36 classes/WPPG_CPT.php:93
 msgid "View Gallery"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:37
+#: classes/WPPG_CPT.php:37
 msgid "All Galleries"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:38
+#: classes/WPPG_CPT.php:38
 msgid "Search Galleries"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:39
+#: classes/WPPG_CPT.php:39
 msgid "Parent Galleries:"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:40
+#: classes/WPPG_CPT.php:40
 msgid "No Galleries found."
 msgstr ""
 
-#: classes/WP_PG_CPT.php:41
+#: classes/WPPG_CPT.php:41
 msgid "No Galleries found in Trash."
 msgstr ""
 
-#: classes/WP_PG_CPT.php:47
+#: classes/WPPG_CPT.php:47
 msgid "Gallery Plugin"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:73 classes/WP_PG_CPT.php:76
+#: classes/WPPG_CPT.php:73 classes/WPPG_CPT.php:76
 msgid "Gallery updated."
 msgstr ""
 
-#: classes/WP_PG_CPT.php:74
+#: classes/WPPG_CPT.php:74
 msgid "Custom field updated."
 msgstr ""
 
-#: classes/WP_PG_CPT.php:75
+#: classes/WPPG_CPT.php:75
 msgid "Custom field deleted."
 msgstr ""
 
-#: classes/WP_PG_CPT.php:78
+#: classes/WPPG_CPT.php:78
 #, php-format
 msgid "Gallery restored to revision from %s"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:79
+#: classes/WPPG_CPT.php:79
 msgid "Gallery published."
 msgstr ""
 
-#: classes/WP_PG_CPT.php:80
+#: classes/WPPG_CPT.php:80
 msgid "Gallery saved."
 msgstr ""
 
-#: classes/WP_PG_CPT.php:81
+#: classes/WPPG_CPT.php:81
 msgid "Gallery submitted."
 msgstr ""
 
-#: classes/WP_PG_CPT.php:83
+#: classes/WPPG_CPT.php:83
 #, php-format
 msgid "Gallery scheduled for: <strong>%1$s</strong>."
 msgstr ""
 
-#: classes/WP_PG_CPT.php:85
+#: classes/WPPG_CPT.php:85
 msgid "M j, Y @ G:i"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:87
+#: classes/WPPG_CPT.php:87
 msgid "Gallery draft updated."
 msgstr ""
 
-#: classes/WP_PG_CPT.php:99
+#: classes/WPPG_CPT.php:99
 msgid "Preview Gallery"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:139
+#: classes/WPPG_CPT.php:139
 msgid "Feedback"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:140
+#: classes/WPPG_CPT.php:140
 msgid "Your opinion matters! We would appreciate if you can share what you think about WP Photo Gallery with us. We would love to improve it!"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:141
+#: classes/WPPG_CPT.php:141
 msgid "Just shoot us an email at <a href=\"mailto:labs@wiredot.com\">labs@wiredot.com</a>"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:205
+#: classes/WPPG_CPT.php:205
 msgid "Cover"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:206
+#: classes/WPPG_CPT.php:206
 msgid "Title"
 msgstr ""
 
-#: classes/WP_PG_CPT.php:207
+#: classes/WPPG_CPT.php:207
 msgid "Date"
 msgstr ""
 
-#: classes/WP_PG_MB.php:20
+#: classes/WPPG_MB.php:20
 msgid "Photos"
 msgstr ""

@@ -1,50 +1,49 @@
 <?php
 
-namespace WP_PG;
+namespace Wiredot\WPPG;
 
-use Wiredot\Preamp\Core;
+use Wiredot\Preamp\Core as Preamp;
 
-class WP_PG {
+class Core {
 
 	private static $instance = null;
 
 	private function __construct() {
-		$Preamp = Core::run(WP_PG_PATH.'/config/');
+		$Preamp = Preamp::run(WPPG_PATH, WPPG_URL);
 		// print_r(get_declared_classes());
 		// add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
 		//$input = new Input('asd');
-
 		// echo $input->html();
 		if (is_admin()) {
 			// init all admin functionality
-			new WP_PG_Admin();
+			new Admin();
 		}
 
 		// // init Custom Post Type
-		// new WP_PG_CPT();
+		// new WPPG_CPT();
 
 		// // init Meta Boxes
-		// new WP_PG_MB();
+		// new WPPG_MB();
 		
-		// $WP_PG_Theme_Directory = new WP_PG_Theme_Directory();
-		// $this->active_theme_name = $WP_PG_Theme_Directory->get_active_theme();
+		// $WPPG_Theme_Directory = new WPPG_Theme_Directory();
+		// $this->active_theme_name = $WPPG_Theme_Directory->get_active_theme();
 
-		// $this->active_theme = new WP_PG_Theme($this->active_theme_name);
+		// $this->active_theme = new WPPG_Theme($this->active_theme_name);
 
 		// // init shortcodes
-		// new WP_PG_Shortcode($this->active_theme);
+		// new WPPG_Shortcode($this->active_theme);
 	}
 
 	public static function run() {
-		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof WP_PG ) ) {
-			self::$instance = new WP_PG;
+		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof Core ) ) {
+			self::$instance = new Core;
 		}
 		return self::$instance;
 	}
 
 	public static function activate() {
-		$WP_PG_CPT = new WP_PG_CPT;
-		$WP_PG_CPT->create_post_type();
+		$WPPG_CPT = new WPPG_CPT;
+		$WPPG_CPT->create_post_type();
 		flush_rewrite_rules();
 
 		self::init_directory(WP_CONTENT_DIR.'/cache');
@@ -65,8 +64,8 @@ class WP_PG {
 	public function get_custom_post_type_template($single_template) {
 		global $post;
 
-		if ($post->post_type == 'wp_pg') {
-			$single_template = $this->plugin_dir . '/single-wp_pg.php';
+		if ($post->post_type == 'wppg') {
+			$single_template = $this->plugin_dir . '/single-wppg.php';
 		}
 		return $single_template;
 	}

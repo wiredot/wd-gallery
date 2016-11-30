@@ -1,21 +1,21 @@
-<div class="wp_pg_mb">
+<div class="wppg_mb">
 {foreach from=$photos item=photo key=key}
-	<div class="wp_pg_photo">
-		<div class="wp_pg_img">{img id=$photo w=200}</div>
-		<div class="wp_pg_details">
-			<label for="wp_pg_title_{$key}">Title</label>
-			<input type="text" id="wp_pg_title_{$key}" name="wp_pg_title[]" value="{the_title id=$photo}">
+	<div class="wppg_photo">
+		<div class="wppg_img">{img id=$photo w=200}</div>
+		<div class="wppg_details">
+			<label for="wppg_title_{$key}">Title</label>
+			<input type="text" id="wppg_title_{$key}" name="wppg_title[]" value="{the_title id=$photo}">
 			
-			<label for="wp_pg_caption{$key}">Caption</label>
-			<input type="text" id="wp_pg_caption{$key}" name="wp_pg_caption[]" value="{the_excerpt id=$photo}">
+			<label for="wppg_caption{$key}">Caption</label>
+			<input type="text" id="wppg_caption{$key}" name="wppg_caption[]" value="{the_excerpt id=$photo}">
 			
-			<label for="wp_pg_alt{$key}">Alt Text</label>
-			<input type="text" id="wp_pg_alt{$key}" name="wp_pg_alt[]" value="{alt id=$photo}">
+			<label for="wppg_alt{$key}">Alt Text</label>
+			<input type="text" id="wppg_alt{$key}" name="wppg_alt[]" value="{alt id=$photo}">
 		</div>
-		<input type="hidden" name="wp_pg_photo[]" value="{$photo}">
-		<a href="#" class="button wp_pg_remove">Remove Photo</a>
+		<input type="hidden" name="wppg_photo[]" value="{$photo}">
+		<a href="#" class="button wppg_remove">Remove Photo</a>
 	</div>
 {/foreach}
 </div>
-<a href="#" class="button wp_pg_add">Add Photos</a>
-{wp_nonce_field action='wp_pg_photo_insert' name='wp_pg_photo_nonce'}
+<a href="#" class="button wppg_add">Add Photos</a>
+{wp_nonce_field action='wppg_photo_insert' name='wppg_photo_nonce'}

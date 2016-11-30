@@ -19,21 +19,21 @@ if ( ! defined( 'WPINC' ) ) {
 // load composer libraries
 require __DIR__ . '/vendor/autoload.php';
 
-define( 'WP_PG_PATH', dirname( __FILE__ ) );
-define( 'WP_PG_URL', plugin_dir_url( __FILE__ ) );
-define( 'WP_PG_BASENAME', plugin_basename( __FILE__ ) );
-define( 'WP_PG_NAME', dirname( plugin_basename( __FILE__ ) ) );
+define( 'WPPG_PATH', dirname( __FILE__ ) );
+define( 'WPPG_URL', plugin_dir_url( __FILE__ ) );
+define( 'WPPG_BASENAME', plugin_basename( __FILE__ ) );
+define( 'WPPG_NAME', dirname( plugin_basename( __FILE__ ) ) );
 
-use WP_PG\WP_PG;
+use Wiredot\WPPG\Core;
 
-register_activation_hook( __FILE__, 'activate_wp_pg' );
+register_activation_hook( __FILE__, 'activate_wppg' );
 
-function activate_wp_pg() {
-	return WP_PG::activate();
+function activate_wppg() {
+	// return Core::activate();
 }
 
-function WP_PG() {
-	return WP_PG::run();
+function WPPG() {
+	return Core::run();
 }
 
-WP_PG();
+WPPG();

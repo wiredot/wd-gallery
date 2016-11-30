@@ -8,40 +8,40 @@ i.mce-i-icon {
   margin-left: -2px;
   padding-right: 2px; }
 
-.wp_pg_mb > div {
+.wppg_mb > div {
   margin-bottom: 10px;
   border: 1px solid #ddd;
   padding: 10px;
   background: #fff; }
-  .wp_pg_mb > div::after {
+  .wppg_mb > div::after {
     clear: both;
     content: "";
     display: table; }
 
-.wp_pg_mb .wp_pg_img, .wp_pg_mb .wp_pg_details {
+.wppg_mb .wppg_img, .wppg_mb .wppg_details {
   float: left; }
 
-.wp_pg_mb .wp_pg_img {
+.wppg_mb .wppg_img {
   width: 20%; }
-  .wp_pg_mb .wp_pg_img img {
+  .wppg_mb .wppg_img img {
     width: 100%;
     cursor: ns-resize; }
 
-.wp_pg_mb .wp_pg_details {
+.wppg_mb .wppg_details {
   width: 60%;
   padding-left: 2%; }
 
-.wp_pg_mb label, .wp_pg_mb input {
+.wppg_mb label, .wppg_mb input {
   display: block;
   float: left;
   width: 20%; }
 
-.wp_pg_mb label {
+.wppg_mb label {
   text-align: right;
   padding-right: 2%;
   line-height: 30px; }
 
-.wp_pg_mb input {
+.wppg_mb input {
   width: 70%;
   margin-bottom: 10px; }
 
@@ -57,7 +57,7 @@ i.mce-i-icon {
   padding: 0 2px 0 0;
   margin-top: -3px; }
 
-.menu-icon-wp_pg img {
+.menu-icon-wppg img {
   width: 20px;
   height: 20px;
   margin-top: -2px; }
@@ -65,25 +65,25 @@ i.mce-i-icon {
 .wp-photo-gallery-themes h1 {
   margin-bottom: 15px; }
 
-.wp_pg_media_content {
+.wppg_media_content {
   border-top: 1px solid #ddd; }
-  .wp_pg_media_content li {
+  .wppg_media_content li {
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     margin: 0; }
-    .wp_pg_media_content li::after {
+    .wppg_media_content li::after {
       clear: both;
       content: "";
       display: table; }
-    .wp_pg_media_content li:hover {
+    .wppg_media_content li:hover {
       background-color: #f7f7f7; }
-  .wp_pg_media_content div {
+  .wppg_media_content div {
     float: left;
     line-height: 50px;
     height: 50px; }
-  .wp_pg_media_content .img, .wp_pg_media_content .title {
+  .wppg_media_content .img, .wppg_media_content .title {
     margin-right: 20px; }
-  .wp_pg_media_content .button {
+  .wppg_media_content .button {
     float: right;
     margin-top: 10px;
     display: block; }

@@ -1,8 +1,8 @@
 <?php
 
-namespace WP_PG;
+namespace Wiredot\WPPG;
 
-class WP_PG_Admin {
+class Admin {
 
 	public function __construct() {
 		// add setting link on plugin page
@@ -11,9 +11,9 @@ class WP_PG_Admin {
 
 	public function add_action_links($links, $file) {
 		// run for this plugin
-		if ($file == WP_PG_BASENAME) {
+		if ($file == WPPG_BASENAME) {
 			// settings link
-			$links[] = "<a href='edit.php?post_type=wp_pg&page=themes'>" . __('Themes', 'wp-photo-gallery') . "</a>";
+			$links[] = "<a href='edit.php?post_type=wppg&page=themes'>" . __('Themes', 'wp-photo-gallery') . "</a>";
 		}
 		return $links;
 	}

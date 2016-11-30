@@ -1,6 +1,6 @@
 <?php
 
-$wp_pg_theme_config = array(
+$wppg_theme_config = array(
 	'id' => 'milan',
 	'name' => 'Milan',
 	'css' => array(
