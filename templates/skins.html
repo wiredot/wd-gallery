@@ -26,7 +26,7 @@
 				</div>
 				<h2 class="theme-name" id="{{ skin.id }}-name">{{ skin.name }}</h2>
 				<div class="theme-actions">
-					<a class="button button-secondary activate" href="{{ wp_nonce_url('?post_type=wppg&page=skins&action=activate&skin=' ~ skin.id, 'wp-photo-gallery-activate-skin-' ~ skin.id) }}">Włącz</a>
+					<a class="button button-secondary activate" href="{{ wp_nonce_url('?post_type=wp-photo-gallery&page=skins&action=activate&skin=' ~ skin.id, 'wp-photo-gallery-activate-skin-' ~ skin.id) }}">Włącz</a>
 				</div>
 			</div>
 			{% endif %}

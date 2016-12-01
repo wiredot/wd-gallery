@@ -13,7 +13,7 @@ class Admin {
 		// run for this plugin
 		if ($file == WPPG_BASENAME) {
 			// settings link
-			$links[] = "<a href='edit.php?post_type=wppg&page=themes'>" . __('Themes', 'wp-photo-gallery') . "</a>";
+			$links[] = "<a href='edit.php?post_type=wp-photo-gallery&page=themes'>" . __('Themes', 'wp-photo-gallery') . "</a>";
 		}
 		return $links;
 	}

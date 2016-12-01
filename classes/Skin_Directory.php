@@ -16,7 +16,7 @@ class Skin_Directory {
 
 		add_action('admin_menu', array($this, 'add_skins_submenu'));
 
-		if (isset($_GET['action']) && $_GET['action'] == 'activate' && isset($_GET['post_type']) && $_GET['post_type'] == 'wppg' && isset($_GET['page']) && $_GET['page'] == 'skins') {
+		if (isset($_GET['action']) && $_GET['action'] == 'activate' && isset($_GET['post_type']) && $_GET['post_type'] == 'wp-photo-gallery' && isset($_GET['page']) && $_GET['page'] == 'skins') {
 			add_action('init', array($this, 'activate_skin'));
 		}
 	}
@@ -35,7 +35,7 @@ class Skin_Directory {
 
 				if ($filename != '.' && $filename != '..' && is_dir(WPPG_PATH.'/skins/'.$filename)) {
 					include WPPG_PATH.'/skins/'.$filename.'/config.php';
-					$skins[$filename] = $wppg_skin_config;
+					$skins[$filename] = $wp_photo_gallery_skin_config;
 					if (file_exists(WPPG_PATH.'/skins/'.$filename.'/screenshot.png')) {
 						$skins[$filename]['screenshot'] = WPPG_URL.'/skins/'.$filename.'/screenshot.png';
 					} else {
@@ -58,7 +58,7 @@ class Skin_Directory {
 	}
 
 	private function find_active_skin() {
-		$active_skin = get_option( 'wppg-active-skin' );
+		$active_skin = get_option( 'wp-photo-gallery-active-skin' );
 		if ( $active_skin ) {
 			return $active_skin;
 		}
@@ -71,17 +71,17 @@ class Skin_Directory {
 		$skin = $_GET['skin'];
 
 		if (wp_verify_nonce( $nonce, 'wp-photo-gallery-activate-skin-'.$skin )) {
-			update_option( 'wppg-active-skin', $skin );
+			update_option( 'wp-photo-gallery-active-skin', $skin );
 		}
 
-		wp_redirect( '?post_type=wppg&page=skins' );
+		wp_redirect( '?post_type=wp-photo-gallery&page=skins' );
 		exit;
 	}
 
 	public function add_skins_submenu() {
 		// add options page
 		add_submenu_page( 
-			'edit.php?post_type=wppg', 
+			'edit.php?post_type=wp-photo-gallery', 
 			__( 'Skins', 'wp-photo-gallery' ),
 			__( 'Skins', 'wp-photo-gallery' ),
 			'read', 

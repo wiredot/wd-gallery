@@ -1,6 +1,6 @@
 <?php
 
-$preamp['config']['custom_post_type']['wppg'] = array(
+$preamp['config']['custom_post_type']['wp-photo-gallery'] = array(
 	'active' => true,
 	'labels' => array(
 		'name'               => _x( 'WP Photo Gallery', 'post type general name', 'wp-photo-gallery' ),
@@ -47,7 +47,7 @@ $preamp['config']['meta_box']['photos'] = [
 	'active' => true,
 	'type' => 'post',
 	'name' => __( 'Photos', 'wp-photo-gallery' ),
-	'post_type' => array('wppg', 'post'),
+	'post_type' => array('wp-photo-gallery', 'post'),
 	'context' => 'normal', // normal | advanced | side
 	'priority' => 'high', // high | core | default | low
 	'fields' => array(

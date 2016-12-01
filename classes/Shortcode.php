@@ -7,7 +7,7 @@ use Wiredot\Preamp\Twig;
 class Shortcode {
 
 	public function __construct() {
-		add_shortcode('wppg', array($this, 'show_shortcode' ));
+		add_shortcode('wp-photo-gallery', array($this, 'show_shortcode' ));
 	}
 
 	public function show_shortcode($atts) {

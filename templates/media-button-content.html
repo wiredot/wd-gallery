@@ -1,14 +1,14 @@
-<div id="wppg_media_content" style="display:none;">
+<div id="wp-photo-gallery_media_content" style="display:none;">
 <div class="wrap">
-	<ul class="wppg_media_content">
+	<ul class="wp-photo-gallery_media_content">
 		<li>
 			<div class="title">Galleries overview</div>
-			<a href="#" class="button wp-photo-gallery-media-insert" onclick="wppgInsertForm(0)">Insert Shortcode</a>
+			<a href="#" class="button wp-photo-gallery-media-insert" onclick="wp-photo-galleryInsertForm(0)">Insert Shortcode</a>
 		</li>
 	</ul>
 	<h1>Galleries</h1>
-	<ul class="wppg_media_content">
-	{% loop { 'post_type' : 'wppg', 'orderby' : 'title', 'posts_per_page' : '-1' } %}
+	<ul class="wp-photo-gallery_media_content">
+	{% loop { 'post_type' : 'wp-photo-gallery', 'orderby' : 'title', 'posts_per_page' : '-1' } %}
 		<li>
 			<div class="img">{{ image(get_post_thumbnail_id(), { 'w' : 50, 'h' : 50, 'zc' : 1 }) | raw}}</div>
 			<div class="title">{{ the_title() }}</div>

@@ -11,9 +11,9 @@ class Gallery_List {
 	}
 
 	public function get_list() {
-		global $wppg_query;
+		global $wp_photo_gallery_query;
 
-		$wppg_query = $this->get_posts();
+		$wp_photo_gallery_query = $this->get_posts();
 
 		return 'list';
 
@@ -25,7 +25,7 @@ class Gallery_List {
 
 	public function get_posts() {
 		$args = array(
-			'post_type' => 'wppg',
+			'post_type' => 'wp-photo-gallery',
 			'order' => 'ASC',
 			'orderby' => 'menu_order',
 			'posts_per_page' => '-1',

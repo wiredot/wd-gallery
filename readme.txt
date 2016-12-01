@@ -55,7 +55,7 @@ There are 2 ways of installing the plugin:
 1. Create a new page or edit and existing one
 2. Click on ‘Add WP Photo Gallery’ button directly above the Editor
 3. Press the ‘Insert Shortcode’ button for Galleries overview
-4. You should have a short code in your editor ([wppg])
+4. You should have a short code in your editor ([wp-photo-gallery])
 5. Save the page and you’re done!
 
 == Changelog ==

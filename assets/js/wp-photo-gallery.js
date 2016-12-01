@@ -1,25 +1,25 @@
 jQuery(document).ready(function($){
-	// wdgInitSortable($);
-	// wdgInitPhotos($);
-	// wdgInitRemove($);
+	// wppgInitSortable($);
+	// wppgInitPhotos($);
+	// wppgInitRemove($);
 });
 
-function wdgInitSortable($) {
-	$('.wppg_mb').sortable();
+function wppgInitSortable($) {
+	$('.wp-photo-gallery_mb').sortable();
 }
 
-function wdgInitPhotos($) {
-	$('.wppg_add').click(function(event) {
+function wppgInitPhotos($) {
+	$('.wp-photo-gallery_add').click(function(event) {
 		event.preventDefault();
 		media_upload();
 	});
 }
 
-function wdgInitRemove($) {
-	$('.wppg_remove').unbind('click');
-	$('.wppg_remove').click(function(event) {
+function wppgInitRemove($) {
+	$('.wp-photo-gallery_remove').unbind('click');
+	$('.wp-photo-gallery_remove').click(function(event) {
 		event.preventDefault();
-		$(this).parent('.wppg_photo').slideUp(300, function(){
+		$(this).parent('.wp-photo-gallery_photo').slideUp(300, function(){
 			$(this).remove();
 		});
 	});
@@ -150,10 +150,10 @@ function media_upload() {
 			console.log(media_attachment);
 			jQuery.each(media_attachment, function( key, value ){
 				var template = newPhotoTemplate(value.id, value.title, value.caption, value.alt, value.url);
-				jQuery('.wppg_mb').append(template);
+				jQuery('.wp-photo-gallery_mb').append(template);
 			});
 
-			wdgInitRemove(jQuery);
+			wppgInitRemove(jQuery);
 		});
 
 		// Now that everything has been set, let's open up the frame.
@@ -161,18 +161,18 @@ function media_upload() {
 }
 
 function newPhotoTemplate(id, title, caption, alt, photo) {
-	var template = '<div class="wppg_photo">' +
-	' 	<div class="wppg_img"><img src="'+photo+'"></div>' +
-	'	<div class="wppg_details">' +
-	'		<label for="wppg_title_'+id+'">Title</label>' +
-	'		<input type="text" id="wppg_title_'+id+'" name="wppg_title[]" value="'+title+'">' +
-	'		<label for="wppg_caption'+id+'">Caption</label>' +
-	'		<input type="text" id="wppg_caption'+id+'" name="wppg_caption[]" value="'+caption+'">' +
-	'		<label for="wppg_alt'+id+'">Alt Text</label>' +
-	'		<input type="text" id="wppg_alt'+id+'" name="wppg_alt[]" value="'+alt+'">' +
+	var template = '<div class="wp-photo-gallery_photo">' +
+	' 	<div class="wp-photo-gallery_img"><img src="'+photo+'"></div>' +
+	'	<div class="wp-photo-gallery_details">' +
+	'		<label for="wp-photo-gallery_title_'+id+'">Title</label>' +
+	'		<input type="text" id="wp-photo-gallery_title_'+id+'" name="wp-photo-gallery_title[]" value="'+title+'">' +
+	'		<label for="wp-photo-gallery_caption'+id+'">Caption</label>' +
+	'		<input type="text" id="wp-photo-gallery_caption'+id+'" name="wp-photo-gallery_caption[]" value="'+caption+'">' +
+	'		<label for="wp-photo-gallery_alt'+id+'">Alt Text</label>' +
+	'		<input type="text" id="wp-photo-gallery_alt'+id+'" name="wp-photo-gallery_alt[]" value="'+alt+'">' +
 	'	</div>' +
-	'	<input type="hidden" name="wppg_photo[]" value="'+id+'">' +
-	'	<a href="#" class="button wppg_remove">Remove Photo</a>' +
+	'	<input type="hidden" name="wp-photo-gallery_photo[]" value="'+id+'">' +
+	'	<a href="#" class="button wp-photo-gallery_remove">Remove Photo</a>' +
 	'</div>';
 
 	return template;
@@ -180,9 +180,9 @@ function newPhotoTemplate(id, title, caption, alt, photo) {
 
 function wppgInsertForm(galleryID) {
 	if (galleryID > 0) {
-		window.send_to_editor("[wppg id="+galleryID+"]");
+		window.send_to_editor("[wp-photo-gallery id="+galleryID+"]");
 	} else {
-		window.send_to_editor("[wppg]");
+		window.send_to_editor("[wp-photo-gallery]");
 	}
 }
 

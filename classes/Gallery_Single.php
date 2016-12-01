@@ -25,7 +25,7 @@ class Gallery_Single {
 
 	public function get_post() {
 		$args = array(
-			'post_type' => 'wppg',
+			'post_type' => 'wp-photo-gallery',
 			'order' => 'ASC',
 			'orderby' => 'menu_order',
 			'posts_per_page' => '-1',

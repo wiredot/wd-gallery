@@ -67,8 +67,8 @@ class Core {
 	public function get_custom_post_type_template($single_template) {
 		global $post;
 
-		if ($post->post_type == 'wppg') {
-			$single_template = $this->plugin_dir . '/single-wppg.php';
+		if ($post->post_type == 'wp-photo-gallery') {
+			$single_template = $this->plugin_dir . '/single-wp-photo-gallery.php';
 		}
 		return $single_template;
 	}

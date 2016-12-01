@@ -26,9 +26,9 @@ define( 'WPPG_NAME', dirname( plugin_basename( __FILE__ ) ) );
 
 use Wiredot\WPPG\Core;
 
-register_activation_hook( __FILE__, 'activate_wppg' );
+register_activation_hook( __FILE__, 'activate_wp-photo-gallery' );
 
-function activate_wppg() {
+function activate_wp_photo_gallery() {
 	// return Core::activate();
 }
 
