@@ -118,3 +118,12 @@ $preamp['config']['meta_box']['photos'] = [
 		),
 	)
 ];
+
+$preamp['config']['admin_custom_columns']['gallery'] = array(
+	'post_type' => 'wp-photo-gallery',
+	'columns' => array(
+		'featured_image',
+		'title',
+		'date'
+	)
+);
