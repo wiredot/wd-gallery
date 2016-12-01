@@ -18,6 +18,8 @@ class Core {
 			// init all admin functionality
 			new Admin();
 			new Editor();
+		} else {
+			new Shortcode();
 		}
 
 		// // init Custom Post Type

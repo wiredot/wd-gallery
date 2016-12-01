@@ -178,9 +178,9 @@ function newPhotoTemplate(id, title, caption, alt, photo) {
 	return template;
 }
 
-function wpPhotoGalleryInsertForm(galleryID) {
+function wppgInsertForm(galleryID) {
 	if (galleryID > 0) {
-		window.send_to_editor("[wppg ID="+galleryID+"]");
+		window.send_to_editor("[wppg id="+galleryID+"]");
 	} else {
 		window.send_to_editor("[wppg]");
 	}

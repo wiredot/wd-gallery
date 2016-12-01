@@ -5,17 +5,17 @@ namespace Wiredot\WPPG;
 use WP_Query;
 use Wiredot\Preamp\Twig;
 
-class Gallery_List {
+class Gallery_Single {
 
-	public function __construct() {
+	private $gallery_id;
+
+	public function __construct($gallery_id) {
+		$this->gallery_id = $gallery_id;
 	}
 
-	public function get_list() {
-		global $wppg_query;
+	public function get_single() {
 
-		$wppg_query = $this->get_posts();
-
-		return 'list';
+		return 'gallery'.$this->gallery_id;
 
 		// $smarty = (new WP_PG_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();
 		// return $smarty->fetch('wp-photo-gallery-list.html');
@@ -23,7 +23,7 @@ class Gallery_List {
 		// echo $Twig->twig->render('wp-photo-gallery-list.html');
 	}
 
-	public function get_posts() {
+	public function get_post() {
 		$args = array(
 			'post_type' => 'wppg',
 			'order' => 'ASC',
