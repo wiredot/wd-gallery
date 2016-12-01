@@ -1,0 +1,37 @@
+<div class="wrap wp-photo-gallery-skins">
+	<h1>{{ __('WP Photo Gallery Themes', 'wp-photo-gallery') }}</h1>
+	<div class="theme-browser rendered">
+		<div class="skins">
+			{% for skin in skins %}
+			{% if skin.id == active_skin %}
+			<div class="theme active" tabindex="0" aria-describedby="{{ skin.id }}-action {{ skin.id }}-name">
+				<div class="theme-screenshot">
+					{% if skin.screenshot %}
+					<img src="{{ skin.screenshot }}" alt="">
+					{% endif %}
+				</div>
+				<h2 class="theme-name" id="{{ skin.id }}-name">
+					<span>Aktywny:</span> {{ skin.name }}
+				</h2>
+			</div>
+			{% endif %}
+			{% endfor %}
+			{% for skin in skins %}
+			{% if skin.id != active_skin %}
+			<div class="theme" tabindex="0" aria-describedby="{skin.id}-action {skin.id}-name">
+				<div class="theme-screenshot">
+					{% if skin.screenshot %}
+					<img src="{{ skin.screenshot }}" alt="">
+					{% endif %}
+				</div>
+				<h2 class="theme-name" id="{{ skin.id }}-name">{{ skin.name }}</h2>
+				<div class="theme-actions">
+					<a class="button button-secondary activate" href="{{ wp_nonce_url('?post_type=wppg&page=skins&action=activate&skin=' ~ skin.id, 'wp-photo-gallery-activate-skin-' ~ skin.id) }}">Włącz</a>
+				</div>
+			</div>
+			{% endif %}
+			{% endfor %}
+		</div>
+		<br class="clear">
+	</div>
+</div>

@@ -18,6 +18,7 @@ class Core {
 			// init all admin functionality
 			new Admin();
 			new Editor();
+			new Skin_Directory();
 		} else {
 			new Shortcode();
 		}

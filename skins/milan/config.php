@@ -1,6 +1,6 @@
 <?php
 
-$wppg_theme_config = array(
+$wppg_skin_config = array(
 	'id' => 'milan',
 	'name' => 'Milan',
 	'css' => array(
