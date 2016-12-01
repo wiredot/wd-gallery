@@ -17,6 +17,7 @@ class Core {
 		if (is_admin()) {
 			// init all admin functionality
 			new Admin();
+			new Editor();
 		}
 
 		// // init Custom Post Type

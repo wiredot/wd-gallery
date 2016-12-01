@@ -8,12 +8,12 @@
 	</ul>
 	<h1>Galleries</h1>
 	<ul class="wppg_media_content">
-		{loop}
+	{% loop { 'post_type' : 'wppg', 'orderby' : 'title', 'posts_per_page' : '-1' } %}
 		<li>
-			<div class="img">{img id={post_thumbnail_id} w=50 h=50 zc=1}</div>
-			<div class="title">{the_title}</div>
-			<a href="#" class="button wp-photo-gallery-media-insert" onclick="wpPhotoGalleryInsertForm({the_id})">Insert Shortcode</a>
+			<div class="img">{{ image(get_post_thumbnail_id(), { 'w' : 50, 'h' : 50, 'zc' : 1 }) | raw}}</div>
+			<div class="title">{{ the_title() }}</div>
+			<a href="#" class="button wp-photo-gallery-media-insert" onclick="wpPhotoGalleryInsertForm({{ the_id() }})">Insert Shortcode</a>
 		</li>
-		{/loop}
+	{% endloop %}
 	</ul>
 </div>
