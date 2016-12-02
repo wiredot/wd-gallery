@@ -20,9 +20,12 @@ class Gallery_List {
 		// global $wp_photo_gallery_query;
 
 		$wp_photo_gallery_query = $this->get_posts();
+		// var_dump($wp_photo_gallery_query->posts);
 
 		$Twig = new Twig($this->skin->get_directory().'/templates/');
-		return $Twig->twig->render('wp-photo-gallery-list.html');
+		return $Twig->twig->render('wp-photo-gallery-list.html', array(
+			'galleries' => $wp_photo_gallery_query->posts
+		));
 	}
 
 	public function get_posts() {

@@ -22,8 +22,12 @@ class Gallery_Single {
 
 	public function get_single() {
 
+		$photos = get_post_meta( $this->gallery_id, 'upload', true );
+
 		$Twig = new Twig($this->skin->get_directory().'/templates/');
-		return $Twig->twig->render('wp-photo-gallery-single.html');
+		return $Twig->twig->render('wp-photo-gallery-single.html', array(
+			'photos' => $photos
+		));
 
 		// $smarty = (new WP_PG_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();
 		// return $smarty->fetch('wp-photo-gallery-list.html');

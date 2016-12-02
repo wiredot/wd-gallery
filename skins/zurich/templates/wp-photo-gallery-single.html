@@ -1,6 +1,5 @@
-{if $photos}<ul class="wp-photo-gallery gallery-single zurich">
-	{foreach from=$photos item=photo}
-		<li><a href="{img id=$photo w=1024 q=95 link=1}" class="fresco" data-fresco-group="wp-photo-gallery-{the_id}" data-fresco-caption="{the_excerpt id=$photo}">{img id=$photo w=200 h=200 zc=1 q=90 title={the_title id=$photo} alt={alt id=$photo}}</a></li>
-	{/foreach}
-</ul>{/if}
-{{ the_title() }}
+{% if photos %}<ul class="wp-photo-gallery gallery-single zurich">
+	{% for photo in photos %}
+		<li><a href="{{ image_url(photo, {'w':1024, 'q':95}) }}" class="fresco" data-fresco-group="wp-photo-gallery-{{ the_ID() }}" data-fresco-caption="{{ the_excerpt(photo) }}">{{ image(photo, {'w':200, 'h':200, 'zc':1, 'q':90, 'title':get_the_title(photo), 'alt':alt(photo)}) | raw }}</a></li>
+	{% endfor %}
+</ul>{% endif %}
