@@ -19,5 +19,4 @@ class Shortcode {
 			return $Gallery_List->get_list();
 		}
 	}
-
 }

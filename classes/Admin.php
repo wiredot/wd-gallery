@@ -7,6 +7,7 @@ class Admin {
 	public function __construct() {
 		// add setting link on plugin page
 		add_filter('plugin_action_links', array($this, 'add_action_links'), 10, 2);
+		add_action('save_post', array($this, 'add_shortcode'), 10, 2);
 	}
 
 	public function add_action_links($links, $file) {
@@ -16,6 +17,32 @@ class Admin {
 			$links[] = "<a href='edit.php?post_type=wp-photo-gallery&page=themes'>" . __('Themes', 'wp-photo-gallery') . "</a>";
 		}
 		return $links;
+	}
+
+	public function show_shortcode($atts) {
+		if (is_array($atts) && array_key_exists('id', $atts)) {
+			$Gallery_Single = new Gallery_Single($atts['id']);
+			return $Gallery_Single->get_single();
+		} else {
+			$Gallery_List = new Gallery_List();
+			return $Gallery_List->get_list();
+		}
+	}
+
+	public function add_shortcode($post_id, $post) {
+		if ($post->post_type == 'wp-photo-gallery') {
+			global $wpdb;
+			
+			$wpdb->update(
+				$wpdb->posts,
+				array(
+					'post_content' => '[wp-photo-gallery id='.$post_id.']'
+				),
+				array(
+					'ID' => $post_id
+				)
+			);
+		}
 	}
 
 // end class
