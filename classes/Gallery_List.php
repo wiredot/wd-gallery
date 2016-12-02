@@ -19,7 +19,7 @@ class Gallery_List {
 	public function get_list() {
 		// global $wp_photo_gallery_query;
 
-		// $wp_photo_gallery_query = $this->get_posts();
+		$wp_photo_gallery_query = $this->get_posts();
 
 		$Twig = new Twig($this->skin->get_directory().'/templates/');
 		return $Twig->twig->render('wp-photo-gallery-list.html');
