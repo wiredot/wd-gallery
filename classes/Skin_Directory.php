@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiredot\WPPG;
+namespace Wiredot\WP_Photo_Gallery;
 
 use Wiredot\Preamp\Twig;
 
@@ -33,7 +33,7 @@ class Skin_Directory {
 	}
 
 	private function find_skins() {
-		return $this->find_skins_in_directory(WPPG_PATH.'/skins/', WPPG_URL.'skins/');
+		return $this->find_skins_in_directory(WP_PHOTO_GALLERY_PATH.'/skins/', WP_PHOTO_GALLERY_URL.'skins/');
 	}
 
 	private function find_skins_in_directory($directory, $url) {

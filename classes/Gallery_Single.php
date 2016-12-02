@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiredot\WPPG;
+namespace Wiredot\WP_Photo_Gallery;
 
 use WP_Query;
 use Wiredot\Preamp\Twig;

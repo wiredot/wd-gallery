@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiredot\WPPG;
+namespace Wiredot\WP_Photo_Gallery;
 
 use Wiredot\Preamp\Core as Preamp;
 
@@ -9,7 +9,7 @@ class Core {
 	private static $instance = null;
 
 	private function __construct() {
-		$Preamp = Preamp::run(WPPG_PATH, WPPG_URL);
+		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
 		// print_r(get_declared_classes());
 		// add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
 		//$input = new Input('asd');
@@ -26,18 +26,18 @@ class Core {
 		}
 
 		// // init Custom Post Type
-		// new WPPG_CPT();
+		// new WP_Photo_Gallery_CPT();
 
 		// // init Meta Boxes
-		// new WPPG_MB();
+		// new WP_Photo_Gallery_MB();
 		
-		// $WPPG_Theme_Directory = new WPPG_Theme_Directory();
-		// $this->active_theme_name = $WPPG_Theme_Directory->get_active_theme();
+		// $WP_Photo_Gallery_Theme_Directory = new WP_Photo_Gallery_Theme_Directory();
+		// $this->active_theme_name = $WP_Photo_Gallery_Theme_Directory->get_active_theme();
 
-		// $this->active_theme = new WPPG_Theme($this->active_theme_name);
+		// $this->active_theme = new WP_Photo_Gallery_Theme($this->active_theme_name);
 
 		// // init shortcodes
-		// new WPPG_Shortcode($this->active_theme);
+		// new WP_Photo_Gallery_Shortcode($this->active_theme);
 	}
 
 	public static function run() {
@@ -48,7 +48,7 @@ class Core {
 	}
 
 	public static function activate() {
-		$Preamp = Preamp::run(WPPG_PATH, WPPG_URL);
+		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
 		flush_rewrite_rules();
 
 		self::init_directory(WP_CONTENT_DIR.'/cache');

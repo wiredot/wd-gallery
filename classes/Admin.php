@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiredot\WPPG;
+namespace Wiredot\WP_Photo_Gallery;
 
 class Admin {
 
@@ -12,7 +12,7 @@ class Admin {
 
 	public function add_action_links($links, $file) {
 		// run for this plugin
-		if ($file == WPPG_BASENAME) {
+		if ($file == WP_PHOTO_GALLERY_BASENAME) {
 			// settings link
 			$links[] = "<a href='edit.php?post_type=wp-photo-gallery&page=themes'>" . __('Themes', 'wp-photo-gallery') . "</a>";
 		}
