@@ -3,7 +3,7 @@
 	<div class="theme-browser rendered">
 		<div class="skins">
 			{% for skin in skins %}
-			{% if skin.id == active_skin %}
+			{% if skin.id == active_skin_id %}
 			<div class="theme active" tabindex="0" aria-describedby="{{ skin.id }}-action {{ skin.id }}-name">
 				<div class="theme-screenshot">
 					{% if skin.screenshot %}
@@ -17,7 +17,7 @@
 			{% endif %}
 			{% endfor %}
 			{% for skin in skins %}
-			{% if skin.id != active_skin %}
+			{% if skin.id != active_skin_id %}
 			<div class="theme" tabindex="0" aria-describedby="{skin.id}-action {skin.id}-name">
 				<div class="theme-screenshot">
 					{% if skin.screenshot %}

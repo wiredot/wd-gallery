@@ -8,11 +8,15 @@ class Skin_Directory {
 
 	private $skins;
 
-	private $active_skin = 'zurich';
+	private $active_skin_id = 'zurich';
 
 	public function __construct() {
 		$this->skins = $this->find_skins();
-		$this->active_skin = $this->find_active_skin();
+		$active_skin_id = $this->find_active_skin_id();
+		
+		if ($active_skin_id) {
+			$this->active_skin_id = $active_skin_id;
+		}
 
 		add_action('admin_menu', array($this, 'add_skins_submenu'));
 
@@ -22,10 +26,10 @@ class Skin_Directory {
 	}
 
 	private function find_skins() {
-		return $this->find_skins_in_directory(WPPG_PATH.'/skins/');
+		return $this->find_skins_in_directory(WPPG_PATH.'/skins/', WPPG_URL.'skins/');
 	}
 
-	private function find_skins_in_directory($directory) {
+	private function find_skins_in_directory($directory, $url) {
 		$skins = array();
 
 		if (file_exists($directory) && $handle = opendir($directory)) {
@@ -33,14 +37,16 @@ class Skin_Directory {
 			// for each file with .config.php extension
 			while (false !== ($filename = readdir($handle))) {
 
-				if ($filename != '.' && $filename != '..' && is_dir(WPPG_PATH.'/skins/'.$filename)) {
-					include WPPG_PATH.'/skins/'.$filename.'/config.php';
+				if ($filename != '.' && $filename != '..' && is_dir($directory.$filename)) {
+					include $directory.$filename.'/config.php';
 					$skins[$filename] = $wp_photo_gallery_skin_config;
-					if (file_exists(WPPG_PATH.'/skins/'.$filename.'/screenshot.png')) {
-						$skins[$filename]['screenshot'] = WPPG_URL.'/skins/'.$filename.'/screenshot.png';
+					if (file_exists($directory.$filename.'/screenshot.png')) {
+						$skins[$filename]['screenshot'] = $url.$filename.'/screenshot.png';
 					} else {
 						$skins[$filename]['screenshot'] = '';
 					}
+					$skins[$filename]['directory'] = $directory.$filename;
+					$skins[$filename]['url'] = $url.$filename;
 				}
 			}
 			closedir($handle);
@@ -54,16 +60,16 @@ class Skin_Directory {
 	}
 
 	public function get_active_skin() {
-		return $this->active_skin;
+		return $this->skins[$this->active_skin_id];
 	}
 
-	private function find_active_skin() {
-		$active_skin = get_option( 'wp-photo-gallery-active-skin' );
-		if ( $active_skin ) {
-			return $active_skin;
+	private function find_active_skin_id() {
+		$active_skin_id = get_option( 'wp-photo-gallery-active-skin-id' );
+		if ( $active_skin_id ) {
+			return $active_skin_id;
 		}
 
-		return 'milan';
+		return null;
 	}
 
 	public function activate_skin() {
@@ -94,7 +100,7 @@ class Skin_Directory {
 		$Twig = new Twig;
 		echo $Twig->twig->render('skins.html', array(
 			'skins' => $this->skins,
-			'active_skin' => $this->active_skin,
+			'active_skin_id' => $this->active_skin_id,
 		));
 	}
 
