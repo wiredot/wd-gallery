@@ -26,6 +26,10 @@ class Skin {
 	}
 
 	public function enqueue_css() {
+		if ( ! isset($this->css['files']) || ! is_array($this->css['files'])) {
+			return;
+		}
+
 		foreach ($this->css['files'] as $key => $css) {
 			wp_register_style( $key, $this->url . '/' .$css, $this->css['dependencies'], $this->css['version'], $this->css['media'] );
 			wp_enqueue_style( $key );
@@ -33,6 +37,10 @@ class Skin {
 	}
 
 	public function enqueue_js() {
+		if ( ! isset($this->js['files']) || ! is_array($this->js['files'])) {
+			return;
+		}
+		
 		foreach ($this->js['files'] as $key => $js) {
 			// wp_deregister_script($key);
 			wp_register_script($key, $this->url . '/' . $js, $this->js['dependencies'], $this->js['version'], $this->js['footer']);

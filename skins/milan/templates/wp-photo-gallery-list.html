@@ -1,5 +1,5 @@
 <ul class="wp-photo-gallery gallery-list milan">
-	{loop}
-	<li><a href="{the_permalink}">{img id={post_thumbnail_id} w=200 h=140 zc=1 q=95 title={the_title id={post_thumbnail_id}} alt={alt id={post_thumbnail_id}}} <h2>{the_title}</h2></a></li>
-	{/loop}
+	{% for gallery in galleries %}
+	<li><a href="{{ the_permalink(gallery.ID) }}">{{ image(get_post_thumbnail_id(gallery.ID), {'w' : 200, 'h' : 140, 'zc' : 1, 'title'  : gallery.post_title}) |raw }}<h2>{{ gallery.post_title }}</h2></a></li>
+	{% endfor %}
 </ul>

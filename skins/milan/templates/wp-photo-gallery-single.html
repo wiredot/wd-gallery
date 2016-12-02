@@ -1,5 +1,5 @@
-{if $photos}<ul class="wp-photo-gallery gallery-single milan">
-	{foreach from=$photos item=photo}
-		<li><a href="{the_permalink id=$photo}">{img id=$photo w=200 h=140 zc=1 title={the_title id=$photo} alt={alt id=$photo}}</a></li>
-	{/foreach}
-</ul>{/if}
+{% if photos %}<ul class="wp-photo-gallery gallery-single milan">
+	{% for photo in photos %}
+		<li><a href="{{ the_permalink(photo) }}">{{ image(photo, {'w':200, 'h':140, 'zc':1, 'q':90, 'title':get_the_title(photo), 'alt':alt(photo)}) | raw }}</a></li>
+	{% endfor %}
+</ul>{% endif %}
