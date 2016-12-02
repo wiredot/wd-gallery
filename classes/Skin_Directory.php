@@ -10,13 +10,20 @@ class Skin_Directory {
 
 	private $active_skin_id = 'zurich';
 
+	private $active_skin_object;
+
 	public function __construct() {
 		$this->skins = $this->find_skins();
 		$active_skin_id = $this->find_active_skin_id();
-		
+
 		if ($active_skin_id) {
 			$this->active_skin_id = $active_skin_id;
 		}
+		
+		$active_skin = $this->skins[$this->active_skin_id];
+		$Active_Skin = new Skin($active_skin['id'], $active_skin['css'], $active_skin['js'], $active_skin['directory'], $active_skin['url']);
+
+		$this->active_skin_object = $Active_Skin;
 
 		add_action('admin_menu', array($this, 'add_skins_submenu'));
 
@@ -55,14 +62,6 @@ class Skin_Directory {
 		return $skins;
 	}
 
-	public function get_skins() {
-		return $this->skins;	
-	}
-
-	public function get_active_skin() {
-		return $this->skins[$this->active_skin_id];
-	}
-
 	private function find_active_skin_id() {
 		$active_skin_id = get_option( 'wp-photo-gallery-active-skin-id' );
 		if ( $active_skin_id ) {
@@ -72,12 +71,16 @@ class Skin_Directory {
 		return null;
 	}
 
+	public function get_active_skin_object() {
+		return $this->active_skin_object;
+	}
+
 	public function activate_skin() {
 		$nonce = $_REQUEST['_wpnonce'];
 		$skin = $_GET['skin'];
 
 		if (wp_verify_nonce( $nonce, 'wp-photo-gallery-activate-skin-'.$skin )) {
-			update_option( 'wp-photo-gallery-active-skin', $skin );
+			update_option( 'wp-photo-gallery-active-skin-id', $skin );
 		}
 
 		wp_redirect( '?post_type=wp-photo-gallery&page=skins' );

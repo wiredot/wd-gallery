@@ -7,22 +7,17 @@ use Wiredot\Preamp\Twig;
 
 class Gallery_List {
 
-	private $skin;
-
 	public function __construct() {
-		$Skins = new Skin_Directory();
-		$active_skin = $Skins->get_active_skin();
-
-		$this->skin = new Skin($active_skin['id'], $active_skin['css'], $active_skin['js'], $active_skin['directory'], $active_skin['url']);
 	}
 
 	public function get_list() {
 		// global $wp_photo_gallery_query;
+		$Skins = new Skin_Directory();
+		$Active_Skin = $Skins->get_active_skin_object();
 
 		$wp_photo_gallery_query = $this->get_posts();
-		// var_dump($wp_photo_gallery_query->posts);
 
-		$Twig = new Twig($this->skin->get_directory().'/templates/');
+		$Twig = new Twig($Active_Skin->get_directory().'/templates/');
 		return $Twig->twig->render('wp-photo-gallery-list.html', array(
 			'galleries' => $wp_photo_gallery_query->posts
 		));

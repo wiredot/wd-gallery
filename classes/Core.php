@@ -14,11 +14,13 @@ class Core {
 		// add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
 		//$input = new Input('asd');
 		// echo $input->html();
+		
+		new Skin_Directory();
+		
 		if (is_admin()) {
 			// init all admin functionality
 			new Admin();
 			new Editor();
-			new Skin_Directory();
 		} else {
 			new Shortcode();
 		}

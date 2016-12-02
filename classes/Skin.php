@@ -21,19 +21,22 @@ class Skin {
 		$this->directory = $directory;
 		$this->url = $url;
 
-		add_filter( 'wp_enqueue_scripts', array($this, 'add_css') );
-		add_filter( 'wp_enqueue_scripts', array($this, 'add_js') );
+		add_action( 'wp_enqueue_scripts', array($this, 'enqueue_css') );
+		add_action( 'wp_enqueue_scripts', array($this, 'enqueue_js') );
 	}
 
-	public function add_css() {
-		foreach ($this->css as $key => $css) {
-			wp_enqueue_style( $key, $this->url . '/' .$css );
+	public function enqueue_css() {
+		foreach ($this->css['files'] as $key => $css) {
+			wp_register_style( $key, $this->url . '/' .$css, $this->css['dependencies'], $this->css['version'], $this->css['media'] );
+			wp_enqueue_style( $key );
 		}
 	}
 
-	public function add_js() {
-		foreach ($this->js as $key => $js) {
-			wp_enqueue_script( $key, $this->url . '/' . $js, array('jquery'), '1.0.0', true );
+	public function enqueue_js() {
+		foreach ($this->js['files'] as $key => $js) {
+			// wp_deregister_script($key);
+			wp_register_script($key, $this->url . '/' . $js, $this->js['dependencies'], $this->js['version'], $this->js['footer']);
+			wp_enqueue_script( $key );
 		}
 	}
 

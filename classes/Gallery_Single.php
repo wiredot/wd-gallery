@@ -13,18 +13,16 @@ class Gallery_Single {
 
 	public function __construct($gallery_id) {
 		$this->gallery_id = $gallery_id;
-
-		$Skins = new Skin_Directory();
-		$active_skin = $Skins->get_active_skin();
-
-		$this->skin = new Skin($active_skin['id'], $active_skin['css'], $active_skin['js'], $active_skin['directory'], $active_skin['url']);
 	}
 
 	public function get_single() {
 
+		$Skins = new Skin_Directory();
+		$Active_Skin = $Skins->get_active_skin_object();
+
 		$photos = get_post_meta( $this->gallery_id, 'upload', true );
 
-		$Twig = new Twig($this->skin->get_directory().'/templates/');
+		$Twig = new Twig($Active_Skin->get_directory().'/templates/');
 		return $Twig->twig->render('wp-photo-gallery-single.html', array(
 			'photos' => $photos
 		));
