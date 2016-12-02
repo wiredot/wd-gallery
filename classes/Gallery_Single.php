@@ -9,13 +9,21 @@ class Gallery_Single {
 
 	private $gallery_id;
 
+	private $skin;
+
 	public function __construct($gallery_id) {
 		$this->gallery_id = $gallery_id;
+
+		$Skins = new Skin_Directory();
+		$active_skin = $Skins->get_active_skin();
+
+		$this->skin = new Skin($active_skin['id'], $active_skin['css'], $active_skin['js'], $active_skin['directory'], $active_skin['url']);
 	}
 
 	public function get_single() {
 
-		return 'gallery'.$this->gallery_id;
+		$Twig = new Twig($this->skin->get_directory().'/templates/');
+		return $Twig->twig->render('wp-photo-gallery-single.html');
 
 		// $smarty = (new WP_PG_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();
 		// return $smarty->fetch('wp-photo-gallery-list.html');
