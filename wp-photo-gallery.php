@@ -29,7 +29,7 @@ use Wiredot\WPPG\Core;
 register_activation_hook( __FILE__, 'activate_wp-photo-gallery' );
 
 function activate_wp_photo_gallery() {
-	// return Core::activate();
+	return Core::activate();
 }
 
 function WPPG() {

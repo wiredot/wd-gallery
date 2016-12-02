@@ -40,7 +40,7 @@ $preamp['config']['custom_post_type']['wp-photo-gallery'] = array(
 	'query_var' => true,
 	'can_export' => true,
 	'delete_with_user' => true,
-	'menu_icon' => WPPG_URL.'/assets/images/wp-photo-gallery.svg',
+	'custom_menu_icon' => 'assets/images/wp-photo-gallery.svg',
 );
 
 $preamp['config']['meta_box']['photos'] = [
