@@ -7,8 +7,7 @@ use Wiredot\Preamp\Twig;
 class Settings {
 
 	public function __construct() {
-		
-		add_action('admin_menu', array($this, 'add_settings_menu'));
+		// add_action('admin_menu', array($this, 'add_settings_menu'));
 	}
 
 	public function add_settings_menu() {

@@ -22,6 +22,21 @@ $preamp['config']['custom_post_type']['wp-photo-gallery'] = array(
 		'use_featured_image'	 => __( 'Use as Gallery Cover', 'wp-photo-gallery' ),
 		'set_featured_image'	 => __( 'Set Gallery Cover', 'wp-photo-gallery' ),
 	),
+	'messages' => array(
+		1  => __( 'Gallery updated.', 'wp-photo-gallery' ),
+		2  => __( 'Gallery updated.', 'wp-photo-gallery' ),
+		3  => __( 'Gallery deleted.', 'wp-photo-gallery' ),
+		4  => __( 'Gallery updated.', 'wp-photo-gallery' ),
+		5  => __( 'Gallery restored to revision from %revision%', 'wp-photo-gallery' ),
+		6  => __( 'Gallery published.', 'wp-photo-gallery' ),
+		7  => __( 'Gallery saved.', 'wp-photo-gallery' ),
+		8  => __( 'Gallery submitted.', 'wp-photo-gallery' ),
+		9  => __( 'Gallery scheduled for: <strong>%date%</strong>.', 'wp-photo-gallery' ),
+			// translators: Publish box date format, see http://php.net/date
+			// date_i18n( __( 'M j, Y @ G:i', 'wp-photo-gallery' ), strtotime( $post->post_date ) )
+		// ),
+		10 => __( 'Gallery draft updated.', 'wp-photo-gallery' )
+	),
 	'description' => __( 'Description.', 'wp-photo-gallery' ),
 	'public' => true,
 	'hierarchical' => false,

@@ -16,7 +16,6 @@ class Admin {
 		if ($file == WP_PHOTO_GALLERY_BASENAME) {
 			// settings link
 			$links[] = "<a href='edit.php?post_type=wp-photo-gallery&page=skins'>" . __('Skins', 'wp-photo-gallery') . "</a>";
-			$links[] = "<a href='edit.php?post_type=wp-photo-gallery&page=wp-photo-gallery-settings'>" . __('Settings', 'wp-photo-gallery') . "</a>";
 		}
 		return $links;
 	}
