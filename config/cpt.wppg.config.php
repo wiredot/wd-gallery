@@ -16,7 +16,11 @@ $preamp['config']['custom_post_type']['wp-photo-gallery'] = array(
 		'search_items'       => __( 'Search Photo Gallery', 'wp-photo-gallery' ),
 		'parent_item_colon'  => __( 'Parent Photo Gallery:', 'wp-photo-gallery' ),
 		'not_found'          => __( 'No Photo Gallery found.', 'wp-photo-gallery' ),
-		'not_found_in_trash' => __( 'No Photo Gallery found in Trash.', 'wp-photo-gallery' )
+		'not_found_in_trash' => __( 'No Photo Gallery found in Trash.', 'wp-photo-gallery' ),
+		'featured_image'	 => __( 'Gallery Cover', 'wp-photo-gallery' ),
+		'remove_featured_image'	 => __( 'Remove Gallery Cover', 'wp-photo-gallery' ),
+		'use_featured_image'	 => __( 'Use as Gallery Cover', 'wp-photo-gallery' ),
+		'set_featured_image'	 => __( 'Set Gallery Cover', 'wp-photo-gallery' ),
 	),
 	'description' => __( 'Description.', 'wp-photo-gallery' ),
 	'public' => true,
