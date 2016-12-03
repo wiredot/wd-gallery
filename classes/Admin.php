@@ -8,6 +8,7 @@ class Admin {
 		// add setting link on plugin page
 		add_filter('plugin_action_links', array($this, 'add_action_links'), 10, 2);
 		add_filter('plugin_row_meta', array($this, 'add_row_meta'), 10, 2);
+		add_filter('bulk_post_updated_messages', array($this, 'bulk_post_updated_messages_filter'), 10, 2);
 		add_action('save_post', array($this, 'add_shortcode'), 10, 2);
 	}
 
@@ -54,6 +55,19 @@ class Admin {
 				)
 			);
 		}
+	}
+
+	function bulk_post_updated_messages_filter( $bulk_messages, $bulk_counts ) {
+	    $bulk_messages['wp-photo-gallery'] = array(
+	        'updated'   => _n( '%s Gallery updated.', '%s Galleries updated.', $bulk_counts['updated'] ),
+	        'locked'    => _n( '%s Gallery not updated, somebody is editing it.', '%s Galleries not updated, somebody is editing them.', $bulk_counts['locked'] ),
+	        'deleted'   => _n( '%s Gallery permanently deleted.', '%s Galleries permanently deleted.', $bulk_counts['deleted'] ),
+	        'trashed'   => _n( '%s Gallery moved to the Trash.', '%s Galleries moved to the Trash.', $bulk_counts['trashed'] ),
+	        'untrashed' => _n( '%s Gallery restored from the Trash.', '%s Galleries restored from the Trash.', $bulk_counts['untrashed'] ),
+	    );
+
+	    return $bulk_messages;
+
 	}
 
 // end class
