@@ -21,6 +21,7 @@ class Core {
 			// init all admin functionality
 			new Admin();
 			new Editor();
+			new Settings();
 		} else {
 			new Shortcode();
 		}
@@ -48,13 +49,13 @@ class Core {
 	}
 
 	public static function activate() {
-		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
-		flush_rewrite_rules();
+		// $Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
+		// flush_rewrite_rules();
 
-		self::init_directory(WP_CONTENT_DIR.'/cache');
-		self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery');
-		self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery/templates_c');
-		self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery/smarty');
+		// self::init_directory(WP_CONTENT_DIR.'/cache');
+		// self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery');
+		// self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery/templates_c');
+		// self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery/smarty');
 	}
 
 	public function deactivate() {

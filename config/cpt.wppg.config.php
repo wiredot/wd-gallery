@@ -5,7 +5,7 @@ $preamp['config']['custom_post_type']['wp-photo-gallery'] = array(
 	'labels' => array(
 		'name'               => _x( 'WP Photo Gallery', 'post type general name', 'wp-photo-gallery' ),
 		'singular_name'      => _x( 'WP Photo Gallery', 'post type singular name', 'wp-photo-gallery' ),
-		'menu_name'          => _x( 'Photo Gallery', 'admin menu', 'wp-photo-gallery' ),
+		'menu_name'          => _x( 'WP Photo Gallery', 'admin menu', 'wp-photo-gallery' ),
 		'name_admin_bar'     => _x( 'WP Photo Gallery', 'add new on admin bar', 'wp-photo-gallery' ),
 		'add_new'            => _x( 'Add New Photo Gallery', 'add new', 'wp-photo-gallery' ),
 		'add_new_item'       => __( 'Add New Photo Gallery', 'wp-photo-gallery' ),
@@ -51,58 +51,6 @@ $preamp['config']['meta_box']['photos'] = [
 	'context' => 'normal', // normal | advanced | side
 	'priority' => 'high', // high | core | default | low
 	'fields' => array(
-		'text_field' => array(
-			'type' => 'text',
-			'label' => __( 'Text field', 'wp-photo-gallery' )
-		),
-		'email_field' => array(
-			'type' => 'email',
-			'label' => __( 'Email field', 'wp-photo-gallery' )
-		),
-		'date_field' => array(
-			'type' => 'date',
-			'label' => __( 'Date field', 'wp-photo-gallery' )
-		),
-		'editor_field' => array(
-			'type' => 'editor',
-			'label' => __( 'Editor field', 'wp-photo-gallery' )
-		),
-		'textarea_field' => array(
-			'type' => 'textarea',
-			'label' => __( 'Textarea field', 'wp-photo-gallery' )
-		),
-		'checkbox_field' => array(
-			'type' => 'checkbox',
-			'label' => __( 'Checkbox', 'wp-photo-gallery' )
-		),
-		'checkboxes_field' => array(
-			'type' => 'checkbox',
-			'label' => __( 'Checkboxes', 'wp-photo-gallery' ),
-			'options' => array(
-				1 => 'no',
-				2 => 'yes'
-			)
-		),
-		'select_field' => array(
-			'type' => 'select',
-			'label' => __( 'Select field', 'wp-photo-gallery' ),
-			'attributes' => array(
-				'multiple' => false,
-			),
-			'options' => array(
-				-1 => '-- select --',
-				1 => 'no',
-				2 => 'yes'
-			)
-		),
-		'radio_field' => array(
-			'type' => 'radio',
-			'label' => __( 'Radio field', 'wp-photo-gallery' ),
-			'options' => array(
-				1 => 'no',
-				2 => 'yes'
-			)
-		),
 		'upload' => array(
 			'type' => 'upload',
 			'label' => __( 'Upload', 'wp-photo-gallery' ),

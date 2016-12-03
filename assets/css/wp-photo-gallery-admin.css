@@ -62,6 +62,23 @@ i.mce-i-icon {
   height: 20px;
   margin-top: -2px; }
 
+.wp-photo-gallery-settings h1 {
+  margin-bottom: 5px; }
+  .wp-photo-gallery-settings h1 img {
+    width: 24px;
+    height: 24px;
+    margin: 3px 10px 0 0;
+    vertical-align: top; }
+
+.wp-photo-gallery-settings .tab-content {
+  display: none; }
+
+.wp-photo-gallery-settings .tab-content.active {
+  display: block; }
+
+.wp-photo-gallery-settings .nav-tab {
+  cursor: pointer; }
+
 .wp-photo-gallery-skins h1 {
   margin-bottom: 15px; }
 

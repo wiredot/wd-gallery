@@ -14,7 +14,8 @@ class Admin {
 		// run for this plugin
 		if ($file == WP_PHOTO_GALLERY_BASENAME) {
 			// settings link
-			$links[] = "<a href='edit.php?post_type=wp-photo-gallery&page=themes'>" . __('Themes', 'wp-photo-gallery') . "</a>";
+			$links[] = "<a href='edit.php?post_type=wp-photo-gallery&page=skins'>" . __('Skins', 'wp-photo-gallery') . "</a>";
+			$links[] = "<a href='edit.php?post_type=wp-photo-gallery&page=skins'>" . __('Settings', 'wp-photo-gallery') . "</a>";
 		}
 		return $links;
 	}
