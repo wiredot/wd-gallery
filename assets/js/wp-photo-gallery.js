@@ -3,12 +3,12 @@ jQuery(document).ready(function($){
 });
 
 function wpPhotoGalleryTabs($) {
-	$('.wp-photo-gallery-settings .nav-tab').on('click', function() {
+	$('.wp-photo-gallery-wrap .nav-tab').on('click', function() {
             var which = $(this).attr('rel');
-            $('.wp-photo-gallery-settings .nav-tab').removeClass('nav-tab-active');
-            $('.wp-photo-gallery-settings .tab-content').removeClass('active');
+            $('.wp-photo-gallery-wrap .nav-tab').removeClass('nav-tab-active');
+            $('.wp-photo-gallery-wrap .tab-content').removeClass('active');
             $(this).addClass('nav-tab-active');
-            $('.wp-photo-gallery-settings .tab-' + which).addClass('active');
+            $('.wp-photo-gallery-wrap .tab-' + which).addClass('active');
         });
 }
 

@@ -22,10 +22,8 @@ class Settings {
 	}
 
 	public function settings_page() {
-
 		$Twig = new Twig();
-		echo $Twig->twig->render('settings.html', array(
-		));
+		echo $Twig->twig->render('settings.html');
 	}
 
 // class end

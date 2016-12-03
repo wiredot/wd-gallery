@@ -62,22 +62,29 @@ i.mce-i-icon {
   height: 20px;
   margin-top: -2px; }
 
-.wp-photo-gallery-settings h1 {
+.wp-photo-gallery-wrap h1 {
   margin-bottom: 5px; }
-  .wp-photo-gallery-settings h1 img {
+  .wp-photo-gallery-wrap h1 img {
     width: 24px;
     height: 24px;
     margin: 3px 10px 0 0;
     vertical-align: top; }
 
-.wp-photo-gallery-settings .tab-content {
+.wp-photo-gallery-wrap .tab-content {
   display: none; }
 
-.wp-photo-gallery-settings .tab-content.active {
+.wp-photo-gallery-wrap .tab-content.active {
   display: block; }
 
-.wp-photo-gallery-settings .nav-tab {
+.wp-photo-gallery-wrap .nav-tab {
   cursor: pointer; }
+
+.wp-photo-gallery-welcome .wp-photo-gallery-header img {
+  float: right;
+  border-radius: 4px;
+  margin: 0 0 15px 15px;
+  width: 100px;
+  height: auto; }
 
 .wp-photo-gallery-skins h1 {
   margin-bottom: 15px; }

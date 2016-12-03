@@ -22,6 +22,7 @@ class Core {
 			new Admin();
 			new Editor();
 			new Settings();
+			new Welcome;
 		} else {
 			new Shortcode();
 		}
