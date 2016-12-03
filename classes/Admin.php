@@ -9,6 +9,7 @@ class Admin {
 		add_filter('plugin_action_links', array($this, 'add_action_links'), 10, 2);
 		add_filter('plugin_row_meta', array($this, 'add_row_meta'), 10, 2);
 		add_filter('bulk_post_updated_messages', array($this, 'bulk_post_updated_messages_filter'), 10, 2);
+		add_action('admin_head', array( $this, 'help_tab'));
 		add_action('save_post', array($this, 'add_shortcode'), 10, 2);
 	}
 
@@ -68,6 +69,53 @@ class Admin {
 
 	    return $bulk_messages;
 
+	}
+
+	public function help_tab() {
+
+		$screen = get_current_screen();
+
+		// Return early if we're not on the book post type.
+		if ( 'wp-photo-gallery' != $screen->post_type ) {
+			return;
+		}
+
+		// Setup help tab args.
+		$args = array(
+			'id'      => 'wdg_getting_started', //unique id for the tab
+			'title'   => 'Getting Started', //unique visible title for the tab
+			'content' => '<h3>Getting Started</h3><ol>
+				<li>Go to WP Photo Gallery and click ‘Add new Gallery’ button</li>
+				<li>Type the name of the gallery and add images</li>
+				<li>Publish and you have a just created your first photo gallery</li>
+			</ol>
+			<h4>Creating gallery list page</h4>
+			<ol>
+				<li>Create a new page or edit and existing one</li>
+				<li>Click on ‘Add WP Photo Gallery’ button directly above the Editor</li>
+				<li>Press the ‘Insert Shortcode’ button for Galleries overview</li>
+				<li>You should have a short code in your editor ([wp-photo-gallery])</li>
+				<li>Save the page and you\’re done!</li>
+			</ol>
+			',  //actual help text
+		);
+
+		// Add the help tab.
+		$screen->add_help_tab( $args );
+
+		$contextual_help = '<h3>' . __('Feedback', 'wp-photo-gallery') . '</h3>' ;
+		$contextual_help.= '<p>' . __('Your opinion matters! We would appreciate if you can share what you think about WP Photo Gallery with us. We would love to improve it!', 'wp-photo-gallery') . '</p>' ;
+		$contextual_help.= '<p>' . __('Just shoot us an email at <a href="mailto:labs@wiredot.com">labs@wiredot.com</a>', 'wp-photo-gallery') . '</p>' ;
+
+		// Setup help tab args.
+		$args = array(
+			'id'      => 'wdg_feedback', //unique id for the tab
+			'title'   => 'Feedback', //unique visible title for the tab
+			'content' => $contextual_help,  //actual help text
+		);
+
+		// Add the help tab.
+		$screen->add_help_tab( $args );
 	}
 
 // end class
