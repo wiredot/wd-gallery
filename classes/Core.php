@@ -56,6 +56,7 @@ class Core {
 		// self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery');
 		// self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery/templates_c');
 		// self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery/smarty');
+		$Welcome = new Welcome;
 	}
 
 	public function deactivate() {

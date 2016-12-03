@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: WP Photo Gallery
- * Plugin URI:  http://wiredot.com/wp-photo-gallery
+ * Plugin URI:  https://wiredot.com/wp-photo-gallery/
  * Description: WP Photo Gallery plugin
  * Author: WireDot Labs
  * Version: 1.1.0
  * Text Domain: wp-photo-gallery
  * Domain Path: /languages
- * Author URI: http://wiredot.com/
+ * Author URI: https://wiredot.com/labs/
  * License: GPLv2 or later
  */
 
@@ -26,10 +26,10 @@ define( 'WP_PHOTO_GALLERY_NAME', dirname( plugin_basename( __FILE__ ) ) );
 
 use Wiredot\WP_Photo_Gallery\Core;
 
-// register_activation_hook( __FILE__, 'activate_wp-photo-gallery' );
+register_activation_hook( __FILE__, 'activate_wp_photo_gallery' );
 
 function activate_wp_photo_gallery() {
-	// return Core::activate();
+	return Core::activate();
 }
 
 function WP_Photo_Gallery() {
