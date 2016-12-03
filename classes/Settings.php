@@ -12,9 +12,10 @@ class Settings {
 	}
 
 	public function add_settings_menu() {
-		add_options_page(
-			__('WP Photo Gallery'),
-			__('WP Photo Gallery'),
+		add_submenu_page(
+			'edit.php?post_type=wp-photo-gallery',
+			__('Settings'),
+			__('Settings'),
 			'manage_options',
 			'wp-photo-gallery-settings',
 			array($this, 'settings_page')
