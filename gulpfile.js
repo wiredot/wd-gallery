@@ -19,7 +19,7 @@ var gulp = require('gulp'),
 var options = {
 	dist: 'dist',
 	assets: 'assets',
-	themes: 'themes',
+	skins: 'skins',
 	dist: 'dist',
 	src: 'src'
 }
@@ -53,20 +53,20 @@ gulp.task('scss', function() {
 		}));
 });
 
-var themes = glob.sync(options.src + '/themes/*').map(function(themeDir) {
+var skins = glob.sync(options.src + '/skins/*').map(function(themeDir) {
     return path.basename(themeDir);
 });
 
-themes.forEach(function(name) {
+skins.forEach(function(name) {
     gulp.task(name+'-scss', function() {
-        return gulp.src(options.src + '/themes/'+name+'/scss/*.scss')
+        return gulp.src(options.src + '/skins/'+name+'/scss/*.scss')
             .pipe(maps.init())
 			.pipe(sass())
 			.pipe(maps.write('./'))
-            .pipe(gulp.dest(options.themes + '/'+name+'/assets/css'))
+            .pipe(gulp.dest(options.skins + '/'+name+'/assets/css'))
     });
 
-    gulp.task(name+'-theme', [name+'-scss']);
+    gulp.task(name+'-skins', [name+'-scss']);
 });
 
 gulp.task('svg', function() {
@@ -85,16 +85,16 @@ gulp.task('svg', function() {
 		.pipe(gulp.dest( options.assets + '/images'));
 });
 
-gulp.task('themes', themes.map(function(name){ return name+'-theme'; }));
+gulp.task('skins', skins.map(function(name){ return name+'-skins'; }));
 
-gulp.task('default', ['scss', 'js', 'svg', 'themes']);
+gulp.task('default', ['scss', 'js', 'svg', 'skins']);
 
 gulp.task('watch', function() {
 	gulp.watch( options.src + '/js/*.js', ['js']);
 	gulp.watch( options.src + '/scss/**/*.scss', ['scss']);
 	gulp.watch( options.src + '/images/*.svg', ['svg']);
-	themes.map(function(name){
-		gulp.watch( options.src + '/themes/'+name+'/scss/*.scss', [name + '-scss']);
+	skins.map(function(name){
+		gulp.watch( options.src + '/skins/'+name+'/scss/*.scss', [name + '-scss']);
 	});
 });
 
@@ -110,14 +110,14 @@ gulp.task('dist_clear', function() {
 
 gulp.task('dist_copy', ['dist_clear', 'default'], function() {
 	return gulp.src( [
+			'assets/**/*.{css,js,jpg,svg}', 
 			'classes/**/*', 
 			'smarty-plugins/**/*', 
 			'vendor/**/*', 
 			'composer.json', 
 			'readme.txt', 
 			'wp-photo-gallery.php', 
-			'assets/**/*.{css,js,jpg,svg}', 
-			'themes/**/*.{css,js,jpg,svg,png,php,html}', 
+			'skins/**/*.{css,js,jpg,svg,png,php,html}', 
 			'templates/**/*'
 		], {base: './'}
 	)
