@@ -36,7 +36,9 @@
 .wp-photo-gallery.gallery-single.milan {
   max-width: 1150px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin: 0;
+  padding: 0; }
   .wp-photo-gallery.gallery-single.milan::after {
     clear: both;
     content: "";

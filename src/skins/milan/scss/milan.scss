@@ -45,6 +45,8 @@ $max-width: 1150px;
 
 .wp-photo-gallery.gallery-single.milan {
 	@include outer-container();
+	margin: 0;
+	padding: 0;
 
 	li {
 		list-style: none;

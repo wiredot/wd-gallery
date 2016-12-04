@@ -61,10 +61,15 @@ var skins = glob.sync(options.src + '/skins/*').map(function(themeDir) {
 skins.forEach(function(name) {
     gulp.task(name+'-scss', function() {
         return gulp.src(options.src + '/skins/'+name+'/scss/*.scss')
+        	.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
             .pipe(maps.init())
 			.pipe(sass())
 			.pipe(maps.write('./'))
             .pipe(gulp.dest(options.skins + '/'+name+'/assets/css'))
+            .pipe(notify({
+				message: 'all done',
+				title: 'JS'
+			}))
     });
 
     gulp.task(name+'-skins', [name+'-scss']);
