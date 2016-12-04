@@ -17,10 +17,12 @@ class Gallery_Single {
 
 	public function get_single() {
 
-		$Skins = new Skin_Directory();
+		$Skins = Skin_Factory::init();
 		$Active_Skin = $Skins->get_active_skin_object();
+		$Active_Skin->enqueue_css();
+		$Active_Skin->enqueue_js();
 
-		$photos = get_post_meta( $this->gallery_id, 'upload', true );
+		$photos = get_post_meta( $this->gallery_id, 'wppg-photos', true );
 
 		$Twig = new Twig($Active_Skin->get_directory().'/templates/');
 		return $Twig->twig->render('wp-photo-gallery-single.html', array(

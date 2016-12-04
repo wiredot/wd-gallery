@@ -62,7 +62,7 @@ $preamp['config']['custom_post_type']['wp-photo-gallery'] = array(
 	'custom_menu_icon' => 'assets/images/wp-photo-gallery.svg',
 );
 
-$preamp['config']['meta_box']['photos'] = [
+$preamp['config']['meta_box']['wp-photo-gallery-photos'] = [
 	'active' => true,
 	'type' => 'post',
 	'name' => __( 'Photos', 'wp-photo-gallery' ),
@@ -70,9 +70,9 @@ $preamp['config']['meta_box']['photos'] = [
 	'context' => 'normal', // normal | advanced | side
 	'priority' => 'high', // high | core | default | low
 	'fields' => array(
-		'upload' => array(
+		'wppg-photos' => array(
 			'type' => 'upload',
-			'label' => __( 'Upload', 'wp-photo-gallery' ),
+			'label' => __( 'Photos', 'wp-photo-gallery' ),
 			'labels' => array(
 				'button' => __( 'Add Files', 'wp-photo-gallery' ),
 				'button_window' => __( 'Add Files', 'wp-photo-gallery' ),
@@ -82,6 +82,21 @@ $preamp['config']['meta_box']['photos'] = [
 				'multiple' => true,
 				'filetype' => 'image'
 			)
+		),
+	)
+];
+
+$preamp['config']['meta_box']['wp-photo-gallery-skin'] = [
+	'active' => true,
+	'type' => 'post',
+	'name' => __( 'Skin', 'wp-photo-gallery' ),
+	'post_type' => array('wp-photo-gallery'),
+	'context' => 'normal', // normal | advanced | side
+	'priority' => 'high', // high | core | default | low
+	'fields' => array(
+		'wppg-skin' => array(
+			'type' => 'text',
+			'label' => __( 'Skin', 'wp-photo-gallery' ),
 		),
 	)
 ];

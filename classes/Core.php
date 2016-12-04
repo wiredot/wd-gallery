@@ -10,19 +10,17 @@ class Core {
 
 	private function __construct() {
 		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
-		// print_r(get_declared_classes());
 		// add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
-		//$input = new Input('asd');
-		// echo $input->html();
 		
-		new Skin_Directory();
+		Skin_Factory::init();
 		
 		if (is_admin()) {
 			// init all admin functionality
 			new Admin();
 			new Editor();
 			new Settings();
-			new Welcome;
+			new Welcome();
+			new Skin_Directory();
 		} else {
 			new Shortcode();
 		}
