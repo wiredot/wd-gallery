@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	plumber = require('gulp-plumber'),
 	notify = require('gulp-notify'),
+	composer = require('gulp-composer'),
 	cssnano = require('gulp-cssnano'),
 	del = require('del');
 
@@ -101,27 +102,36 @@ gulp.task('watch', function() {
 // Production
 
 gulp.task('dist_clear', function() {
+	del( options.dist + '/assets' );
 	del( options.dist + '/classes' );
-	del( options.dist + '/smarty-plugins' );
+	del( options.dist + '/config' );
+	del( options.dist + '/languages' );
+	del( options.dist + '/skins' );
 	del( options.dist + '/templates' );
 	del( options.dist + '/vendor' );
-	del( options.dist + '/assets' );
 });
 
-gulp.task('dist_copy', ['dist_clear', 'default'], function() {
+gulp.task('composer', function() {
+	composer({
+        "working-dir": "./dist/",
+        bin: "composer"
+    });
+});
+
+gulp.task('dist_copy', ['dist_clear', 'default', ], function() {
 	return gulp.src( [
 			'assets/**/*.{css,js,jpg,svg}', 
-			'classes/**/*', 
-			'smarty-plugins/**/*', 
-			'vendor/**/*', 
+			'classes/*', 
+			'config/*', 
+			'languages/*', 
+			'skins/**/*.{css,js,jpg,svg,png,php,html}', 
+			'templates/**/*',
 			'composer.json', 
 			'readme.txt', 
-			'wp-photo-gallery.php', 
-			'skins/**/*.{css,js,jpg,svg,png,php,html}', 
-			'templates/**/*'
+			'wp-photo-gallery.php'
 		], {base: './'}
 	)
 	.pipe(gulp.dest( options.dist ));
 });
 
-gulp.task('dist', ['dist_copy']);
+gulp.task('dist', ['dist_copy', 'composer']);

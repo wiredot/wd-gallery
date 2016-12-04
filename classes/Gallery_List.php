@@ -12,8 +12,10 @@ class Gallery_List {
 
 	public function get_list() {
 		// global $wp_photo_gallery_query;
-		$Skins = new Skin_Directory();
+		$Skins = Skin_Factory::init();
 		$Active_Skin = $Skins->get_active_skin_object();
+		$Active_Skin->enqueue_css();
+		$Active_Skin->enqueue_js();
 
 		$wp_photo_gallery_query = $this->get_posts();
 
