@@ -86,6 +86,21 @@ i.mce-i-icon {
   width: 100px;
   height: auto; }
 
+.wp-photo-gallery-welcome .feature-section-media, .wp-photo-gallery-welcome .feature-section-content {
+  width: 50%;
+  box-sizing: border-box; }
+
+.wp-photo-gallery-welcome .feature-section-media {
+  float: right; }
+  .wp-photo-gallery-welcome .feature-section-media img {
+    border: 1px solid #ddd; }
+
+.wp-photo-gallery-welcome .feature-section-content {
+  float: left;
+  padding-right: 50px; }
+  .wp-photo-gallery-welcome .feature-section-content h4 {
+    margin: 0 0 1em; }
+
 .wp-photo-gallery-skins h1 {
   margin-bottom: 15px; }
 
