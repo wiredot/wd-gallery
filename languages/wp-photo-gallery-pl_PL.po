@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Photo Gallery\n"
-"POT-Creation-Date: 2016-12-06 18:27+0100\n"
-"PO-Revision-Date: 2016-12-06 18:29+0100\n"
+"POT-Creation-Date: 2016-12-06 21:46+0100\n"
+"PO-Revision-Date: 2016-12-06 21:52+0100\n"
 "Last-Translator: Piotr Soluch <psoluch@wiredot.com>\n"
 "Language-Team: Piotr Soluch <psoluch@wiredot.com>\n"
 "Language: pl\n"
@@ -86,6 +86,31 @@ msgstr "Aktywna"
 msgid "Activate"
 msgstr "Aktywuj"
 
+#: templates/welcome.html:36
+msgid ""
+"On any page click on the Add Photo Gallery button directly above the Editor. "
+"Then click on the Insert Shortcode button next to Galleries List. Save the "
+"page and you're done."
+msgstr ""
+"Na dowolnej strony kliknij przycisk Dodaj Galerię tuż nad edytorem. "
+"Następnie kliknij przycisk wstaw Krótki Kod obok listy galerii. Zapisz "
+"stronę i gotowe."
+
+#: templates/welcome.html:37
+msgid "Shortcode"
+msgstr "Krótki Kod"
+
+#: templates/welcome.html:50
+msgid ""
+"You can display a single Gallery on a page. Click on the Add Photo Gallery "
+"button directly above the Editor. Then click on the Insert Shortcode button "
+"next to the Gallery you want to show. Save the page and that's it."
+msgstr ""
+
+#: templates/welcome.html:51
+msgid "Example Shortcode (id is a post id of your Gallery)"
+msgstr "Przykładowy Krótki Kod (id to id twojej Galerii)"
+
 #: classes/Admin.php:28 classes/Help.php:23 classes/Help.php:24
 msgid "Getting Started"
 msgstr "Zacznij tutaj"
@@ -133,6 +158,18 @@ msgid_plural "%s Galleries restored from the Trash."
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+
+#: classes/Help.php:25
+#, php-format
+msgid "Follow the instructions on <a href=\"%s\">this page</a>."
+msgstr ""
+
+#: classes/Help.php:37
+#, php-format
+msgid ""
+"If you have a question or need help, check out our <a href=\"%s\">support "
+"page</a>."
+msgstr ""
 
 #: classes/Help.php:47 classes/Help.php:48
 msgid "Credits"

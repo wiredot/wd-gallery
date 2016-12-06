@@ -47,7 +47,6 @@ class Settings {
 		$hide_css = intval($_POST['hide_css']);
 		$image_quality = intval($_POST['image_quality']);
 
-
 		$options = array(
 			'hide_css' => $hide_css,
 			'hide_js' => $hide_js,
@@ -58,7 +57,7 @@ class Settings {
 
 		set_transient( 'wp_photo_gallery_message', __('Settings updated.', 'wp-photo-gallery'), 2 );
 		wp_redirect( 'edit.php?post_type=wp-photo-gallery&page=wp-photo-gallery-settings' );
-		wp_die();
+		exit;
 	}
 
 }

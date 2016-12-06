@@ -11,7 +11,10 @@ class Core {
 	private static $settings;
 
 	private function __construct() {
-		$this->load_plugin_textdomain();
+		add_action( 'plugins_loaded', array( $this, 'load_plugin_textdomain' ) );
+		add_action( 'plugins_loaded', array( $this, 'setup' ) );
+
+		// $this->load_plugin_textdomain();
 		
 		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
 
@@ -30,6 +33,10 @@ class Core {
 		} else {
 			new Shortcode();
 		}
+	}
+
+	public function setup() {
+		
 	}
 
 	public static function run() {
