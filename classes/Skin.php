@@ -4,8 +4,6 @@ namespace Wiredot\WP_Photo_Gallery;
 
 class Skin {
 
-	private $id;
-
 	private $config;
 
 	public function __construct($config) {

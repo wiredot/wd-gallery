@@ -15,6 +15,12 @@ class Skin_Factory {
 	private function __construct() {
 		$this->skins = $this->find_skins();
 
+		$active_skin_id = $this->find_active_skin_id();
+
+		if ($active_skin_id) {
+			$this->active_skin_id = $active_skin_id;
+		}
+
 		add_action('wp_enqueue_scripts', array($this, 'init_skins'));
 	}
 
