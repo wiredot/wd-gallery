@@ -5,15 +5,14 @@
 	</div>
 	{% endif %}
     <h1 class="nav-tab-wrapper">
-        <a class="nav-tab nav-tab-active" rel="general">General</a>
-        <a class="nav-tab" rel="credits">Credits</a>
-    </h1><div class="updated notice pm-notice hidden"></div>
+        <a class="nav-tab nav-tab-active" rel="general">{{__("General", "wp-photo-gallery")}}</a>
+    </h1>
 
     <div class="tab-content tab-general active">
 	    <form action="{{ admin_url('admin-ajax.php') }}?action=wp_photo_gallery_general" method="POST">
 	        <table class="form-table">
 	            <tbody><tr>
-	                <th><label for="wp-photo-gallery-image-quality">Image Quality</label></th>
+	                <th><label for="wp-photo-gallery-image-quality">{{__("Image Quality", "wp-photo-gallery")}}</label></th>
 	                <td>
 	                     <input type="text" value="{{ image_quality }}" id="wp-photo-gallery-image-quality" name="image_quality">
 	                </td>
@@ -35,12 +34,8 @@
 	        </tbody></table>
 
 	        <div class="submit">
-	            <input type="submit" class="button-primary save-settings" value="Save Changes">
+	            <input type="submit" class="button-primary save-settings" value="{{__("Save Changes", "wp-photo-gallery")}}">
 	        </div>
 	    </form>
-    </div>
-
-    <div class="tab-content tab-credits">
-       credits
     </div>
 </div>

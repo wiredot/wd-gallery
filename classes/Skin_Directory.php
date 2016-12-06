@@ -22,6 +22,7 @@ class Skin_Directory {
 			update_option( 'wp-photo-gallery-active-skin-id', $skin );
 		}
 
+		set_transient( 'wp_photo_gallery_message', __('Skin enabled.', 'wp-photo-gallery'), 2 );
 		wp_redirect( '?post_type=wp-photo-gallery&page=skins' );
 		exit;
 	}

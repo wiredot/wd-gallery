@@ -1,11 +1,10 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
 "Project-Id-Version: WP Photo Gallery\n"
-"POT-Creation-Date: 2016-12-06 09:49+0100\n"
-"PO-Revision-Date: 2016-12-06 09:45+0100\n"
-"Last-Translator: Piotr Soluch <psoluch@wiredot.com>\n"
+"POT-Creation-Date: 2016-12-06 09:50+0100\n"
+"PO-Revision-Date: 2016-12-06 09:57+0100\n"
 "Language-Team: Piotr Soluch <psoluch@wiredot.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,8 +14,10 @@ msgstr ""
 "X-Poedit-WPHeader: wp-photo-gallery.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: Piotr Soluch <psoluch@wiredot.com>\n"
+"Language: pl\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
@@ -26,16 +27,16 @@ msgstr ""
 
 #: templates/settings.html:8
 msgid "General"
-msgstr ""
+msgstr "Ogólne"
 
 #: templates/settings.html:15
 msgid "Image Quality"
-msgstr ""
+msgstr "Jakość Zdjęć"
 
 #: classes/Admin.php:20 classes/Skin_Directory.php:34
 #: classes/Skin_Directory.php:35
 msgid "Skins"
-msgstr ""
+msgstr "Skórki"
 
 #: classes/Admin.php:29
 msgid "Getting Started"
@@ -43,14 +44,15 @@ msgstr ""
 
 #: classes/Admin.php:30
 msgid "Support"
-msgstr ""
+msgstr "Wsparcie"
 
 #: classes/Admin.php:63
 #, php-format
 msgid "%s Gallery updated."
 msgid_plural "%s Galleries updated."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s Galeria zaktualizowana."
+msgstr[1] "%s Galerie zaktualizowane."
+msgstr[2] "%s Galerie zaktualizowane."
 
 #: classes/Admin.php:64
 #, php-format
@@ -58,6 +60,7 @@ msgid "%s Gallery not updated, somebody is editing it."
 msgid_plural "%s Galleries not updated, somebody is editing them."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: classes/Admin.php:65
 #, php-format
@@ -65,6 +68,7 @@ msgid "%s Gallery permanently deleted."
 msgid_plural "%s Galleries permanently deleted."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: classes/Admin.php:66
 #, php-format
@@ -72,6 +76,7 @@ msgid "%s Gallery moved to the Trash."
 msgid_plural "%s Galleries moved to the Trash."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: classes/Admin.php:67
 #, php-format
@@ -79,10 +84,11 @@ msgid "%s Gallery restored from the Trash."
 msgid_plural "%s Galleries restored from the Trash."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: classes/Admin.php:106
 msgid "Feedback"
-msgstr ""
+msgstr "Opinie"
 
 #: classes/Admin.php:107
 msgid ""
@@ -95,101 +101,103 @@ msgid ""
 "Just shoot us an email at <a href=\"mailto:labs@wiredot.com\">labs@wiredot."
 "com</a>"
 msgstr ""
+"Wyślij do nas email na adres <a href=\"mailto:labs@wiredot.com"
+"\">labs@wiredot.com</a>"
 
 #: classes/Settings.php:18 classes/Settings.php:19
 msgid "Settings"
-msgstr ""
+msgstr "Ustawienia"
 
 #: classes/Settings.php:60
 msgid "Settings updated."
-msgstr ""
+msgstr "Ustawienia zapisane."
 
 #: classes/Skin_Directory.php:25
 msgid "Skin enabled."
-msgstr ""
+msgstr "Skórka aktywowana."
 
 #: classes/Welcome.php:23 classes/Welcome.php:24
 msgid "Welcome to WP Photo Gallery"
-msgstr ""
+msgstr "Witaj w WP Photo Gallery"
 
 #: config/cpt.wppg.config.php:8
 msgctxt "admin menu"
 msgid "Photo Gallery"
-msgstr ""
+msgstr "Galeria Zdjęć"
 
 #: config/cpt.wppg.config.php:10
 msgctxt "gallery"
 msgid "Add New Photo Gallery"
-msgstr ""
+msgstr "Dodaj Nową Galerię"
 
 #: config/cpt.wppg.config.php:11
 msgid "Add New Photo Gallery"
-msgstr ""
+msgstr "Dodaj Nową Galerię"
 
 #: config/cpt.wppg.config.php:12
 msgid "New Photo Gallery"
-msgstr ""
+msgstr "Nowa Galeria"
 
 #: config/cpt.wppg.config.php:13
 msgid "Edit Photo Gallery"
-msgstr ""
+msgstr "Edytuj Galerię"
 
 #: config/cpt.wppg.config.php:14
 msgid "View Photo Gallery"
-msgstr ""
+msgstr "Zobacz Galerię"
 
 #: config/cpt.wppg.config.php:15
 msgid "All Photo Galleries"
-msgstr ""
+msgstr "Wszystkie Galerie"
 
 #: config/cpt.wppg.config.php:16
 msgid "Search Photo Gallery"
-msgstr ""
+msgstr "Szukaj Galerii"
 
 #: config/cpt.wppg.config.php:17
 msgid "No Photo Gallery found."
-msgstr ""
+msgstr "Nie znaleziono Galerii."
 
 #: config/cpt.wppg.config.php:18
 msgid "No Photo Gallery found in Trash."
-msgstr ""
+msgstr "Nie znaleziono Galerii w koszu."
 
 #: config/cpt.wppg.config.php:19
 msgid "Gallery Cover"
-msgstr ""
+msgstr "Okładka Galerii"
 
 #: config/cpt.wppg.config.php:20
 msgid "Remove Gallery Cover"
-msgstr ""
+msgstr "Usuń Okładkę Galerii"
 
 #: config/cpt.wppg.config.php:21
 msgid "Use as Gallery Cover"
-msgstr ""
+msgstr "Użyj jako Okładki Galerii"
 
 #: config/cpt.wppg.config.php:22
 msgid "Set Gallery Cover"
-msgstr ""
+msgstr "Ustaw Okładkę Galerii"
 
 #: config/cpt.wppg.config.php:25 config/cpt.wppg.config.php:26
 #: config/cpt.wppg.config.php:28
 msgid "Gallery updated."
-msgstr ""
+msgstr "Galeria zaktualizowana."
 
 #: config/cpt.wppg.config.php:27
 msgid "Gallery deleted."
-msgstr ""
+msgstr "Galeria usunięta."
 
 #: config/cpt.wppg.config.php:29
 msgid "Gallery restored to revision from %revision%"
-msgstr ""
+msgstr "Galeria przywrócona do wersji %revision%"
 
 #: config/cpt.wppg.config.php:30
 msgid "Gallery published."
-msgstr ""
+msgstr "Galeria opublikowana."
 
 #: config/cpt.wppg.config.php:31
 msgid "Gallery saved."
-msgstr ""
+msgstr "Galeria zapisana."
 
 #: config/cpt.wppg.config.php:32
 msgid "Gallery submitted."
@@ -197,31 +205,31 @@ msgstr ""
 
 #: config/cpt.wppg.config.php:33
 msgid "Gallery scheduled for: <strong>%date%</strong>."
-msgstr ""
+msgstr "Publikacja Galerii zaplanowana na: <strong>%date%</strong>."
 
 #: config/cpt.wppg.config.php:37
 msgid "Gallery draft updated."
-msgstr ""
+msgstr "Szkic Galerii zaktualizowany."
 
 #: config/cpt.wppg.config.php:39
 msgid "Description."
-msgstr ""
+msgstr "Opis."
 
 #: config/cpt.wppg.config.php:67 config/cpt.wppg.config.php:74
 msgid "Photos"
-msgstr ""
+msgstr "Zdjęcia"
 
 #: config/cpt.wppg.config.php:76 config/cpt.wppg.config.php:77
 msgid "Add Files"
-msgstr ""
+msgstr "Dodaj Pliki"
 
 #: config/cpt.wppg.config.php:78
 msgid "Upload or Choose Files"
-msgstr ""
+msgstr "Prześlij lub Wybierz Pliki"
 
 #: config/cpt.wppg.config.php:91 config/cpt.wppg.config.php:98
 msgid "Skin"
-msgstr ""
+msgstr "Skórka"
 
 #. Plugin Name of the plugin/theme
 msgid "WP Photo Gallery"

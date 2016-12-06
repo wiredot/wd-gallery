@@ -11,9 +11,12 @@ class Core {
 	private static $settings;
 
 	private function __construct() {
-		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
-		// add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
+		$this->load_plugin_textdomain();
 		
+		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
+
+		add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
+
 		Skin_Factory::init();
 
 		self::$settings = get_option( 'wp-photo-gallery' );
