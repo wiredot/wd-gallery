@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Photo Gallery\n"
-"POT-Creation-Date: 2016-12-06 16:53+0100\n"
-"PO-Revision-Date: 2016-12-06 17:13+0100\n"
+"POT-Creation-Date: 2016-12-06 18:27+0100\n"
+"PO-Revision-Date: 2016-12-06 18:29+0100\n"
 "Last-Translator: Piotr Soluch <psoluch@wiredot.com>\n"
 "Language-Team: Piotr Soluch <psoluch@wiredot.com>\n"
 "Language: pl\n"
@@ -41,7 +41,7 @@ msgstr "Galerie"
 msgid "Add Photo Gallery"
 msgstr "Dodaj Galerię"
 
-#: templates/settings.html:2 classes/Settings.php:18 classes/Settings.php:19
+#: templates/settings.html:2 classes/Settings.php:17 classes/Settings.php:18
 msgid "Settings"
 msgstr "Ustawienia"
 
@@ -73,7 +73,7 @@ msgstr "JS"
 msgid "Hide standard Skin JS Scripts"
 msgstr "Ukrycie standardowych skryptów JS"
 
-#: templates/skins.html:2 classes/Admin.php:20 classes/Skin_Directory.php:34
+#: templates/skins.html:2 classes/Admin.php:19 classes/Skin_Directory.php:34
 #: classes/Skin_Directory.php:35
 msgid "Skins"
 msgstr "Skórki"
@@ -86,15 +86,15 @@ msgstr "Aktywna"
 msgid "Activate"
 msgstr "Aktywuj"
 
-#: classes/Admin.php:29
+#: classes/Admin.php:28 classes/Help.php:23 classes/Help.php:24
 msgid "Getting Started"
 msgstr "Zacznij tutaj"
 
-#: classes/Admin.php:30
+#: classes/Admin.php:29 classes/Help.php:35 classes/Help.php:36
 msgid "Support"
 msgstr "Wsparcie"
 
-#: classes/Admin.php:63
+#: classes/Admin.php:62
 #, php-format
 msgid "%s Gallery updated."
 msgid_plural "%s Galleries updated."
@@ -102,7 +102,7 @@ msgstr[0] "%s Galeria zaktualizowana."
 msgstr[1] "%s Galerie zaktualizowane."
 msgstr[2] "%s Galerie zaktualizowane."
 
-#: classes/Admin.php:64
+#: classes/Admin.php:63
 #, php-format
 msgid "%s Gallery not updated, somebody is editing it."
 msgid_plural "%s Galleries not updated, somebody is editing them."
@@ -110,7 +110,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: classes/Admin.php:65
+#: classes/Admin.php:64
 #, php-format
 msgid "%s Gallery permanently deleted."
 msgid_plural "%s Galleries permanently deleted."
@@ -118,7 +118,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: classes/Admin.php:66
+#: classes/Admin.php:65
 #, php-format
 msgid "%s Gallery moved to the Trash."
 msgid_plural "%s Galleries moved to the Trash."
@@ -126,7 +126,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: classes/Admin.php:67
+#: classes/Admin.php:66
 #, php-format
 msgid "%s Gallery restored from the Trash."
 msgid_plural "%s Galleries restored from the Trash."
@@ -134,25 +134,20 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: classes/Admin.php:106
-msgid "Feedback"
-msgstr "Opinie"
-
-#: classes/Admin.php:107
-msgid ""
-"Your opinion matters! We would appreciate if you can share what you think "
-"about WP Photo Gallery with us. We would love to improve it!"
+#: classes/Help.php:47 classes/Help.php:48
+msgid "Credits"
 msgstr ""
 
-#: classes/Admin.php:108
+#: classes/Help.php:49
+#, php-format
 msgid ""
-"Just shoot us an email at <a href=\"mailto:labs@wiredot.com\">labs@wiredot."
-"com</a>"
+"Want to learn more about the authors of WP Photo Gallery? Go to <a href=\"%s"
+"\">this page</a> for more info."
 msgstr ""
-"Wyślij do nas email na adres <a href=\"mailto:labs@wiredot.com"
-"\">labs@wiredot.com</a>"
+"Chcesz dowiedzieć się więcej na temat autorów WP Photo Gallery? Przejdź na "
+"<a href=\"%s\">tę stronę</a> aby uzyskać więcej informacji."
 
-#: classes/Settings.php:60
+#: classes/Settings.php:59
 msgid "Settings updated."
 msgstr "Ustawienia zapisane."
 
@@ -294,3 +289,13 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://wiredot.com/labs/"
 msgstr "https://wiredot.com/labs/"
+
+#~ msgid "Feedback"
+#~ msgstr "Opinie"
+
+#~ msgid ""
+#~ "Just shoot us an email at <a href=\"mailto:labs@wiredot.com"
+#~ "\">labs@wiredot.com</a>"
+#~ msgstr ""
+#~ "Wyślij do nas email na adres <a href=\"mailto:labs@wiredot.com"
+#~ "\">labs@wiredot.com</a>"

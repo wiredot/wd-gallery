@@ -22,7 +22,7 @@ class Help {
 			'id'      => 'wp-photo-gallery-getting-started',
 			'title'   => __('Getting Started', 'wp-photo-gallery'),
 			'content' => '<h3>'.__('Getting Started', 'wp-photo-gallery').'</h3>
-				<p>Follow the instructions on <a href="'.admin_url('index.php?page=wp-photo-gallery-welcome').'">this page</a>.</p>
+				<p>'.sprintf(__('Follow the instructions on <a href="%s">this page</a>.', 'wp-photo-gallery'), admin_url('index.php?page=wp-photo-gallery-welcome')).'</p>
 			',
 		);
 
@@ -34,7 +34,7 @@ class Help {
 			'id'      => 'wp-photo-gallery-support',
 			'title'   => __('Support', 'wp-photo-gallery'),
 			'content' => '<h3>'.__('Support', 'wp-photo-gallery').'</h3>
-				<p>If you have a question or need help, check out our <a href="'.admin_url('index.php?page=wp-photo-gallery-welcome&tab=support').'">support page</a>.</p>
+				<p>'.sprintf(__('If you have a question or need help, check out our <a href="%s">support page</a>.', 'wp-photo-gallery'), admin_url('index.php?page=wp-photo-gallery-welcome&tab=support')).'</p>
 			',
 		);
 
@@ -46,7 +46,7 @@ class Help {
 			'id'      => 'wp-photo-gallery-credits',
 			'title'   => __('Credits', 'wp-photo-gallery'),
 			'content' => '<h3>'.__('Credits', 'wp-photo-gallery').'</h3>
-				<p>Want to learn more about the authors of WP Photo Gallery? Go to <a href="'.admin_url('index.php?page=wp-photo-gallery-welcome&tab=credits').'">this page</a> for more info.</p>
+				<p>'.sprintf(__('Want to learn more about the authors of WP Photo Gallery? Go to <a href="%s">this page</a> for more info.', 'wp-photo-gallery'), admin_url('index.php?page=wp-photo-gallery-welcome&tab=credits')).'</p>
 			',
 		);
 
