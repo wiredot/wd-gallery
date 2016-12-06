@@ -1,5 +1,5 @@
 <ul class="wp-photo-gallery gallery-list zurich">
 	{% for gallery in galleries %}
-	<li><a href="{{ the_permalink(gallery.ID) }}">{{ image(get_post_thumbnail_id(gallery.ID), {'w' : 400, 'h' : 400, 'zc' : 1, 'title'  : gallery.post_title}) |raw }} <h2>{{ gallery.post_title }}</h2></a></li>
+	<li><a href="{{ gallery.permalink }}">{{ gallery.thumbnail |raw }} <h2>{{ gallery.title }}</h2></a></li>
 	{% endfor %}
 </ul>
