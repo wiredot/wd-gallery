@@ -13,7 +13,8 @@ class Editor {
 	}
 
 	public function add_media_button() {
-		echo '<a href="#TB_inline?width=400&amp;inlineId=wp-photo-gallery_media_content&amp;width=753&amp;height=657" class="thickbox button wp-photo-gallery-media-button" id="" title="Add WP Photo Gallery"><img src="'.WP_PHOTO_GALLERY_URL.'/assets/images/wp-photo-gallery.svg"> Add WP Photo Gallery</a>';
+		$Twig = new Twig;
+		echo $Twig->twig->render('media-button.html');
 	}
 
 	public function add_media_button_content() {

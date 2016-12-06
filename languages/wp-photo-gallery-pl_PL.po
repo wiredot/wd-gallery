@@ -1,29 +1,53 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
 "Project-Id-Version: WP Photo Gallery\n"
-"POT-Creation-Date: 2016-12-06 09:50+0100\n"
-"PO-Revision-Date: 2016-12-06 09:57+0100\n"
+"POT-Creation-Date: 2016-12-06 16:43+0100\n"
+"PO-Revision-Date: 2016-12-06 16:43+0100\n"
+"Last-Translator: Piotr Soluch <psoluch@wiredot.com>\n"
 "Language-Team: Piotr Soluch <psoluch@wiredot.com>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: wp-photo-gallery.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: Piotr Soluch <psoluch@wiredot.com>\n"
-"Language: pl\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
 "X-Poedit-SearchPathExcluded-3: dist\n"
 "X-Poedit-SearchPathExcluded-4: skins/zurich/assets/fresco\n"
+
+#: templates/media-button-content.html:5
+msgid "Galleries List"
+msgstr "Lista Galerii"
+
+#: templates/media-button-content.html:6 templates/media-button-content.html:15
+msgid "Insert Shortcode"
+msgstr "Wstaw shortcode"
+
+#: templates/media-button-content.html:9
+msgid "Galleries"
+msgstr "Galerie"
+
+#: templates/media-button.html:1
+msgid "Add Photo Gallery"
+msgstr "Dodaj Galerię"
+
+#: templates/settings.html:2 classes/Settings.php:18 classes/Settings.php:19
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: templates/settings.html:4 templates/skins.html:4
+msgid "Dismiss this notice."
+msgstr "Ukryj to powiadomienie."
 
 #: templates/settings.html:8
 msgid "General"
@@ -33,14 +57,38 @@ msgstr "Ogólne"
 msgid "Image Quality"
 msgstr "Jakość Zdjęć"
 
-#: classes/Admin.php:20 classes/Skin_Directory.php:34
+#: templates/settings.html:21
+msgid "CSS"
+msgstr "CSS"
+
+#: templates/settings.html:24
+msgid "Hide standard Skin CSS Styles"
+msgstr "Ukrycie standardowych stylów CSS"
+
+#: templates/settings.html:28
+msgid "JS"
+msgstr "JS"
+
+#: templates/settings.html:31
+msgid "Hide standard Skin JS Scripts"
+msgstr "Ukrycie standardowych skryptów JS"
+
+#: templates/skins.html:2 classes/Admin.php:20 classes/Skin_Directory.php:34
 #: classes/Skin_Directory.php:35
 msgid "Skins"
 msgstr "Skórki"
 
+#: templates/skins.html:18
+msgid "Active"
+msgstr "Aktywna"
+
+#: templates/skins.html:33
+msgid "Activate"
+msgstr "Aktywuj"
+
 #: classes/Admin.php:29
 msgid "Getting Started"
-msgstr ""
+msgstr "Zacznij tutaj"
 
 #: classes/Admin.php:30
 msgid "Support"
@@ -103,10 +151,6 @@ msgid ""
 msgstr ""
 "Wyślij do nas email na adres <a href=\"mailto:labs@wiredot.com"
 "\">labs@wiredot.com</a>"
-
-#: classes/Settings.php:18 classes/Settings.php:19
-msgid "Settings"
-msgstr "Ustawienia"
 
 #: classes/Settings.php:60
 msgid "Settings updated."
@@ -237,7 +281,7 @@ msgstr ""
 
 #. Plugin URI of the plugin/theme
 msgid "https://wiredot.com/wp-photo-gallery/"
-msgstr ""
+msgstr "https://wiredot.com/wp-photo-gallery/"
 
 #. Description of the plugin/theme
 msgid "WP Photo Gallery plugin"
@@ -249,4 +293,4 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "https://wiredot.com/labs/"
-msgstr ""
+msgstr "https://wiredot.com/labs/"

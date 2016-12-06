@@ -1,7 +1,7 @@
 <div class="wrap wp-photo-gallery-skins">
-	<h1>{{ __('Skins', 'wp-photo-gallery') }}</h1>
+	<h1>{{ __("Skins", "wp-photo-gallery") }}</h1>
 	{% if get_transient('wp_photo_gallery_message') %}<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
-		<p><strong>{{ get_transient('wp_photo_gallery_message') }}</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>
+		<p><strong>{{ get_transient('wp_photo_gallery_message') }}</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">{{ __("Dismiss this notice.", "wp-photo-gallery") }}</span></button>
 	</div>
 	{% endif %}
 	<div class="theme-browser rendered">
@@ -15,7 +15,7 @@
 					{% endif %}
 				</div>
 				<h2 class="theme-name" id="{{ skin.id }}-name">
-					<span>Aktywny:</span> {{ skin.name }}
+					<span>{{ __("Active", "wp-photo-gallery") }}:</span> {{ skin.name }}
 				</h2>
 			</div>
 			{% endif %}
@@ -30,7 +30,7 @@
 				</div>
 				<h2 class="theme-name" id="{{ skin.id }}-name">{{ skin.name }}</h2>
 				<div class="theme-actions">
-					<a class="button button-secondary activate" href="{{ wp_nonce_url('?post_type=wp-photo-gallery&page=skins&action=activate&skin=' ~ skin.id, 'wp-photo-gallery-activate-skin-' ~ skin.id) }}">Włącz</a>
+					<a class="button button-secondary activate" href="{{ wp_nonce_url('?post_type=wp-photo-gallery&page=skins&action=activate&skin=' ~ skin.id, 'wp-photo-gallery-activate-skin-' ~ skin.id) }}">{{ __("Activate", "wp-photo-gallery") }}</a>
 				</div>
 			</div>
 			{% endif %}

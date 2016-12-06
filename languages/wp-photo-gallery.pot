@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Photo Gallery\n"
-"POT-Creation-Date: 2016-12-06 09:49+0100\n"
+"POT-Creation-Date: 2016-12-06 16:38+0100\n"
 "PO-Revision-Date: 2016-12-06 09:45+0100\n"
 "Last-Translator: Piotr Soluch <psoluch@wiredot.com>\n"
 "Language-Team: Piotr Soluch <psoluch@wiredot.com>\n"
@@ -15,14 +15,35 @@ msgstr ""
 "X-Poedit-WPHeader: wp-photo-gallery.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
 "X-Poedit-SearchPathExcluded-3: dist\n"
 "X-Poedit-SearchPathExcluded-4: skins/zurich/assets/fresco\n"
+
+#: templates/media-button-content.html:5
+msgid "Galleries List"
+msgstr ""
+
+#: templates/media-button-content.html:6
+#: templates/media-button-content.html:15
+msgid "Insert Shortcode"
+msgstr ""
+
+#: templates/media-button-content.html:9
+msgid "Galleries"
+msgstr ""
+
+#: templates/settings.html:2 classes/Settings.php:18 classes/Settings.php:19
+msgid "Settings"
+msgstr ""
+
+#: templates/settings.html:4 templates/skins.html:4
+msgid "Dismiss this notice."
+msgstr ""
 
 #: templates/settings.html:8
 msgid "General"
@@ -32,9 +53,33 @@ msgstr ""
 msgid "Image Quality"
 msgstr ""
 
-#: classes/Admin.php:20 classes/Skin_Directory.php:34
+#: templates/settings.html:21
+msgid "CSS"
+msgstr ""
+
+#: templates/settings.html:24
+msgid "Hide standard Skin CSS Styles"
+msgstr ""
+
+#: templates/settings.html:28
+msgid "JS"
+msgstr ""
+
+#: templates/settings.html:31
+msgid "Hide standard Skin JS Scripts"
+msgstr ""
+
+#: templates/skins.html:2 classes/Admin.php:20 classes/Skin_Directory.php:34
 #: classes/Skin_Directory.php:35
 msgid "Skins"
+msgstr ""
+
+#: templates/skins.html:18
+msgid "Active"
+msgstr ""
+
+#: templates/skins.html:33
+msgid "Activate"
 msgstr ""
 
 #: classes/Admin.php:29
@@ -94,10 +139,6 @@ msgstr ""
 msgid ""
 "Just shoot us an email at <a href=\"mailto:labs@wiredot.com\">labs@wiredot."
 "com</a>"
-msgstr ""
-
-#: classes/Settings.php:18 classes/Settings.php:19
-msgid "Settings"
 msgstr ""
 
 #: classes/Settings.php:60
