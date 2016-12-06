@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Photo Gallery\n"
-"POT-Creation-Date: 2016-12-06 21:46+0100\n"
-"PO-Revision-Date: 2016-12-06 21:52+0100\n"
+"POT-Creation-Date: 2016-12-06 23:16+0100\n"
+"PO-Revision-Date: 2016-12-06 23:17+0100\n"
 "Last-Translator: Piotr Soluch <psoluch@wiredot.com>\n"
 "Language-Team: Piotr Soluch <psoluch@wiredot.com>\n"
 "Language: pl\n"
@@ -73,8 +73,8 @@ msgstr "JS"
 msgid "Hide standard Skin JS Scripts"
 msgstr "Ukrycie standardowych skryptów JS"
 
-#: templates/skins.html:2 classes/Admin.php:19 classes/Skin_Directory.php:34
-#: classes/Skin_Directory.php:35
+#: templates/skins.html:2 templates/welcome.html:64 classes/Admin.php:19
+#: classes/Skin_Directory.php:34 classes/Skin_Directory.php:35
 msgid "Skins"
 msgstr "Skórki"
 
@@ -85,6 +85,58 @@ msgstr "Aktywna"
 #: templates/skins.html:33
 msgid "Activate"
 msgstr "Aktywuj"
+
+#: templates/welcome.html:4 classes/Welcome.php:23 classes/Welcome.php:24
+msgid "Welcome to WP Photo Gallery"
+msgstr "Witaj w WP Photo Gallery"
+
+#: templates/welcome.html:5
+msgid "Thank you for installing WP Photo Gallery."
+msgstr ""
+
+#: templates/welcome.html:8 classes/Admin.php:28 classes/Help.php:23
+#: classes/Help.php:24
+msgid "Getting Started"
+msgstr "Zacznij tutaj"
+
+#: templates/welcome.html:9 classes/Admin.php:29 classes/Help.php:35
+#: classes/Help.php:36
+msgid "Support"
+msgstr "Wsparcie"
+
+#: templates/welcome.html:10 classes/Help.php:47 classes/Help.php:48
+msgid "Credits"
+msgstr ""
+
+#: templates/welcome.html:14
+msgid ""
+"Follow the steps below to get started using WP Photo Gallery. Your Galleries "
+"will be ready in just few minutes!"
+msgstr ""
+
+#: templates/welcome.html:17
+msgid "Creating Your First Gallery"
+msgstr ""
+
+#: templates/welcome.html:23 templates/welcome.html:64
+msgid "Photo Gallery"
+msgstr ""
+
+#: templates/welcome.html:23 config/cpt.wppg.config.php:11
+msgid "Add New Photo Gallery"
+msgstr "Dodaj Nową Galerię"
+
+#: templates/welcome.html:24
+msgid ""
+"On this page you can create your first Photo Gallery. Simply enter the "
+"Gallery title and click on the Add Photos button. You can chose photos from "
+"your WordPress Media Library or upload them. Then you can add a Gallery "
+"Cover if you want and Publish the Gallery."
+msgstr ""
+
+#: templates/welcome.html:30
+msgid "Adding a Gallery List to a Page"
+msgstr ""
 
 #: templates/welcome.html:36
 msgid ""
@@ -100,6 +152,10 @@ msgstr ""
 msgid "Shortcode"
 msgstr "Krótki Kod"
 
+#: templates/welcome.html:44
+msgid "Adding a Gallery to a Page"
+msgstr ""
+
 #: templates/welcome.html:50
 msgid ""
 "You can display a single Gallery on a page. Click on the Add Photo Gallery "
@@ -111,13 +167,120 @@ msgstr ""
 msgid "Example Shortcode (id is a post id of your Gallery)"
 msgstr "Przykładowy Krótki Kod (id to id twojej Galerii)"
 
-#: classes/Admin.php:28 classes/Help.php:23 classes/Help.php:24
-msgid "Getting Started"
-msgstr "Zacznij tutaj"
+#: templates/welcome.html:58
+msgid "Selecting a Skin"
+msgstr ""
 
-#: classes/Admin.php:29 classes/Help.php:35 classes/Help.php:36
-msgid "Support"
-msgstr "Wsparcie"
+#: templates/welcome.html:65
+msgid ""
+"WP Photo Gallery has several beautiful skins. Select the one you like the "
+"most on the Skns page. More skins coming soon."
+msgstr ""
+
+#: templates/welcome.html:73
+msgid ""
+"We did our best to make WP Photo Gallery as simple to use as possible. But "
+"if you have a problem or a questions, get in  touch and we will do "
+"everything to help."
+msgstr ""
+
+#: templates/welcome.html:76
+msgid "Need help?"
+msgstr ""
+
+#: templates/welcome.html:80
+msgid "Free Support"
+msgstr ""
+
+#: templates/welcome.html:81
+#, c-format
+msgid ""
+"Visit our <a href=\"%s\" target=\"_blank\">Support page</a> and submit a "
+"ticket if you have a problem or a question. We will get back to you as soon "
+"as we can."
+msgstr ""
+
+#: templates/welcome.html:84
+msgid "Premium Support"
+msgstr ""
+
+#: templates/welcome.html:85
+#, c-format
+msgid ""
+"You can purchase our <a href=\"%s\" target=\"_blank\">Premium Support</a> "
+"access if you need our help right away. You will get a phone support and "
+"access to our Slack."
+msgstr ""
+
+#: templates/welcome.html:91
+msgid "Learn more"
+msgstr ""
+
+#: templates/welcome.html:95
+msgid "Documentation"
+msgstr ""
+
+#: templates/welcome.html:96
+msgid ""
+"Visit WP Photo Gallery website and have a look at the documentation to learn "
+"more about the plugin."
+msgstr ""
+
+#: templates/welcome.html:99
+msgid "Newsletter"
+msgstr ""
+
+#: templates/welcome.html:100
+#, c-format
+msgid ""
+"Get regular updates on new features, new skins and tips & tricks. Sign up "
+"for our Newsletter <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: templates/welcome.html:107
+#, c-format
+msgid ""
+"WP Photo Gallery is created and maintained by <a href=\"%s\" target=\"_blank"
+"\">WireDot Labs</a>."
+msgstr ""
+
+#: templates/welcome.html:112
+msgid "Contribute"
+msgstr ""
+
+#: templates/welcome.html:113
+#, c-format
+msgid ""
+"If you want to contribute go to our <a href=\"%s\" target=\"_blank\">GitHub "
+"Repository</a>, fork WP Photo Gallery and submit a Pull Request."
+msgstr ""
+
+#: templates/welcome.html:116
+msgid "Issues"
+msgstr ""
+
+#: templates/welcome.html:117
+#, c-format
+msgid ""
+"If you find any problems or bugs, report them on our <a href=\"%s\" target="
+"\"_blank\">GitHub Issues page</a>."
+msgstr ""
+
+#: templates/welcome.html:122
+msgid "Libraries"
+msgstr ""
+
+#: templates/welcome.html:123
+msgid "WP Photo Gallery uses following libraries"
+msgstr ""
+
+#: templates/welcome.html:133
+msgid "Inspiration"
+msgstr ""
+
+#: templates/welcome.html:134
+msgid "Parts of WP Photo Gallery have been inspired by"
+msgstr ""
 
 #: classes/Admin.php:62
 #, php-format
@@ -171,10 +334,6 @@ msgid ""
 "page</a>."
 msgstr ""
 
-#: classes/Help.php:47 classes/Help.php:48
-msgid "Credits"
-msgstr ""
-
 #: classes/Help.php:49
 #, php-format
 msgid ""
@@ -184,17 +343,13 @@ msgstr ""
 "Chcesz dowiedzieć się więcej na temat autorów WP Photo Gallery? Przejdź na "
 "<a href=\"%s\">tę stronę</a> aby uzyskać więcej informacji."
 
-#: classes/Settings.php:59
+#: classes/Settings.php:58
 msgid "Settings updated."
 msgstr "Ustawienia zapisane."
 
 #: classes/Skin_Directory.php:25
 msgid "Skin enabled."
 msgstr "Skórka aktywowana."
-
-#: classes/Welcome.php:23 classes/Welcome.php:24
-msgid "Welcome to WP Photo Gallery"
-msgstr "Witaj w WP Photo Gallery"
 
 #: config/cpt.wppg.config.php:8
 msgctxt "admin menu"
@@ -203,10 +358,6 @@ msgstr "Galeria Zdjęć"
 
 #: config/cpt.wppg.config.php:10
 msgctxt "gallery"
-msgid "Add New Photo Gallery"
-msgstr "Dodaj Nową Galerię"
-
-#: config/cpt.wppg.config.php:11
 msgid "Add New Photo Gallery"
 msgstr "Dodaj Nową Galerię"
 

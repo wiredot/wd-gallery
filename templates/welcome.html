@@ -1,33 +1,33 @@
 <div class="wrap about-wrap wp-photo-gallery-welcome wp-photo-gallery-wrap">
 	<div class="wp-photo-gallery-header">
-		<img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/wp-photo-gallery.svg" alt="Easy Digital Downloads">
-		<h1>Welcome to WP Photo Gallery</h1>
-		<p class="about-text">Thank you for installing WP Photo Gallery.</p>
+		<img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/wp-photo-gallery.svg" alt="WP Photo Gallery Logo">
+		<h1>{{ __("Welcome to WP Photo Gallery", "wp-photo-gallery") }}</h1>
+		<p class="about-text">{{ __("Thank you for installing WP Photo Gallery.", "wp-photo-gallery") }}</p>
 	</div>
 	<h1 class="nav-tab-wrapper">
-        <a class="nav-tab{% if tab == 'getting-started' %} nav-tab-active{% endif %}" rel="getting-started">Getting Started</a>
-        <a class="nav-tab{% if tab == 'support' %} nav-tab-active{% endif %}" rel="support">Support</a>
-        <a class="nav-tab{% if tab == 'credits' %} nav-tab-active{% endif %}" rel="credits">Credits</a>
+        <a class="nav-tab{% if tab == 'getting-started' %} nav-tab-active{% endif %}" rel="getting-started">{{ __("Getting Started", "wp-photo-gallery") }}</a>
+        <a class="nav-tab{% if tab == 'support' %} nav-tab-active{% endif %}" rel="support">{{ __("Support", "wp-photo-gallery") }}</a>
+        <a class="nav-tab{% if tab == 'credits' %} nav-tab-active{% endif %}" rel="credits">{{ __("Credits", "wp-photo-gallery") }}</a>
     </h1><div class="updated notice pm-notice hidden"></div>
 
     <div class="tab-content tab-getting-started{% if tab == 'getting-started' %} active{% endif %}">
-        <p class="about-description">Follow the steps below to get started using WP Photo Gallery. Your Galleries will be ready in just few minutes!</p>
+        <p class="about-description">{{ __("Follow the steps below to get started using WP Photo Gallery. Your Galleries will be ready in just few minutes!", "wp-photo-gallery") }}</p>
 
         <div class="changelog">
-            <h3>Creating Your First Gallery</h3>
+            <h3>{{ __("Creating Your First Gallery", "wp-photo-gallery") }}</h3>
             <div class="feature-section">
                 <div class="feature-section-media">
                     <img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/step1.jpg">
                 </div>
                 <div class="feature-section-content">
-                    <h4><a href="{{ admin_url('post-new.php?post_type=wp-photo-gallery') }}">Photo Gallery → Add New Photo Gallery</a></h4>
-                    <p>On this page you can create your first Photo Gallery. Simply enter the Gallery title and click on the Add Photos button. You can chose photos from your WordPress Media Library or upload them. Then you can add a Gallery Cover if you want and Publish the Gallery.</p>
+                    <h4><a href="{{ admin_url('post-new.php?post_type=wp-photo-gallery') }}">{{ __("Photo Gallery", "wp-photo-gallery") }} → {{ __("Add New Photo Gallery", "wp-photo-gallery") }}</a></h4>
+                    <p>{{ __("On this page you can create your first Photo Gallery. Simply enter the Gallery title and click on the Add Photos button. You can chose photos from your WordPress Media Library or upload them. Then you can add a Gallery Cover if you want and Publish the Gallery.", "wp-photo-gallery") }}</p>
                 </div>
             </div>
         </div>
         
         <div class="changelog">
-            <h3>Adding a Gallery List to a Page</h3>
+            <h3>{{ __("Adding a Gallery List to a Page", "wp-photo-gallery") }}</h3>
             <div class="feature-section">
                 <div class="feature-section-media">
                     <img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/step2.jpg">
@@ -41,7 +41,7 @@
         </div>
         
         <div class="changelog">
-            <h3>Adding a Gallery to a Page</h3>
+            <h3>{{ __("Adding a Gallery to a Page", "wp-photo-gallery") }}</h3>
             <div class="feature-section">
                 <div class="feature-section-media">
                     <img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/step3.jpg">
@@ -55,14 +55,14 @@
         </div>
         
         <div class="changelog">
-            <h3>Selecting a Skin</h3>
+            <h3>{{ __("Selecting a Skin", "wp-photo-gallery") }}</h3>
             <div class="feature-section">
                 <div class="feature-section-media">
                     <img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/step4.jpg">
                 </div>
                 <div class="feature-section-content">
-                    <h4><a href="{{ admin_url('edit.php?post_type=wp-photo-gallery&page=skins') }}">Photo Gallery → Skins</a></h4>
-                    <p>WP Photo Gallery has several beautiful skins. Select the one you like the most on the Skns page. More skins coming soon.</p>
+                    <h4><a href="{{ admin_url('edit.php?post_type=wp-photo-gallery&page=skins') }}">{{ __("Photo Gallery", "wp-photo-gallery") }} → {{ __("Skins", "wp-photo-gallery") }}</a></h4>
+                    <p>{{ __("WP Photo Gallery has several beautiful skins. Select the one you like the most on the Skns page. More skins coming soon.", "wp-photo-gallery") }}</p>
                 </div>
             </div>
         </div>
@@ -70,57 +70,57 @@
     </div>
 
     <div class="tab-content tab-support{% if tab == 'support' %} active{% endif %}">
-        <p class="about-description">We did our best to make WP Photo Gallery as simple to use as possible. But if you have a problem or a questions, get in  touch and we will do everything to help.</p>
+        <p class="about-description">{{ __("We did our best to make WP Photo Gallery as simple to use as possible. But if you have a problem or a questions, get in  touch and we will do everything to help.", "wp-photo-gallery") }}</p>
 
         <div class="changelog">
-            <h3>Need help?</h3>
+            <h3>{{ __("Need help?", "wp-photo-gallery") }}</h3>
             <div class="feature-section">
                 
                 <div class="feature-section-content">
-                    <h4>Free Support</h4>
-                    <p>Visit our Support page and submit a ticket if you have a problem or a question. We will get back to you as soon as we can.</p>
+                    <h4>{{ __("Free Support", "wp-photo-gallery") }}</h4>
+                    <p>{{ sprintf(__("Visit our <a href=\"%s\" target=\"_blank\">Support page</a> and submit a ticket if you have a problem or a question. We will get back to you as soon as we can.", "wp-photo-gallery"), "https://wiredot.com/labs/support/") }}</p>
                 </div>
                 <div class="feature-section-media">
-                    <h4>Premium Support</h4>
-                    <p>You can purchase our Premium Support access if you need our help right away. You will get a phone support and access to our Slack.</p>
+                    <h4>{{ __("Premium Support", "wp-photo-gallery") }}</h4>
+                    <p>{{ sprintf(__("You can purchase our <a href=\"%s\" target=\"_blank\">Premium Support</a> access if you need our help right away. You will get a phone support and access to our Slack.", "wp-photo-gallery"), "https://wiredot.com/labs/support/premium-support/") }}</p>
                 </div>
             </div>
         </div>
 
         <div class="changelog">
-            <h3>Learn more</h3>
+            <h3>{{ __("Learn more", "wp-photo-gallery") }}</h3>
             <div class="feature-section">
                 
                 <div class="feature-section-content">
-                    <h4>Documentation</h4>
-                    <p>Visit WP Photo Gallery website and have a look at the documentation to learn more about the plugin.</p>
+                    <h4>{{ __("Documentation", "wp-photo-gallery") }}</h4>
+                    <p>{{ __("Visit WP Photo Gallery website and have a look at the documentation to learn more about the plugin.", "wp-photo-gallery") }}</p>
                 </div>
                 <div class="feature-section-media">
-                    <h4>Newsletter</h4>
-                    <p>Get regular updates on new features, new skins and tips & tricks. Sign up for our Newsletter <a href="%s" target="_blank">here</a>.</p>
+                    <h4>{{ __("Newsletter", "wp-photo-gallery") }}</h4>
+                    <p>{{ __("Get regular updates on new features, new skins and tips & tricks. Sign up for our Newsletter <a href=\"%s\" target=\"_blank\">here</a>.", "wp-photo-gallery") }}</p>
                 </div>
             </div>
         </div>
     </div>	
 
     <div class="tab-content tab-credits{% if tab == 'credits' %} active{% endif %}">
-        <p class="about-description">WP Photo Gallery is created and maintained by <a href="https://wiredot.com/labs" target="_blank">WireDot Labs</a>.</p>
+        <p class="about-description">{{ sprintf(__("WP Photo Gallery is created and maintained by <a href=\"%s\" target=\"_blank\">WireDot Labs</a>.", "wp-photo-gallery"), "https://wiredot.com/labs") }}</p>
 
         <div class="changelog">
             <div class="feature-section">
                 <div class="feature-section-content">
-                    <h4>Contribute</h4>
-                    <p>If you want to contribute go to our <a href="https://github.com/wiredot/wp-photo-gallery">GitHub Repository</a>, fork WP Photo Gallery and submit a Pull Request.</p>
+                    <h4>{{ __("Contribute", "wp-photo-gallery") }}</h4>
+                    <p>{{ sprintf(__("If you want to contribute go to our <a href=\"%s\" target=\"_blank\">GitHub Repository</a>, fork WP Photo Gallery and submit a Pull Request.", "wp-photo-gallery"), "https://github.com/wiredot/wp-photo-gallery") }}</p>
                 </div>
                 <div class="feature-section-media">
-                    <h4>Issues</h4>
-                    <p>If you find any problems or bugs, report them on our <a href="https://github.com/wiredot/wp-photo-gallery/issues" target="_blank">GitHub Issues page</a>.</p>
+                    <h4>{{ __("Issues", "wp-photo-gallery") }}</h4>
+                    <p>{{ sprintf(__("If you find any problems or bugs, report them on our <a href=\"%s\" target=\"_blank\">GitHub Issues page</a>.", "wp-photo-gallery"), 'https://github.com/wiredot/wp-photo-gallery/issues') }}</p>
                 </div>
             </div>
             <div class="feature-section">
                 <div class="feature-section-content">
-                    <h4>Libraries</h4>
-                    <p>WP Photo Gallery uses following libraries:</p>
+                    <h4>{{ __("Libraries", "wp-photo-gallery") }}</h4>
+                    <p>{{ __("WP Photo Gallery uses following libraries", "wp-photo-gallery") }}:</p>
                     <ul>
                         <li>Composer</li>
                         <li>Bower</li>
@@ -130,11 +130,11 @@
                     </ul>
                 </div>
                 <div class="feature-section-media">
-                    <h4>Inspiration</h4>
-                    <p>Parts of WP Photo Gallery have been inspired by:</p>
+                    <h4>{{ __("Inspiration", "wp-photo-gallery") }}</h4>
+                    <p>{{ __("Parts of WP Photo Gallery have been inspired by", "wp-photo-gallery") }}:</p>
                     <ul>
-                        <li>Easy Digital Downloads by Pippin Williamson</li>
-                        <li>Meadow by Rarst</li>
+                        <li>Easy Digital Downloads (Pippin Williamson)</li>
+                        <li>Meadow (Rarst)</li>
                     </ul>
                 </div>
             </div>

@@ -34,7 +34,7 @@ class Help {
 			'id'      => 'wp-photo-gallery-support',
 			'title'   => __('Support', 'wp-photo-gallery'),
 			'content' => '<h3>'.__('Support', 'wp-photo-gallery').'</h3>
-				<p>'.sprintf(__('If you have a question or need help, check out our <a href="%s">support page</a>.', 'wp-photo-gallery'), admin_url('index.php?page=wp-photo-gallery-welcome&tab=support')).'</p>
+				<p>'.sprintf(__('If you have a question or need help, check out our <a href="%s" target="_blank">support page</a>.', 'wp-photo-gallery'), admin_url('index.php?page=wp-photo-gallery-welcome&tab=support')).'</p>
 			',
 		);
 
