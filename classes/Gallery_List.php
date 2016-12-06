@@ -15,8 +15,14 @@ class Gallery_List {
 		// global $wp_photo_gallery_query;
 		$Skins = Skin_Factory::init();
 		$Active_Skin = $Skins->get_active_skin_object();
-		$Active_Skin->enqueue_css();
-		$Active_Skin->enqueue_js();
+
+		if ( ! CORE::get_settings('hide_css') ) {
+			$Active_Skin->enqueue_css();
+		}
+
+		if ( ! CORE::get_settings('hide_js') ) {
+			$Active_Skin->enqueue_js();
+		}
 
 		$params_thumbnail = $Active_Skin->get_image_params('thumbnail');
 

@@ -8,11 +8,15 @@ class Core {
 
 	private static $instance = null;
 
+	private static $settings;
+
 	private function __construct() {
 		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
 		// add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
 		
 		Skin_Factory::init();
+
+		self::$settings = get_option( 'wp-photo-gallery' );
 		
 		if (is_admin()) {
 			// init all admin functionality
@@ -86,6 +90,14 @@ class Core {
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
+	}
+
+	public static function get_settings($option = null) {
+		if (isset(self::$settings[$option])) {
+			return self::$settings[$option];
+		}
+
+		return null;
 	}
 
 // class end	
