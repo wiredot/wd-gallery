@@ -43,5 +43,4 @@ class Welcome {
 		));
 	}
 
-// end class
 }

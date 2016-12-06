@@ -15,8 +15,6 @@ class Core {
 		
 		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
 
-		add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
-
 		Skin_Factory::init();
 
 		self::$settings = get_option( 'wp-photo-gallery' );
@@ -31,20 +29,6 @@ class Core {
 		} else {
 			new Shortcode();
 		}
-
-		// // init Custom Post Type
-		// new WP_Photo_Gallery_CPT();
-
-		// // init Meta Boxes
-		// new WP_Photo_Gallery_MB();
-		
-		// $WP_Photo_Gallery_Theme_Directory = new WP_Photo_Gallery_Theme_Directory();
-		// $this->active_theme_name = $WP_Photo_Gallery_Theme_Directory->get_active_theme();
-
-		// $this->active_theme = new WP_Photo_Gallery_Theme($this->active_theme_name);
-
-		// // init shortcodes
-		// new WP_Photo_Gallery_Shortcode($this->active_theme);
 	}
 
 	public static function run() {
@@ -78,15 +62,6 @@ class Core {
 		}
 	}
 
-	public function get_custom_post_type_template($single_template) {
-		global $post;
-
-		if ($post->post_type == 'wp-photo-gallery') {
-			$single_template = $this->plugin_dir . '/single-wp-photo-gallery.php';
-		}
-		return $single_template;
-	}
-
 	public function load_plugin_textdomain() {
 		load_plugin_textdomain(
 			'wp-photo-gallery',
@@ -103,5 +78,4 @@ class Core {
 		return null;
 	}
 
-// class end	
 }

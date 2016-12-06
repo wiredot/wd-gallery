@@ -48,5 +48,4 @@ class Skin_Directory {
 		));
 	}
 
-// end class
 }

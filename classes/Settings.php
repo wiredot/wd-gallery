@@ -8,7 +8,6 @@ class Settings {
 
 	public function __construct() {
 		add_action('admin_menu', array($this, 'add_settings_menu'));
-
 		add_action( 'wp_ajax_wp_photo_gallery_general', array( $this, 'save_general_settings' ) );
 	}
 
@@ -58,9 +57,8 @@ class Settings {
 		update_option( 'wp-photo-gallery', $options );
 
 		set_transient( 'wp_photo_gallery_message', __('Settings updated.', 'wp-photo-gallery'), 2 );
-		wp_redirect( 'edit.php?post_type=wp-photo-gallery&page=wp-photo-gallery-settings' );		
+		wp_redirect( 'edit.php?post_type=wp-photo-gallery&page=wp-photo-gallery-settings' );
 		wp_die();
 	}
 
-// class end
 }

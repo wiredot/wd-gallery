@@ -69,11 +69,6 @@ class Gallery_Single {
 		return $Twig->twig->render('wp-photo-gallery-single.html', array(
 			'photos' => $photos_data
 		));
-
-		// $smarty = (new WP_PG_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();
-		// return $smarty->fetch('wp-photo-gallery-list.html');
-		// $Twig = new Twig;
-		// echo $Twig->twig->render('wp-photo-gallery-list.html');
 	}
 
 	public function get_post() {
@@ -87,5 +82,4 @@ class Gallery_Single {
 		return new WP_Query( $args );
 	}
 
-// class end
 }

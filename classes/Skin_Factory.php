@@ -111,5 +111,4 @@ class Skin_Factory {
 		return $this->active_skin_id;
 	}
 
-// end class
 }

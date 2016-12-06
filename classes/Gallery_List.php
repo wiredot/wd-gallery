@@ -68,5 +68,4 @@ class Gallery_List {
 		return new WP_Query( $args );
 	}
 
-// class end
 }

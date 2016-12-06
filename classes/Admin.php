@@ -118,5 +118,4 @@ class Admin {
 		$screen->add_help_tab( $args );
 	}
 
-// end class
 }

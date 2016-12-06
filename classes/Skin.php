@@ -20,7 +20,6 @@ class Skin {
 
 		foreach ($this->config['css']['files'] as $key => $css) {
 			wp_register_style( $key, $this->config['url'] . '/' .$css, $this->config['css']['dependencies'], $this->config['css']['version'], $this->config['css']['media'] );
-			// wp_enqueue_style( $key );
 		}
 	}
 
@@ -67,5 +66,4 @@ class Skin {
 		return $this->config['photos'][$size];
 	}
 
-// class end
 }
