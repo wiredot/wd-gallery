@@ -26,6 +26,7 @@ class Core {
 			new Settings();
 			new Welcome();
 			new Skin_Directory();
+			new Help();
 		} else {
 			new Shortcode();
 		}

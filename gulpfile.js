@@ -102,6 +102,22 @@ gulp.task('watch', function() {
 	skins.map(function(name){
 		gulp.watch( options.src + '/skins/'+name+'/scss/*.scss', [name + '-scss']);
 	});
+	gulp.watch( options.src + '/images/*.{png,jpg,jpeg}')
+		.on('change', function(file) {
+			gulp.src(file.path)
+				.pipe(imagemin('iSsNqV3CinZPpNT_i5LV87-VeryQMdUT'))
+				.pipe(gulp.dest( options.assets + '/images'));
+		});
+});
+
+gulp.task('cleanimg', function () {
+	del( options.assets + '/images/*.{png,jpg,jpeg}');
+});
+
+gulp.task('img', ['cleanimg'], function () {
+	gulp.src( options.src + '/images/*.{png,jpg,jpeg}')
+		.pipe(imagemin('iSsNqV3CinZPpNT_i5LV87-VeryQMdUT'))
+		.pipe(gulp.dest( options.assets + '/images'));
 });
 
 // Production

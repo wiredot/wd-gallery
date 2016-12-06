@@ -1,6 +1,6 @@
 <div class="wrap about-wrap wp-photo-gallery-welcome wp-photo-gallery-wrap">
 	<div class="wp-photo-gallery-header">
-		<img class="edd-badge" src="http://local.wordpress.org/wp-content/plugins/wp-photo-gallery/assets/images/wp-photo-gallery.svg" alt="Easy Digital Downloads">
+		<img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/wp-photo-gallery.svg" alt="Easy Digital Downloads">
 		<h1>Welcome to WP Photo Gallery</h1>
 		<p class="about-text">Thank you for installing WP Photo Gallery.</p>
 	</div>
@@ -17,15 +17,11 @@
             <h3>Creating Your First Gallery</h3>
             <div class="feature-section">
                 <div class="feature-section-media">
-                    <img src="http://local.wordpress.org/wp-content/plugins/easy-digital-downloads/assets/images/screenshots/edit-download.png" class="edd-welcome-screenshots">
+                    <img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/step1.jpg">
                 </div>
                 <div class="feature-section-content">
-                    <h4><a href="http://local.wordpress.org/wp-admin/post-new.php?post_type=wp-photo-gallery">Downloads → Add New</a></h4>
-                    <p>The Downloads menu is your access point for all aspects of your Easy Digital Downloads product creation and setup. To create your first product, simply click Add New and then fill out the product details.</p>
-
-
-                    <h4>Download Files</h4>
-                    <p>Uploading the downloadable files is simple. Click <em>Upload File</em> in the Download Files section and choose your download file. To add more than one file, simply click the <em>Add New</em> button.</p>
+                    <h4><a href="{{ admin_url('post-new.php?post_type=wp-photo-gallery') }}">Photo Gallery → Add New Photo Gallery</a></h4>
+                    <p>On this page you can create your first Photo Gallery. Simply enter the Gallery title and click on the Add Photos button. You can chose photos from your WordPress Media Library or upload them. Then you can add a Gallery Cover if you want and Publish the Gallery.</p>
                 </div>
             </div>
         </div>
@@ -34,15 +30,12 @@
             <h3>Adding a Gallery List to a Page</h3>
             <div class="feature-section">
                 <div class="feature-section-media">
-                    <img src="http://local.wordpress.org/wp-content/plugins/easy-digital-downloads/assets/images/screenshots/edit-download.png" class="edd-welcome-screenshots">
+                    <img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/step2.jpg">
                 </div>
                 <div class="feature-section-content">
-                    <h4><a href="http://local.wordpress.org/wp-admin/post-new.php?post_type=wp-photo-gallery">Downloads → Add New</a></h4>
-                    <p>The Downloads menu is your access point for all aspects of your Easy Digital Downloads product creation and setup. To create your first product, simply click Add New and then fill out the product details.</p>
-
-
-                    <h4>Download Files</h4>
-                    <p>Uploading the downloadable files is simple. Click <em>Upload File</em> in the Download Files section and choose your download file. To add more than one file, simply click the <em>Add New</em> button.</p>
+                    <p>On any page click on the Add Photo Gallery button directly above the Editor. Then click on the Insert Shortcode button next to Galleries List. Save the page and you're done.</p>
+                    <p>Shortcode:</p>
+                    <pre>[wp-photo-gallery]</pre>
                 </div>
             </div>
         </div>
@@ -51,15 +44,25 @@
             <h3>Adding a Gallery to a Page</h3>
             <div class="feature-section">
                 <div class="feature-section-media">
-                    <img src="http://local.wordpress.org/wp-content/plugins/easy-digital-downloads/assets/images/screenshots/edit-download.png" class="edd-welcome-screenshots">
+                    <img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/step3.jpg">
                 </div>
                 <div class="feature-section-content">
-                    <h4><a href="http://local.wordpress.org/wp-admin/post-new.php?post_type=wp-photo-gallery">Downloads → Add New</a></h4>
-                    <p>The Downloads menu is your access point for all aspects of your Easy Digital Downloads product creation and setup. To create your first product, simply click Add New and then fill out the product details.</p>
-
-
-                    <h4>Download Files</h4>
-                    <p>Uploading the downloadable files is simple. Click <em>Upload File</em> in the Download Files section and choose your download file. To add more than one file, simply click the <em>Add New</em> button.</p>
+                    <p>You can display a single Gallery on a page. Click on the Add Photo Gallery button directly above the Editor. Then click on the Insert Shortcode button next to the Gallery you want to show. Save the page and that's it.</p>
+                    <p>Example Shortcode (id is a post id of your Gallery):</p>
+                    <pre>[wp-photo-gallery id=1]</pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="changelog">
+            <h3>Selecting a Skin</h3>
+            <div class="feature-section">
+                <div class="feature-section-media">
+                    <img src="{{ constant('WP_PHOTO_GALLERY_URL') }}assets/images/step3.jpg">
+                </div>
+                <div class="feature-section-content">
+                    <h4><a href="{{ admin_url('edit.php?post_type=wp-photo-gallery&page=skins') }}">Photo Gallery → Skins</a></h4>
+                    <p>WP Photo Gallery has several beautiful skins. Select the one you like the most on the Skns page. More skins coming soon.</p>
                 </div>
             </div>
         </div>

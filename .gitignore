@@ -7,3 +7,4 @@ assets/js/wp-photo-gallery.js.map
 dist
 *.svn
 *.map
+/.gulp
