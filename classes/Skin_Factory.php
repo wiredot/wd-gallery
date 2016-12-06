@@ -33,7 +33,7 @@ class Skin_Factory {
 		}
 
 		$active_skin = $this->skins[$this->active_skin_id];
-		$Active_Skin = new Skin($active_skin['id'], $active_skin['css'], $active_skin['js'], $active_skin['directory'], $active_skin['url']);
+		$Active_Skin = new Skin($active_skin);
 
 		$this->active_skin_object = $Active_Skin;
 	}
@@ -94,7 +94,7 @@ class Skin_Factory {
 		}
 
 		$skin = $this->skins[$skin_id];
-		return new Skin($skin['id'], $skin['css'], $skin['js'], $skin['directory'], $skin['url']);
+		return new Skin($skin);
 	}
 
 	public function get_skins() {

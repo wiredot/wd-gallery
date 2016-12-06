@@ -20,5 +20,15 @@ $wp_photo_gallery_skin_config = array(
 			'frescojs' => 'assets/fresco/js/fresco/fresco.js'
 		)
 	),
-	'author' => 'wiredot'
+	'author' => 'wiredot',
+	'photos' => array(
+		'thumbnail' => array(
+			'w' => 200,
+			'h' => 200,
+			'zc' => 1,
+		),
+		'big_image' => array(
+			'w' => 1024,
+		)
+	)
 );

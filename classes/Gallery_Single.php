@@ -4,6 +4,7 @@ namespace Wiredot\WP_Photo_Gallery;
 
 use WP_Query;
 use Wiredot\Preamp\Twig;
+use Wiredot\Preamp\Image;
 
 class Gallery_Single {
 
@@ -22,11 +23,45 @@ class Gallery_Single {
 		$Active_Skin->enqueue_css();
 		$Active_Skin->enqueue_js();
 
+		$params_thumbnail = $Active_Skin->get_image_params('thumbnail');
+		$params_big_image = $Active_Skin->get_image_params('big_image');
+
 		$photos = get_post_meta( $this->gallery_id, 'wppg-photos', true );
+
+		$photos_data = array();
+		foreach ($photos as $photo_id) {
+			$alt = get_post_meta($photo_id, '_wp_attachment_image_alt', true);
+			$title = get_the_title($photo_id);
+			$caption = get_the_excerpt($photo_id);
+
+			$atts = array(
+				'title' => $title,
+				'alt' => $alt
+			);
+
+			$Image = new Image($photo_id, $params_thumbnail, $atts);
+			$thumbnail = $Image->get_image();
+
+			if ( $params_big_image ) {
+				$Image = new Image($photo_id, $params_big_image, $atts);
+				$big_image = $Image->get_url();
+			} else {
+				$big_image = null;
+			}
+			
+			$photos_data[] = array(
+				'id' => $photo_id,
+				'thumbnail' => $thumbnail,
+				'big_image' => $big_image,
+				'title' => $title,
+				'alt' => $alt,
+				'caption' => get_the_excerpt($photo_id)
+			);
+		}
 
 		$Twig = new Twig($Active_Skin->get_directory().'/templates/');
 		return $Twig->twig->render('wp-photo-gallery-single.html', array(
-			'photos' => $photos
+			'photos' => $photos_data
 		));
 
 		// $smarty = (new WP_PG_Smarty($this->active_theme->get_path().'/templates/'))->get_smarty();

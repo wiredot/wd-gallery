@@ -1,5 +1,5 @@
 {% if photos %}<ul class="wp-photo-gallery gallery-single zurich">
 	{% for photo in photos %}
-		<li><a href="{{ image_url(photo, {'w':1024, 'q':95}) }}" class="fresco" data-fresco-group="wp-photo-gallery-{{ the_ID() }}" data-fresco-caption="{{ the_excerpt(photo) }}">{{ image(photo, {'w':200, 'h':200, 'zc':1, 'q':90, 'title':get_the_title(photo), 'alt':alt(photo)}) | raw }}</a></li>
+		<li><a href="{{ photo.big_image | raw }}" class="fresco" data-fresco-group="wp-photo-gallery-{{ the_ID() }}" data-fresco-caption="{{ photo.caption }}">{{ photo.thumbnail | raw }}</a></li>
 	{% endfor %}
 </ul>{% endif %}

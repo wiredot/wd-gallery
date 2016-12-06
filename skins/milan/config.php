@@ -12,5 +12,13 @@ $wp_photo_gallery_skin_config = array(
 		)
 	),
 	'js' => array(),
-	'author' => 'wiredot'
+	'author' => 'wiredot',
+	'photos' => array(
+		'thumbnail' => array(
+			'w' => 200,
+			'h' => 140,
+			'zc' => 1,
+		),
+		'big_image' => null
+	)
 );

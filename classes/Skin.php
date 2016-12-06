@@ -6,69 +6,67 @@ class Skin {
 
 	private $id;
 
-	private $directory;
+	private $config;
 
-	private $url;
-
-	private $css = array();
-
-	private $js = array();
-
-	public function __construct($id, $css, $js, $directory, $url) {
-		$this->id = $id;
-		$this->css = $css;
-		$this->js = $js;
-		$this->directory = $directory;
-		$this->url = $url;
+	public function __construct($config) {
+		$this->config = $config;
 
 		$this->register_css();
 		$this->register_js();
 	}
 
 	public function register_css() {
-		if ( ! isset($this->css['files']) || ! is_array($this->css['files'])) {
+		if ( ! isset($this->config['css']['files']) || ! is_array($this->config['css']['files'])) {
 			return;
 		}
 
-		foreach ($this->css['files'] as $key => $css) {
-			wp_register_style( $key, $this->url . '/' .$css, $this->css['dependencies'], $this->css['version'], $this->css['media'] );
+		foreach ($this->config['css']['files'] as $key => $css) {
+			wp_register_style( $key, $this->config['url'] . '/' .$css, $this->config['css']['dependencies'], $this->config['css']['version'], $this->config['css']['media'] );
 			// wp_enqueue_style( $key );
 		}
 	}
 
 	public function enqueue_css() {
-		if ( ! isset($this->css['files']) || ! is_array($this->css['files'])) {
+		if ( ! isset($this->config['css']['files']) || ! is_array($this->config['css']['files'])) {
 			return;
 		}
 
-		foreach ($this->css['files'] as $key => $css) {
+		foreach ($this->config['css']['files'] as $key => $css) {
 			wp_enqueue_style( $key );
 		}
 	}
 
 	public function register_js() {
-		if ( ! isset($this->js['files']) || ! is_array($this->js['files'])) {
+		if ( ! isset($this->config['js']['files']) || ! is_array($this->config['js']['files'])) {
 			return;
 		}
 		
-		foreach ($this->js['files'] as $key => $js) {
+		foreach ($this->config['js']['files'] as $key => $js) {
 			wp_deregister_script($key);
-			wp_register_script($key, $this->url . '/' . $js, $this->js['dependencies'], $this->js['version'], $this->js['footer']);
+			wp_register_script($key, $this->config['url'] . '/' . $js, $this->config['js']['dependencies'], $this->config['js']['version'], $this->config['js']['footer']);
 		}
 	}
 
 	public function enqueue_js() {
-		if ( ! isset($this->js['files']) || ! is_array($this->js['files'])) {
+		if ( ! isset($this->config['js']['files']) || ! is_array($this->config['js']['files'])) {
 			return;
 		}
 		
-		foreach ($this->js['files'] as $key => $js) {
+		foreach ($this->config['js']['files'] as $key => $js) {
 			wp_enqueue_script( $key );
 		}
 	}
 
 	public function get_directory() {
-		return $this->directory;
+		return $this->config['directory'];
+	}
+
+	public function get_image_params($size) {
+		if ( ! isset($this->config['photos'][$size])) {
+			return null;
+		}
+
+		return $this->config['photos'][$size];
 	}
 
 // class end
