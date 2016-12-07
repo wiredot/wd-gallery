@@ -141,17 +141,16 @@ gulp.task('composer', function() {
 
 gulp.task('dist_copy', ['dist_clear', 'default', ], function() {
 	return gulp.src( [
-			'assets/**/*.{css,js,jpg,svg}', 
-			'classes/*', 
-			'config/*', 
-			'languages/*', 
-			'skins/**/*.{css,js,jpg,svg,png,php,html}', 
-			'templates/**/*',
-			'composer.json', 
-			'readme.txt', 
-			'wp-photo-gallery.php'
-		], {base: './'}
-	)
+		'assets/**/*.{css,js,jpg,svg}', 
+		'classes/*', 
+		'config/*', 
+		'languages/*', 
+		'skins/**/*.{css,js,jpg,svg,png,php,html}', 
+		'templates/**/*',
+		'composer.json', 
+		'readme.txt', 
+		'wp-photo-gallery.php'
+	], {base: './'} )
 	.pipe(gulp.dest( options.dist ));
 });
 
