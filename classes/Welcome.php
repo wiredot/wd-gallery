@@ -7,15 +7,7 @@ use Wiredot\Preamp\Twig;
 class Welcome {
 
 	public function __construct() {
-		add_action( 'activated_plugin', array($this, 'welcome' ));
 		add_action( 'admin_menu', array( $this, 'add_admin_menus') );
-	}
-
-	public static function welcome( $plugin ) {
-		if ( $plugin == WP_PHOTO_GALLERY_BASENAME ) {
-			wp_safe_redirect( admin_url('index.php?page=wp-photo-gallery-welcome&activate=1') );
-			exit;
-		}
 	}
 
 	public function add_admin_menus() {

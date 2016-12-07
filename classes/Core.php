@@ -12,10 +12,7 @@ class Core {
 
 	private function __construct() {
 		add_action( 'plugins_loaded', array( $this, 'load_plugin_textdomain' ) );
-		add_action( 'plugins_loaded', array( $this, 'setup' ) );
 
-		// $this->load_plugin_textdomain();
-		
 		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
 
 		Skin_Factory::init();
@@ -35,39 +32,11 @@ class Core {
 		}
 	}
 
-	public function setup() {
-		
-	}
-
 	public static function run() {
 		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof Core ) ) {
 			self::$instance = new Core;
 		}
 		return self::$instance;
-	}
-
-	public static function activate() {
-		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
-
-		// self::init_directory(WP_CONTENT_DIR.'/cache');
-		// self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery');
-		// self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery/templates_c');
-		// self::init_directory(WP_CONTENT_DIR.'/cache/wp-photo-gallery/smarty');
-		add_action( 'init', 'flush_rewrite_rules' );
-		$Welcome = new Welcome;
-	}
-
-	public function flush_rewrite_rules() {
-		flush_rewrite_rules();
-	}
-
-	public function deactivate() {
-	}
-
-	private static function init_directory($dir) {
-		if ( ! file_exists($dir)) {
-			mkdir($dir, 0755);
-		}
 	}
 
 	public function load_plugin_textdomain() {

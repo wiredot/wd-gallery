@@ -25,11 +25,12 @@ define( 'WP_PHOTO_GALLERY_BASENAME', plugin_basename( __FILE__ ) );
 define( 'WP_PHOTO_GALLERY_NAME', dirname( plugin_basename( __FILE__ ) ) );
 
 use Wiredot\WP_Photo_Gallery\Core;
+use Wiredot\WP_Photo_Gallery\Activation;
 
 register_activation_hook( __FILE__, 'activate_wp_photo_gallery' );
 
 function activate_wp_photo_gallery() {
-	return Core::activate();
+	return new Activation;
 }
 
 function WP_Photo_Gallery() {
