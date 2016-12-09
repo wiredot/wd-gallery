@@ -1,6 +1,6 @@
 <?php
 
-$preamp['config']['css']['styles'] = array(
+$preamp['config']['css']['wp-photo-gallery'] = array(
 	'front' => false,
 	'admin' => true,
 	'media' => 'all',

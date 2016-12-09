@@ -1,6 +1,6 @@
 <?php
 
-$preamp['config']['js']['scripts'] = array(
+$preamp['config']['js']['wp-photo-gallery'] = array(
 	'footer' => true,
 	'front' => false,
 	'admin' => true,
