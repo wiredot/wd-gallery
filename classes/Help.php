@@ -46,7 +46,7 @@ class Help {
 			'id'      => 'wp-photo-gallery-credits',
 			'title'   => __('Credits', 'wp-photo-gallery'),
 			'content' => '<h3>'.__('Credits', 'wp-photo-gallery').'</h3>
-				<p>'.sprintf(__('Want to learn more about the authors of WP Photo Gallery? Go to <a href="%s">this page</a> for more info.', 'wp-photo-gallery'), admin_url('index.php?page=wp-photo-gallery-welcome&tab=credits')).'</p>
+				<p>'.sprintf(__('Want to learn more about the authors of WP Gallery? Go to <a href="%s">this page</a> for more info.', 'wp-photo-gallery'), admin_url('index.php?page=wp-photo-gallery-welcome&tab=credits')).'</p>
 			',
 		);
 

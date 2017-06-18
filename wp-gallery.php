@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: WP Photo Gallery
+ * Plugin Name: WP Gallery
  * Plugin URI:  https://wiredot.com/wp-photo-gallery/
- * Description: WP Photo Gallery plugin
+ * Description: WP Gallery plugin
  * Author: WireDot Labs
  * Version: 1.1.0
  * Text Domain: wp-photo-gallery

@@ -12,8 +12,8 @@ class Welcome {
 
 	public function add_admin_menus() {
 		add_dashboard_page(
-			__( 'Welcome to WP Photo Gallery', 'wp-photo-gallery' ),
-			__( 'Welcome to WP Photo Gallery', 'wp-photo-gallery' ),
+			__( 'Welcome to WP Gallery', 'wp-photo-gallery' ),
+			__( 'Welcome to WP Gallery', 'wp-photo-gallery' ),
 			'manage_options',
 			'wp-photo-gallery-welcome',
 			array( $this, 'welcome_page' )

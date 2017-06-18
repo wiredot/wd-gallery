@@ -1,4 +1,4 @@
-=== WP Photo Gallery ===
+=== WP Gallery ===
 Contributors: wiredot
 Donate link: http://wiredot.com
 Tags: gallery, photo
@@ -8,11 +8,11 @@ Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WP Photo Gallery is a Simple and Beautiful Photo Gallery plugin for WordPress.
+WP Gallery is a Simple and Beautiful Photo Gallery plugin for WordPress.
 
 == Description ==
 
-WP Photo Gallery is a Simple and Beautiful Photo Gallery plugin for WordPress.
+WP Gallery is a Simple and Beautiful Photo Gallery plugin for WordPress.
 
 == Installation ==
 
@@ -26,14 +26,14 @@ There are 2 ways of installing the plugin:
 1. Log in to your WordPress Back End (usually your-domain.com/wp-admin/)
 2. Go to Plugins
 3. Click ‘Add New’ button
-4. Search for WP Photo Gallery
+4. Search for WP Gallery
 5. Click ‘Install’ button
 6. Activate the plugin
 7. You’re done!
 
 **By uploading the plugin to server**
 
-1. Go to WP Photo Gallery plugin page on WordPress.org (http://wordpress.org/plugins/wp-photo-gallery
+1. Go to WP Gallery plugin page on WordPress.org (http://wordpress.org/plugins/wp-photo-gallery
 2. Download the plugin
 3. Unzip
 4. Upload to plugins folder on your server (usually wp-content/plugins/)
@@ -44,16 +44,16 @@ There are 2 ways of installing the plugin:
 
 **Getting started**
 
-1. In your WordPress Back End go to WP Photo Gallery -> Themes
+1. In your WordPress Back End go to WP Gallery -> Themes
 2. Activate the theme you like
-3. Go to WP Photo Gallery and click ‘Add new Gallery’ button
+3. Go to WP Gallery and click ‘Add new Gallery’ button
 4. Type the name of the gallery and add images
 5. Publish and you have a just created your first photo gallery
 
 **Creating gallery list page**
 
 1. Create a new page or edit and existing one
-2. Click on ‘Add WP Photo Gallery’ button directly above the Editor
+2. Click on ‘Add WP Gallery’ button directly above the Editor
 3. Press the ‘Insert Shortcode’ button for Galleries overview
 4. You should have a short code in your editor ([wp-photo-gallery])
 5. Save the page and you’re done!
@@ -61,7 +61,7 @@ There are 2 ways of installing the plugin:
 == Changelog ==
 
 = 1.1.0 =
-* [changed] changed name to WP Photo Gallery
+* [changed] changed name to WP Gallery
 
 = 1.0.3 =
 * [new] POT file

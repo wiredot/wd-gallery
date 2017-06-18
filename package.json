@@ -1,7 +1,7 @@
 {
   "name": "wp-photo-gallery",
   "version": "1.1.0",
-  "description": "WP Photo Gallery WordPress plugin",
+  "description": "WP Gallery WordPress plugin",
   "main": "wp-photo-gallery.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

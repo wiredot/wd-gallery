@@ -3,10 +3,10 @@
 $preamp['config']['custom_post_type']['wp-photo-gallery'] = array(
 	'active' => true,
 	'labels' => array(
-		'name'               => 'WP Photo Gallery',
-		'singular_name'      => 'WP Photo Gallery',
+		'name'               => 'WP Gallery',
+		'singular_name'      => 'WP Gallery',
 		'menu_name'          => _x( 'Photo Gallery', 'admin menu', 'wp-photo-gallery' ),
-		'name_admin_bar'     => 'WP Photo Gallery',
+		'name_admin_bar'     => 'WP Gallery',
 		'add_new'            => _x( 'Add New Photo Gallery', 'gallery', 'wp-photo-gallery' ),
 		'add_new_item'       => __( 'Add New Photo Gallery', 'wp-photo-gallery' ),
 		'new_item'           => __( 'New Photo Gallery', 'wp-photo-gallery' ),
