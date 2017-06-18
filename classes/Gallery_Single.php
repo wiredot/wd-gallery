@@ -32,7 +32,7 @@ class Gallery_Single {
 		$params_thumbnail = $Active_Skin->get_image_params('thumbnail');
 		$params_big_image = $Active_Skin->get_image_params('big_image');
 
-		$photos = get_post_meta( $this->gallery_id, 'wppg-photos', true );
+		$photos = get_post_meta( $this->gallery_id, 'photos', true );
 
 		$photos_data = array();
 		foreach ($photos as $photo_id) {

@@ -3,7 +3,6 @@ lib/composer
 vendor
 composer.lock
 node_modules
-assets/js/wp-photo-gallery.js.map
 dist
 *.svn
 *.map

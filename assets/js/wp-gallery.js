@@ -1,8 +1,8 @@
 jQuery(document).ready(function($){
-	wpPhotoGalleryTabs($);
+	wpGalleryTabs($);
 });
 
-function wpPhotoGalleryTabs($) {
+function wpGalleryTabs($) {
 	$('.wp-gallery-wrap .nav-tab').on('click', function() {
             var which = $(this).attr('rel');
             $('.wp-gallery-wrap .nav-tab').removeClass('nav-tab-active');
@@ -12,7 +12,7 @@ function wpPhotoGalleryTabs($) {
         });
 }
 
-function wppgInsertForm(galleryID) {
+function wpGalleryInsertForm(galleryID) {
 	if (galleryID > 0) {
 		window.send_to_editor("[wp-gallery id="+galleryID+"]");
 	} else {

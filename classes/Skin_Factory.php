@@ -76,7 +76,7 @@ class Skin_Factory {
 
 	private function find_active_skin_id() {
 		if (get_the_id()) {
-			$active_skin_id = get_post_meta( get_the_id(), 'wppg-skin', true );
+			$active_skin_id = get_post_meta( get_the_id(), 'skin', true );
 		}
 
 		if ( ! isset($active_skin_id) || ! $active_skin_id ) {
