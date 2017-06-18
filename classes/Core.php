@@ -17,7 +17,7 @@ class Core {
 
 		Skin_Factory::init();
 
-		self::$settings = get_option( 'wp-photo-gallery' );
+		self::$settings = get_option( 'wp-gallery' );
 		
 		if (is_admin()) {
 			// init all admin functionality
@@ -41,7 +41,7 @@ class Core {
 
 	public function load_plugin_textdomain() {
 		load_plugin_textdomain(
-			'wp-photo-gallery',
+			'wp-gallery',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

@@ -1,95 +1,95 @@
-.wp-photo-gallery {
+.wp-gallery {
   box-sizing: border-box; }
-  .wp-photo-gallery *, .wp-photo-gallery *::after, .wp-photo-gallery *::before {
+  .wp-gallery *, .wp-gallery *::after, .wp-gallery *::before {
     box-sizing: inherit; }
 
-.wp-photo-gallery.gallery-list.zurich {
+.wp-gallery.gallery-list.zurich {
   max-width: 1150px;
   margin-left: auto;
   margin-right: auto; }
-  .wp-photo-gallery.gallery-list.zurich::after {
+  .wp-gallery.gallery-list.zurich::after {
     clear: both;
     content: "";
     display: block; }
-  .wp-photo-gallery.gallery-list.zurich li {
+  .wp-gallery.gallery-list.zurich li {
     list-style: none;
     padding: 0;
     margin: 0 0 60px 0; }
     @media screen and (min-width: 801px) {
-      .wp-photo-gallery.gallery-list.zurich li {
+      .wp-gallery.gallery-list.zurich li {
         float: left;
         display: block;
         margin-right: 4.34783%;
         width: 30.43478%; }
-        .wp-photo-gallery.gallery-list.zurich li:last-child {
+        .wp-gallery.gallery-list.zurich li:last-child {
           margin-right: 0; }
-        .wp-photo-gallery.gallery-list.zurich li:nth-child(3n) {
+        .wp-gallery.gallery-list.zurich li:nth-child(3n) {
           margin-right: 0; }
-        .wp-photo-gallery.gallery-list.zurich li:nth-child(3n+1) {
+        .wp-gallery.gallery-list.zurich li:nth-child(3n+1) {
           clear: left; } }
     @media screen and (min-width: 401px) and (max-width: 800px) {
-      .wp-photo-gallery.gallery-list.zurich li {
+      .wp-gallery.gallery-list.zurich li {
         float: left;
         display: block;
         margin-right: 4.34783%;
         width: 47.82609%;
         margin-bottom: 40px; }
-        .wp-photo-gallery.gallery-list.zurich li:last-child {
+        .wp-gallery.gallery-list.zurich li:last-child {
           margin-right: 0; }
-        .wp-photo-gallery.gallery-list.zurich li:nth-child(2n) {
+        .wp-gallery.gallery-list.zurich li:nth-child(2n) {
           margin-right: 0; }
-        .wp-photo-gallery.gallery-list.zurich li:nth-child(2n+1) {
+        .wp-gallery.gallery-list.zurich li:nth-child(2n+1) {
           clear: left; } }
     @media screen and (max-width: 400px) {
-      .wp-photo-gallery.gallery-list.zurich li {
+      .wp-gallery.gallery-list.zurich li {
         margin-bottom: 40px; } }
-    .wp-photo-gallery.gallery-list.zurich li img {
+    .wp-gallery.gallery-list.zurich li img {
       width: 100%;
       height: auto; }
-    .wp-photo-gallery.gallery-list.zurich li h2 {
+    .wp-gallery.gallery-list.zurich li h2 {
       margin: 20px 0 0 0; }
 
-.wp-photo-gallery.gallery-single.zurich {
+.wp-gallery.gallery-single.zurich {
   max-width: 1150px;
   margin-left: auto;
   margin-right: auto; }
-  .wp-photo-gallery.gallery-single.zurich::after {
+  .wp-gallery.gallery-single.zurich::after {
     clear: both;
     content: "";
     display: block; }
-  .wp-photo-gallery.gallery-single.zurich li {
+  .wp-gallery.gallery-single.zurich li {
     list-style: none;
     padding: 0;
     margin: 0 0 30px 0; }
     @media screen and (min-width: 901px) {
-      .wp-photo-gallery.gallery-single.zurich li {
+      .wp-gallery.gallery-single.zurich li {
         float: left;
         display: block;
         margin-right: 4.34783%;
         width: 21.73913%; }
-        .wp-photo-gallery.gallery-single.zurich li:last-child {
+        .wp-gallery.gallery-single.zurich li:last-child {
           margin-right: 0; }
-        .wp-photo-gallery.gallery-single.zurich li:nth-child(4n) {
+        .wp-gallery.gallery-single.zurich li:nth-child(4n) {
           margin-right: 0; }
-        .wp-photo-gallery.gallery-single.zurich li:nth-child(4n+1) {
+        .wp-gallery.gallery-single.zurich li:nth-child(4n+1) {
           clear: left; } }
     @media screen and (min-width: 451px) and (max-width: 900px) {
-      .wp-photo-gallery.gallery-single.zurich li {
+      .wp-gallery.gallery-single.zurich li {
         float: left;
         display: block;
         margin-right: 4.34783%;
         width: 30.43478%;
         margin-bottom: 20px; }
-        .wp-photo-gallery.gallery-single.zurich li:last-child {
+        .wp-gallery.gallery-single.zurich li:last-child {
           margin-right: 0; }
-        .wp-photo-gallery.gallery-single.zurich li:nth-child(3n) {
+        .wp-gallery.gallery-single.zurich li:nth-child(3n) {
           margin-right: 0; }
-        .wp-photo-gallery.gallery-single.zurich li:nth-child(3n+1) {
+        .wp-gallery.gallery-single.zurich li:nth-child(3n+1) {
           clear: left; } }
     @media screen and (max-width: 450px) {
-      .wp-photo-gallery.gallery-single.zurich li {
+      .wp-gallery.gallery-single.zurich li {
         margin-bottom: 20px; } }
-    .wp-photo-gallery.gallery-single.zurich li img {
+    .wp-gallery.gallery-single.zurich li img {
       width: 100%;
       height: auto; }
 

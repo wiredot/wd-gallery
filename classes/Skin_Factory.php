@@ -80,7 +80,7 @@ class Skin_Factory {
 		}
 
 		if ( ! isset($active_skin_id) || ! $active_skin_id ) {
-			$active_skin_id = get_option( 'wp-photo-gallery-active-skin-id' );
+			$active_skin_id = get_option( 'wp-gallery-active-skin-id' );
 		}
 
 		if ( $active_skin_id ) {

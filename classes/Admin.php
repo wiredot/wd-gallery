@@ -16,7 +16,7 @@ class Admin {
 		// run for this plugin
 		if ($file == WP_GALLERY_BASENAME) {
 			// settings link
-			$links[] = "<a href='edit.php?post_type=wp-photo-gallery&page=skins'>" . __('Skins', 'wp-photo-gallery') . "</a>";
+			$links[] = "<a href='edit.php?post_type=wp-gallery&page=skins'>" . __('Skins', 'wp-gallery') . "</a>";
 		}
 		return $links;
 	}
@@ -25,8 +25,8 @@ class Admin {
 		// run for this plugin
 		if ($file == WP_GALLERY_BASENAME) {
 			// settings link
-			$links[] = "<a href='index.php?page=wp-photo-gallery-welcome'>" . __('Getting Started', 'wp-photo-gallery') . "</a>";
-			$links[] = "<a href='index.php?page=wp-photo-gallery-welcome&tab=support'>" . __('Support', 'wp-photo-gallery') . "</a>";
+			$links[] = "<a href='index.php?page=wp-gallery-welcome'>" . __('Getting Started', 'wp-gallery') . "</a>";
+			$links[] = "<a href='index.php?page=wp-gallery-welcome&tab=support'>" . __('Support', 'wp-gallery') . "</a>";
 		}
 		return $links;
 	}
@@ -42,13 +42,13 @@ class Admin {
 	}
 
 	public function add_shortcode($post_id, $post) {
-		if ($post->post_type == 'wp-photo-gallery') {
+		if ($post->post_type == 'wp-gallery') {
 			global $wpdb;
 			
 			$wpdb->update(
 				$wpdb->posts,
 				array(
-					'post_content' => '[wp-photo-gallery id='.$post_id.']'
+					'post_content' => '[wp-gallery id='.$post_id.']'
 				),
 				array(
 					'ID' => $post_id
@@ -58,7 +58,7 @@ class Admin {
 	}
 
 	function bulk_post_updated_messages_filter( $bulk_messages, $bulk_counts ) {
-	    $bulk_messages['wp-photo-gallery'] = array(
+	    $bulk_messages['wp-gallery'] = array(
 	        'updated'   => _n( '%s Gallery updated.', '%s Galleries updated.', $bulk_counts['updated'] ),
 	        'locked'    => _n( '%s Gallery not updated, somebody is editing it.', '%s Galleries not updated, somebody is editing them.', $bulk_counts['locked'] ),
 	        'deleted'   => _n( '%s Gallery permanently deleted.', '%s Galleries permanently deleted.', $bulk_counts['deleted'] ),

@@ -12,14 +12,14 @@ class Welcome {
 
 	public function add_admin_menus() {
 		add_dashboard_page(
-			__( 'Welcome to WP Gallery', 'wp-photo-gallery' ),
-			__( 'Welcome to WP Gallery', 'wp-photo-gallery' ),
+			__( 'Welcome to WP Gallery', 'wp-gallery' ),
+			__( 'Welcome to WP Gallery', 'wp-gallery' ),
 			'manage_options',
-			'wp-photo-gallery-welcome',
+			'wp-gallery-welcome',
 			array( $this, 'welcome_page' )
 		);
 
-		remove_submenu_page( 'index.php', 'wp-photo-gallery-welcome' );
+		remove_submenu_page( 'index.php', 'wp-gallery-welcome' );
 	}
 
 	public function welcome_page() {

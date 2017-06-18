@@ -29,7 +29,7 @@ gulp.task('js', function() {
 	return gulp.src( options.src + '/js/*.js')
 		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 		.pipe(maps.init())
-		.pipe(concat('wp-photo-gallery.js'))
+		.pipe(concat('wp-gallery.js'))
 		// .pipe(uglify())
 		.pipe(maps.write('./'))
 		.pipe(gulp.dest( options.assets + '/js'))
@@ -45,7 +45,7 @@ gulp.task('scss', function() {
 		.pipe(maps.init())
 		.pipe(sass(''))
 		// .pipe(cssnano())
-		// .pipe(rename('wp-photo-gallery-admin.min.css'))
+		// .pipe(rename('wp-gallery-admin.min.css'))
 		.pipe(maps.write('./'))
 		.pipe(gulp.dest( options.assets + '/css'))
 		.pipe(notify({
@@ -149,7 +149,7 @@ gulp.task('dist_copy', ['dist_clear', 'default', ], function() {
 		'templates/**/*',
 		'composer.json', 
 		'readme.txt', 
-		'wp-photo-gallery.php'
+		'wp-gallery.php'
 	], {base: './'} )
 	.pipe(gulp.dest( options.dist ));
 });

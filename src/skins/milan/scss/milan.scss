@@ -11,7 +11,7 @@ $max-width: 1150px;
 
 @import '../../../bower/neat/app/assets/stylesheets/neat';
 
-.wp-photo-gallery {
+.wp-gallery {
 	box-sizing: border-box;
 
 	*, *::after, *::before {
@@ -19,7 +19,7 @@ $max-width: 1150px;
 	}
 }
 
-.wp-photo-gallery.gallery-list.milan {
+.wp-gallery.gallery-list.milan {
 	@include outer-container();
 
 	li {
@@ -43,7 +43,7 @@ $max-width: 1150px;
 	}
 }
 
-.wp-photo-gallery.gallery-single.milan {
+.wp-gallery.gallery-single.milan {
 	@include outer-container();
 	margin: 0;
 	padding: 0;

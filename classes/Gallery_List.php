@@ -52,14 +52,14 @@ class Gallery_List {
 		}
 
 		$Twig = new Twig($Active_Skin->get_directory().'/templates/');
-		return $Twig->twig->render('wp-photo-gallery-list.html', array(
+		return $Twig->twig->render('wp-gallery-list.html', array(
 			'galleries' => $gallery_data
 		));
 	}
 
 	public function get_posts() {
 		$args = array(
-			'post_type' => 'wp-photo-gallery',
+			'post_type' => 'wp-gallery',
 			'order' => 'ASC',
 			'orderby' => 'menu_order',
 			'posts_per_page' => '-1',

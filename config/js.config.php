@@ -1,12 +1,12 @@
 <?php
 
-$preamp['config']['js']['wp-photo-gallery'] = array(
+$preamp['config']['js']['wp-gallery'] = array(
 	'footer' => true,
 	'front' => false,
 	'admin' => true,
 	'dependencies' => array('jquery'),
 	'files' => array(
-		'wp-photo-gallery' => 'assets/js/wp-photo-gallery.js'
+		'wp-gallery' => 'assets/js/wp-gallery.js'
 	),
 	'dev_files' => array(
 

@@ -7,9 +7,9 @@ use Wiredot\Preamp\Core as Preamp;
 class Activation {
 
 	public function __construct() {
-		register_post_type( 'wp-photo-gallery', 
+		register_post_type( 'wp-gallery', 
 			array(
-				'rewrite' => array( 'slug' => 'wp-photo-gallery' ),
+				'rewrite' => array( 'slug' => 'wp-gallery' ),
 			)
 		);
 		flush_rewrite_rules(false);
@@ -19,7 +19,7 @@ class Activation {
 
 	public function activated_plugin( $plugin ) {
 		if ( $plugin == WP_GALLERY_BASENAME ) {
-			wp_safe_redirect( admin_url('index.php?page=wp-photo-gallery-welcome&activate=1') );
+			wp_safe_redirect( admin_url('index.php?page=wp-gallery-welcome&activate=1') );
 			exit;
 		}
 	}

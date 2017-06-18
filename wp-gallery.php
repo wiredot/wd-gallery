@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: WP Gallery
- * Plugin URI:  https://wiredot.com/wp-photo-gallery/
+ * Plugin URI:  https://wiredot.com/wp-gallery/
  * Description: WP Gallery plugin
  * Author: WireDot Labs
  * Version: 1.1.0
- * Text Domain: wp-photo-gallery
+ * Text Domain: wp-gallery
  * Domain Path: /languages
  * Author URI: https://wiredot.com/labs/
  * License: GPLv2 or later

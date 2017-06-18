@@ -9,7 +9,7 @@ class Skin_Directory {
 	public function __construct() {
 		add_action('admin_menu', array($this, 'add_skins_submenu'));
 
-		if (isset($_GET['action']) && $_GET['action'] == 'activate' && isset($_GET['post_type']) && $_GET['post_type'] == 'wp-photo-gallery' && isset($_GET['page']) && $_GET['page'] == 'skins') {
+		if (isset($_GET['action']) && $_GET['action'] == 'activate' && isset($_GET['post_type']) && $_GET['post_type'] == 'wp-gallery' && isset($_GET['page']) && $_GET['page'] == 'skins') {
 			add_action('init', array($this, 'activate_skin'));
 		}
 	}
@@ -18,21 +18,21 @@ class Skin_Directory {
 		$nonce = $_REQUEST['_wpnonce'];
 		$skin = $_GET['skin'];
 
-		if (wp_verify_nonce( $nonce, 'wp-photo-gallery-activate-skin-'.$skin )) {
-			update_option( 'wp-photo-gallery-active-skin-id', $skin );
+		if (wp_verify_nonce( $nonce, 'wp-gallery-activate-skin-'.$skin )) {
+			update_option( 'wp-gallery-active-skin-id', $skin );
 		}
 
-		set_transient( 'WP_GALLERY_message', __('Skin enabled.', 'wp-photo-gallery'), 2 );
-		wp_redirect( '?post_type=wp-photo-gallery&page=skins' );
+		set_transient( 'WP_GALLERY_message', __('Skin enabled.', 'wp-gallery'), 2 );
+		wp_redirect( '?post_type=wp-gallery&page=skins' );
 		exit;
 	}
 
 	public function add_skins_submenu() {
 		// add options page
 		add_submenu_page( 
-			'edit.php?post_type=wp-photo-gallery', 
-			__( 'Skins', 'wp-photo-gallery' ),
-			__( 'Skins', 'wp-photo-gallery' ),
+			'edit.php?post_type=wp-gallery', 
+			__( 'Skins', 'wp-gallery' ),
+			__( 'Skins', 'wp-gallery' ),
 			'read', 
 			'skins', 
 			array($this, 'skins_page')

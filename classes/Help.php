@@ -13,16 +13,16 @@ class Help {
 		$screen = get_current_screen();
 
 		// Return early if we're not on the book post type.
-		if ( 'wp-photo-gallery' != $screen->post_type ) {
+		if ( 'wp-gallery' != $screen->post_type ) {
 			return;
 		}
 
 		// Setup help tab args.
 		$args = array(
-			'id'      => 'wp-photo-gallery-getting-started',
-			'title'   => __('Getting Started', 'wp-photo-gallery'),
-			'content' => '<h3>'.__('Getting Started', 'wp-photo-gallery').'</h3>
-				<p>'.sprintf(__('Follow the instructions on <a href="%s">this page</a>.', 'wp-photo-gallery'), admin_url('index.php?page=wp-photo-gallery-welcome')).'</p>
+			'id'      => 'wp-gallery-getting-started',
+			'title'   => __('Getting Started', 'wp-gallery'),
+			'content' => '<h3>'.__('Getting Started', 'wp-gallery').'</h3>
+				<p>'.sprintf(__('Follow the instructions on <a href="%s">this page</a>.', 'wp-gallery'), admin_url('index.php?page=wp-gallery-welcome')).'</p>
 			',
 		);
 
@@ -31,10 +31,10 @@ class Help {
 
 		// Setup help tab args.
 		$args = array(
-			'id'      => 'wp-photo-gallery-support',
-			'title'   => __('Support', 'wp-photo-gallery'),
-			'content' => '<h3>'.__('Support', 'wp-photo-gallery').'</h3>
-				<p>'.sprintf(__('If you have a question or need help, check out our <a href="%s" target="_blank">support page</a>.', 'wp-photo-gallery'), admin_url('index.php?page=wp-photo-gallery-welcome&tab=support')).'</p>
+			'id'      => 'wp-gallery-support',
+			'title'   => __('Support', 'wp-gallery'),
+			'content' => '<h3>'.__('Support', 'wp-gallery').'</h3>
+				<p>'.sprintf(__('If you have a question or need help, check out our <a href="%s" target="_blank">support page</a>.', 'wp-gallery'), admin_url('index.php?page=wp-gallery-welcome&tab=support')).'</p>
 			',
 		);
 
@@ -43,10 +43,10 @@ class Help {
 
 		// Setup help tab args.
 		$args = array(
-			'id'      => 'wp-photo-gallery-credits',
-			'title'   => __('Credits', 'wp-photo-gallery'),
-			'content' => '<h3>'.__('Credits', 'wp-photo-gallery').'</h3>
-				<p>'.sprintf(__('Want to learn more about the authors of WP Gallery? Go to <a href="%s">this page</a> for more info.', 'wp-photo-gallery'), admin_url('index.php?page=wp-photo-gallery-welcome&tab=credits')).'</p>
+			'id'      => 'wp-gallery-credits',
+			'title'   => __('Credits', 'wp-gallery'),
+			'content' => '<h3>'.__('Credits', 'wp-gallery').'</h3>
+				<p>'.sprintf(__('Want to learn more about the authors of WP Gallery? Go to <a href="%s">this page</a> for more info.', 'wp-gallery'), admin_url('index.php?page=wp-gallery-welcome&tab=credits')).'</p>
 			',
 		);
 

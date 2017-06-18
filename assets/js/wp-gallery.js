@@ -19,3 +19,5 @@ function wppgInsertForm(galleryID) {
 		window.send_to_editor("[wp-gallery]");
 	}
 }
+
+//# sourceMappingURL=wp-gallery.js.map

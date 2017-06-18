@@ -13,18 +13,18 @@ class Settings {
 
 	public function add_settings_menu() {
 		add_submenu_page(
-			'edit.php?post_type=wp-photo-gallery',
+			'edit.php?post_type=wp-gallery',
 			__('Settings'),
 			__('Settings'),
 			'manage_options',
-			'wp-photo-gallery-settings',
+			'wp-gallery-settings',
 			array($this, 'settings_page')
 		);
 	}
 
 	public function settings_page() {
 
-		$options = get_option( 'wp-photo-gallery' );
+		$options = get_option( 'wp-gallery' );
 
 		if ( ! is_array($options)) {
 			$options = array(
@@ -53,10 +53,10 @@ class Settings {
 			'image_quality' => $image_quality
 		);
 
-		update_option( 'wp-photo-gallery', $options );
+		update_option( 'wp-gallery', $options );
 
-		set_transient( 'WP_GALLERY_message', __('Settings updated.', 'wp-photo-gallery'), 2 );
-		wp_redirect( 'edit.php?post_type=wp-photo-gallery&page=wp-photo-gallery-settings' );
+		set_transient( 'WP_GALLERY_message', __('Settings updated.', 'wp-gallery'), 2 );
+		wp_redirect( 'edit.php?post_type=wp-gallery&page=wp-gallery-settings' );
 		exit;
 	}
 

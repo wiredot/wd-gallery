@@ -8,40 +8,40 @@ i.mce-i-icon {
   margin-left: -2px;
   padding-right: 2px; }
 
-.wp-photo-gallery_mb > div {
+.wp-gallery_mb > div {
   margin-bottom: 10px;
   border: 1px solid #ddd;
   padding: 10px;
   background: #fff; }
-  .wp-photo-gallery_mb > div::after {
+  .wp-gallery_mb > div::after {
     clear: both;
     content: "";
     display: table; }
 
-.wp-photo-gallery_mb .wp-photo-gallery_img, .wp-photo-gallery_mb .wp-photo-gallery_details {
+.wp-gallery_mb .wp-gallery_img, .wp-gallery_mb .wp-gallery_details {
   float: left; }
 
-.wp-photo-gallery_mb .wp-photo-gallery_img {
+.wp-gallery_mb .wp-gallery_img {
   width: 20%; }
-  .wp-photo-gallery_mb .wp-photo-gallery_img img {
+  .wp-gallery_mb .wp-gallery_img img {
     width: 100%;
     cursor: ns-resize; }
 
-.wp-photo-gallery_mb .wp-photo-gallery_details {
+.wp-gallery_mb .wp-gallery_details {
   width: 60%;
   padding-left: 2%; }
 
-.wp-photo-gallery_mb label, .wp-photo-gallery_mb input {
+.wp-gallery_mb label, .wp-gallery_mb input {
   display: block;
   float: left;
   width: 20%; }
 
-.wp-photo-gallery_mb label {
+.wp-gallery_mb label {
   text-align: right;
   padding-right: 2%;
   line-height: 30px; }
 
-.wp-photo-gallery_mb input {
+.wp-gallery_mb input {
   width: 70%;
   margin-bottom: 10px; }
 
@@ -51,80 +51,80 @@ i.mce-i-icon {
 .locale-pl-pl .fixed .column-date {
   width: 11%; }
 
-.wp-media-buttons .wp-photo-gallery-media-button img {
+.wp-media-buttons .wp-gallery-media-button img {
   width: 16px;
   height: 16px;
   padding: 0 2px 0 0;
   margin-top: -3px; }
 
-.menu-icon-wp-photo-gallery img {
+.menu-icon-wp-gallery img {
   width: 20px;
   height: 20px;
   margin-top: -2px; }
 
-.wp-photo-gallery-wrap h1 {
+.wp-gallery-wrap h1 {
   margin-bottom: 5px; }
-  .wp-photo-gallery-wrap h1 img {
+  .wp-gallery-wrap h1 img {
     width: 24px;
     height: 24px;
     margin: 3px 10px 0 0;
     vertical-align: top; }
 
-.wp-photo-gallery-wrap .tab-content {
+.wp-gallery-wrap .tab-content {
   display: none; }
 
-.wp-photo-gallery-wrap .tab-content.active {
+.wp-gallery-wrap .tab-content.active {
   display: block; }
 
-.wp-photo-gallery-wrap .nav-tab {
+.wp-gallery-wrap .nav-tab {
   cursor: pointer; }
 
-.wp-photo-gallery-welcome .wp-photo-gallery-header img {
+.wp-gallery-welcome .wp-gallery-header img {
   float: right;
   border-radius: 4px;
   margin: 0 0 15px 15px;
   width: 100px;
   height: auto; }
 
-.wp-photo-gallery-welcome .feature-section-media, .wp-photo-gallery-welcome .feature-section-content {
+.wp-gallery-welcome .feature-section-media, .wp-gallery-welcome .feature-section-content {
   width: 50%;
   box-sizing: border-box; }
-  .wp-photo-gallery-welcome .feature-section-media h4, .wp-photo-gallery-welcome .feature-section-content h4 {
+  .wp-gallery-welcome .feature-section-media h4, .wp-gallery-welcome .feature-section-content h4 {
     margin: 0 0 1em; }
 
-.wp-photo-gallery-welcome .feature-section-media {
+.wp-gallery-welcome .feature-section-media {
   float: right; }
-  .wp-photo-gallery-welcome .feature-section-media img {
+  .wp-gallery-welcome .feature-section-media img {
     border: 1px solid #ddd; }
 
-.wp-photo-gallery-welcome .feature-section-content {
+.wp-gallery-welcome .feature-section-content {
   float: left;
   padding-right: 50px; }
 
-.wp-photo-gallery-skins h1 {
+.wp-gallery-skins h1 {
   margin-bottom: 15px; }
 
-.wp-photo-gallery_media_content {
+.wp-gallery_media_content {
   border-top: 1px solid #ddd; }
-  .wp-photo-gallery_media_content li {
+  .wp-gallery_media_content li {
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     margin: 0; }
-    .wp-photo-gallery_media_content li::after {
+    .wp-gallery_media_content li::after {
       clear: both;
       content: "";
       display: table; }
-    .wp-photo-gallery_media_content li:hover {
+    .wp-gallery_media_content li:hover {
       background-color: #f7f7f7; }
-  .wp-photo-gallery_media_content div {
+  .wp-gallery_media_content div {
     float: left;
     line-height: 50px;
     height: 50px; }
-  .wp-photo-gallery_media_content .img, .wp-photo-gallery_media_content .title {
+  .wp-gallery_media_content .img, .wp-gallery_media_content .title {
     margin-right: 20px; }
-  .wp-photo-gallery_media_content .button {
+  .wp-gallery_media_content .button {
     float: right;
     margin-top: 10px;
     display: block; }
 
-/*# sourceMappingURL=wp-photo-gallery-admin.css.map */
+/*# sourceMappingURL=wp-gallery-admin.css.map */
