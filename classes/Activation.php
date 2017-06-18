@@ -19,7 +19,7 @@ class Activation {
 
 	public function activated_plugin( $plugin ) {
 		if ( $plugin == WP_GALLERY_BASENAME ) {
-			wp_safe_redirect( admin_url('index.php?page=wp-gallery-welcome&activate=1') );
+			wp_safe_redirect( admin_url('edit.php?post_type=wp-gallery&page=getting_started') );
 			exit;
 		}
 	}

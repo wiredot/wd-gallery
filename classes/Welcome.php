@@ -11,15 +11,14 @@ class Welcome {
 	}
 
 	public function add_admin_menus() {
-		add_dashboard_page(
-			__( 'Welcome to WP Gallery', 'wp-gallery' ),
-			__( 'Welcome to WP Gallery', 'wp-gallery' ),
-			'manage_options',
-			'wp-gallery-welcome',
-			array( $this, 'welcome_page' )
+		add_submenu_page( 
+			'edit.php?post_type=wp-gallery', 
+			__( 'Getting Started', 'wp-gallery' ),
+			__( 'Getting Started', 'wp-gallery' ),
+			'read', 
+			'getting_started', 
+			array($this, 'welcome_page')
 		);
-
-		remove_submenu_page( 'index.php', 'wp-gallery-welcome' );
 	}
 
 	public function welcome_page() {
