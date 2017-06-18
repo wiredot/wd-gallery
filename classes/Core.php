@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiredot\WP_Photo_Gallery;
+namespace Wiredot\WP_GALLERY;
 
 use Wiredot\Preamp\Core as Preamp;
 
@@ -13,7 +13,7 @@ class Core {
 	private function __construct() {
 		add_action( 'plugins_loaded', array( $this, 'load_plugin_textdomain' ) );
 
-		$Preamp = Preamp::run(WP_PHOTO_GALLERY_PATH, WP_PHOTO_GALLERY_URL);
+		$Preamp = Preamp::run(WP_GALLERY_PATH, WP_GALLERY_URL);
 
 		Skin_Factory::init();
 

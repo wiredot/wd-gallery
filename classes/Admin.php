@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiredot\WP_Photo_Gallery;
+namespace Wiredot\WP_GALLERY;
 
 class Admin {
 
@@ -14,7 +14,7 @@ class Admin {
 
 	public function add_action_links($links, $file) {
 		// run for this plugin
-		if ($file == WP_PHOTO_GALLERY_BASENAME) {
+		if ($file == WP_GALLERY_BASENAME) {
 			// settings link
 			$links[] = "<a href='edit.php?post_type=wp-photo-gallery&page=skins'>" . __('Skins', 'wp-photo-gallery') . "</a>";
 		}
@@ -23,7 +23,7 @@ class Admin {
 
 	public function add_row_meta($links, $file) {
 		// run for this plugin
-		if ($file == WP_PHOTO_GALLERY_BASENAME) {
+		if ($file == WP_GALLERY_BASENAME) {
 			// settings link
 			$links[] = "<a href='index.php?page=wp-photo-gallery-welcome'>" . __('Getting Started', 'wp-photo-gallery') . "</a>";
 			$links[] = "<a href='index.php?page=wp-photo-gallery-welcome&tab=support'>" . __('Support', 'wp-photo-gallery') . "</a>";

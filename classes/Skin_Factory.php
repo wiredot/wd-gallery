@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiredot\WP_Photo_Gallery;
+namespace Wiredot\WP_GALLERY;
 
 use Wiredot\Preamp\Twig;
 
@@ -45,7 +45,7 @@ class Skin_Factory {
 	}
 
 	private function find_skins() {
-		return $this->find_skins_in_directory(WP_PHOTO_GALLERY_PATH.'/skins/', WP_PHOTO_GALLERY_URL.'skins/');
+		return $this->find_skins_in_directory(WP_GALLERY_PATH.'/skins/', WP_GALLERY_URL.'skins/');
 	}
 
 	private function find_skins_in_directory($directory, $url) {
@@ -58,7 +58,7 @@ class Skin_Factory {
 
 				if ($filename != '.' && $filename != '..' && is_dir($directory.$filename)) {
 					include $directory.$filename.'/config.php';
-					$skins[$filename] = $wp_photo_gallery_skin_config;
+					$skins[$filename] = $WP_GALLERY_skin_config;
 					if (file_exists($directory.$filename.'/screenshot.png')) {
 						$skins[$filename]['screenshot'] = $url.$filename.'/screenshot.png';
 					} else {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiredot\WP_Photo_Gallery;
+namespace Wiredot\WP_GALLERY;
 
 use Wiredot\Preamp\Twig;
 
@@ -22,7 +22,7 @@ class Skin_Directory {
 			update_option( 'wp-photo-gallery-active-skin-id', $skin );
 		}
 
-		set_transient( 'wp_photo_gallery_message', __('Skin enabled.', 'wp-photo-gallery'), 2 );
+		set_transient( 'WP_GALLERY_message', __('Skin enabled.', 'wp-photo-gallery'), 2 );
 		wp_redirect( '?post_type=wp-photo-gallery&page=skins' );
 		exit;
 	}

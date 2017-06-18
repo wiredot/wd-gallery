@@ -19,22 +19,22 @@ if ( ! defined( 'WPINC' ) ) {
 // load composer libraries
 require __DIR__ . '/vendor/autoload.php';
 
-define( 'WP_PHOTO_GALLERY_PATH', dirname( __FILE__ ) );
-define( 'WP_PHOTO_GALLERY_URL', plugin_dir_url( __FILE__ ) );
-define( 'WP_PHOTO_GALLERY_BASENAME', plugin_basename( __FILE__ ) );
-define( 'WP_PHOTO_GALLERY_NAME', dirname( plugin_basename( __FILE__ ) ) );
+define( 'WP_GALLERY_PATH', dirname( __FILE__ ) );
+define( 'WP_GALLERY_URL', plugin_dir_url( __FILE__ ) );
+define( 'WP_GALLERY_BASENAME', plugin_basename( __FILE__ ) );
+define( 'WP_GALLERY_NAME', dirname( plugin_basename( __FILE__ ) ) );
 
-use Wiredot\WP_Photo_Gallery\Core;
-use Wiredot\WP_Photo_Gallery\Activation;
+use Wiredot\WP_GALLERY\Core;
+use Wiredot\WP_GALLERY\Activation;
 
-register_activation_hook( __FILE__, 'activate_wp_photo_gallery' );
+register_activation_hook( __FILE__, 'activate_WP_GALLERY' );
 
-function activate_wp_photo_gallery() {
+function activate_WP_GALLERY() {
 	return new Activation;
 }
 
-function WP_Photo_Gallery() {
+function WP_GALLERY() {
 	return Core::run();
 }
 
-WP_Photo_Gallery();
+WP_GALLERY();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiredot\WP_Photo_Gallery;
+namespace Wiredot\WP_GALLERY;
 
 use WP_Query;
 use Wiredot\Preamp\Twig;
@@ -12,7 +12,7 @@ class Gallery_List {
 	}
 
 	public function get_list() {
-		// global $wp_photo_gallery_query;
+		// global $WP_GALLERY_query;
 		$Skins = Skin_Factory::init();
 		$Active_Skin = $Skins->get_active_skin_object();
 
@@ -26,10 +26,10 @@ class Gallery_List {
 
 		$params_thumbnail = $Active_Skin->get_image_params('thumbnail');
 
-		$wp_photo_gallery_query = $this->get_posts();
+		$WP_GALLERY_query = $this->get_posts();
 
 		$gallery_data = array();
-		foreach ($wp_photo_gallery_query->posts as $gallery) {
+		foreach ($WP_GALLERY_query->posts as $gallery) {
 			$photo_id = get_post_thumbnail_id( $gallery->ID );
 
 			$alt = get_post_meta($photo_id, '_wp_attachment_image_alt', true);

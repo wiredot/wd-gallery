@@ -1,6 +1,6 @@
 <?php
 
-$wp_photo_gallery_skin_config = array(
+$WP_GALLERY_skin_config = array(
 	'id' => 'zurich',
 	'name' => 'Zurich',
 	'css' => array(

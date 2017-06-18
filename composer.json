@@ -4,7 +4,7 @@
     },
     "autoload": {
 		"psr-4": {
-			"Wiredot\\WP_Photo_Gallery\\": "classes/"
+			"Wiredot\\WP_GALLERY\\": "classes/"
 		}
 	}
 }

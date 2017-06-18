@@ -1,7 +1,7 @@
 <div class="wrap wp-photo-gallery-settings wp-photo-gallery-wrap">
     <h1>{{ __("Settings", "wp-photo-gallery") }}</h1>
-	{% if get_transient('wp_photo_gallery_message') %}<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
-		<p><strong>{{ get_transient('wp_photo_gallery_message') }}</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">{{ __("Dismiss this notice.", "wp-photo-gallery") }}</span></button>
+	{% if get_transient('WP_GALLERY_message') %}<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
+		<p><strong>{{ get_transient('WP_GALLERY_message') }}</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">{{ __("Dismiss this notice.", "wp-photo-gallery") }}</span></button>
 	</div>
 	{% endif %}
     <h1 class="nav-tab-wrapper">
@@ -9,7 +9,7 @@
     </h1>
 
     <div class="tab-content tab-general active">
-	    <form action="{{ admin_url('admin-ajax.php') }}?action=wp_photo_gallery_general" method="POST">
+	    <form action="{{ admin_url('admin-ajax.php') }}?action=WP_GALLERY_general" method="POST">
 	        <table class="form-table">
 	            <tbody><tr>
 	                <th><label for="wp-photo-gallery-image-quality">{{__("Image Quality", "wp-photo-gallery")}}</label></th>
