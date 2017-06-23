@@ -120,38 +120,30 @@ gulp.task('img', ['cleanimg'], function () {
 		.pipe(gulp.dest( options.assets + '/images'));
 });
 
+
 // Production
-
 gulp.task('dist_clear', function() {
-	del( options.dist + '/assets' );
-	del( options.dist + '/classes' );
-	del( options.dist + '/config' );
-	del( options.dist + '/languages' );
-	del( options.dist + '/skins' );
-	del( options.dist + '/templates' );
-	del( options.dist + '/vendor' );
-});
-
-gulp.task('composer', function() {
-	composer({
-        "working-dir": "./dist/",
-        bin: "composer"
-    });
+	del( options.dist + '/*' );
 });
 
 gulp.task('dist_copy', ['dist_clear', 'default', ], function() {
 	return gulp.src( [
+		'composer.json', 
 		'assets/**/*.{css,js,jpg,svg}', 
 		'classes/*', 
 		'config/*', 
 		'languages/*', 
 		'skins/**/*.{css,js,jpg,svg,png,php,html}', 
 		'templates/**/*',
-		'composer.json', 
 		'readme.txt', 
 		'wp-gallery.php'
 	], {base: './'} )
 	.pipe(gulp.dest( options.dist ));
 });
 
-gulp.task('dist', ['dist_copy', 'composer']);
+gulp.task('dist', ['dist_copy'], function(){
+	composer({
+        "working-dir": "./dist/",
+        bin: "composer"
+    });
+});
