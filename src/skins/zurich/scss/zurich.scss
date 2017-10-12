@@ -1,86 +1,85 @@
-@import '../../../bower/bourbon/app/assets/stylesheets/bourbon';
+// @import '../../../bower/bourbon/app/assets/stylesheets/bourbon';
 
-@import '../../../bower/neat/app/assets/stylesheets/neat-helpers';
-$border-box-sizing: false;
+// $border-box-sizing: false;
 
-// --- grid settings ---
-$column: 50px;
-$gutter: 50px;
-$grid-columns: 12;
-$max-width: 1150px;
+// // --- grid settings ---
+// $column: 50px;
+// $gutter: 50px;
+// $grid-columns: 12;
+// $max-width: 1150px;
 
-@import '../../../bower/neat/app/assets/stylesheets/neat';
+// @import '../../../bower/neat/core/neat';
 
-.wp-gallery {
-	box-sizing: border-box;
+// .wp-gallery {
+// 	box-sizing: border-box;
 
-	*, *::after, *::before {
-		box-sizing: inherit;
-	}
-}
+// 	*, *::after, *::before {
+// 		box-sizing: inherit;
+// 	}
+// }
 
-.wp-gallery.gallery-list.zurich {
-	@include outer-container();
+// .wp-gallery.gallery-list.zurich {
+// 	@include grid-container;
 
-	li {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 60px 0;
+// 	li {
+// 		list-style: none;
+// 		padding: 0;
+// 		margin: 0 0 60px 0;
 
-		@include media(801px) {
-			@include span-columns(4);
-			@include omega(3n);
-		}
+// 		@include media(801px) {
+// 			@include span-columns(4);
+// 			@include omega(3n);
+// 		}
 
-		@include media(min-width 401px max-width 800px) {
-			@include span-columns(6);
-			@include omega(2n);
-			margin-bottom: 40px;
-		}
+// 		@include media(min-width 401px max-width 800px) {
+// 			@include span-columns(6);
+// 			@include omega(2n);
+// 			margin-bottom: 40px;
+// 		}
 
-		@include media(max-width 400px) {
-			margin-bottom: 40px;
-		}
+// 		@include media(max-width 400px) {
+// 			margin-bottom: 40px;
+// 		}
 
-		img {
-			width: 100%;
-			height: auto;
-		}
+// 		img {
+// 			width: 100%;
+// 			height: auto;
+// 		}
 
-		h2 {
-			margin: 20px 0 0 0;
-		}
-	}
-}
+// 		h2 {
+// 			margin: 20px 0 0 0;
+// 		}
+// 	}
+// }
 
-.wp-gallery.gallery-single.zurich {
-	@include outer-container();
+// .wp-gallery.gallery-single.zurich {
+// 	@include grid-container;
 
-	li {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 30px 0;
+// 	li {
+// 		list-style: none;
+// 		padding: 0;
+// 		margin: 0 0 30px 0;
 
-		@include media(901px) {
-			@include span-columns(3);
-			@include omega(4n);
-		}
+// 		@include media(901px) {
+// 			@include span-columns(3);
+// 			@include omega(4n);
+// 		}
 
-		@include media(min-width 451px max-width 900px) {
-			@include span-columns(4);
-			@include omega(3n);
-			margin-bottom: 20px;
-		}
+// 		@include media(min-width 451px max-width 900px) {
+// 			@include span-columns(4);
+// 			@include omega(3n);
+// 			margin-bottom: 20px;
+// 		}
 
-		@include media(max-width 450px) {
-			margin-bottom: 20px;
-		}
-
+// 		@include media(max-width 450px) {
+// 			margin-bottom: 20px;
+// 		}
 
 
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}
-}
+
+// 		img {
+// 			width: 100%;
+// 			height: auto;
+// 		}
+// 	}
+// }

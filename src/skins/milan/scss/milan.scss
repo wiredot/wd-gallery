@@ -1,71 +1,70 @@
-@import '../../../bower/bourbon/app/assets/stylesheets/bourbon';
+// @import '../../../bower/bourbon/app/assets/stylesheets/bourbon';
 
-@import '../../../bower/neat/app/assets/stylesheets/neat-helpers';
-$border-box-sizing: false;
+// $border-box-sizing: false;
 
-// --- grid settings ---
-$column: 50px;
-$gutter: 50px;
-$grid-columns: 12;
-$max-width: 1150px;
+// // --- grid settings ---
+// $column: 50px;
+// $gutter: 50px;
+// $grid-columns: 12;
+// $max-width: 1150px;
 
-@import '../../../bower/neat/app/assets/stylesheets/neat';
+// @import '../../../bower/neat/core/neat';
 
-.wp-gallery {
-	box-sizing: border-box;
+// .wp-gallery {
+// 	box-sizing: border-box;
 
-	*, *::after, *::before {
-		box-sizing: inherit;
-	}
-}
+// 	*, *::after, *::before {
+// 		box-sizing: inherit;
+// 	}
+// }
 
-.wp-gallery.gallery-list.milan {
-	@include outer-container();
+// .wp-gallery.gallery-list.milan {
+// 	@include grid-container;
 
-	li {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 50px 0;
+// 	li {
+// 		list-style: none;
+// 		padding: 0;
+// 		margin: 0 0 50px 0;
 		
-		@include media(451px) {
-			@include span-columns(6);
-			@include omega(2n);
-		}
+// 		@include media(451px) {
+// 			@include span-columns(6);
+// 			@include omega(2n);
+// 		}
 
-		img {
-			width: 100%;
-			height: auto;
-		}
+// 		img {
+// 			width: 100%;
+// 			height: auto;
+// 		}
 
-		h2 {
-			margin: 20px 0 0 0;
-		}
-	}
-}
+// 		h2 {
+// 			margin: 20px 0 0 0;
+// 		}
+// 	}
+// }
 
-.wp-gallery.gallery-single.milan {
-	@include outer-container();
-	margin: 0;
-	padding: 0;
+// .wp-gallery.gallery-single.milan {
+// 	@include grid-container;
+// 	margin: 0;
+// 	padding: 0;
 
-	li {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 20px 0;
+// 	li {
+// 		list-style: none;
+// 		padding: 0;
+// 		margin: 0 0 20px 0;
 		
-		@include media(801px) {
-			@include span-columns(4);
-			@include omega(3n);
-		}
+// 		@include media(801px) {
+// 			@include span-columns(4);
+// 			@include omega(3n);
+// 		}
 
-		@include media(min-width 401px max-width 800px) {
-			@include span-columns(6);
-			@include omega(2n);
-		}
+// 		@include media(min-width 401px max-width 800px) {
+// 			@include span-columns(6);
+// 			@include omega(2n);
+// 		}
 
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}
-}
+// 		img {
+// 			width: 100%;
+// 			height: auto;
+// 		}
+// 	}
+// }
