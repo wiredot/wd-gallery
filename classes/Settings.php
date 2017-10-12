@@ -36,7 +36,7 @@ class Settings {
 
 		$Twig = new Twig();
 		echo $Twig->twig->render(
-			'settings.html', array(
+			'settings.twig', array(
 				'hide_css' => $options['hide_css'],
 				'hide_js' => $options['hide_js'],
 				'image_quality' => $options['image_quality'],

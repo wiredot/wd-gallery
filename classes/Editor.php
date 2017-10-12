@@ -14,12 +14,12 @@ class Editor {
 
 	public function add_media_button() {
 		$Twig = new Twig;
-		echo $Twig->twig->render( 'media-button.html' );
+		echo $Twig->twig->render( 'media-button.twig' );
 	}
 
 	public function add_media_button_content() {
 		$Twig = new Twig;
-		echo $Twig->twig->render( 'media-button-content.html' );
+		echo $Twig->twig->render( 'media-button-content.twig' );
 	}
 
 }

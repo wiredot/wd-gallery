@@ -30,7 +30,7 @@ class Welcome {
 
 		$Twig = new Twig();
 		echo $Twig->twig->render(
-			'welcome.html', array(
+			'welcome.twig', array(
 				'tab' => $tab,
 			)
 		);

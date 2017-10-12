@@ -53,7 +53,7 @@ class Gallery_List {
 
 		$Twig = new Twig( $Active_Skin->get_directory() . '/templates/' );
 		return $Twig->twig->render(
-			'wp-gallery-list.html', array(
+			'wp-gallery-list.twig', array(
 				'galleries' => $gallery_data,
 			)
 		);

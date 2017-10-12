@@ -43,7 +43,7 @@ class Skin_Directory {
 		$Skins = Skin_Factory::init();
 		$Twig = new Twig;
 		echo $Twig->twig->render(
-			'skins.html', array(
+			'skins.twig', array(
 				'skins' => $Skins->get_skins(),
 				'active_skin_id' => $Skins->get_active_skin_id(),
 			)

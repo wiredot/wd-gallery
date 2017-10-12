@@ -67,7 +67,7 @@ class Gallery_Single {
 
 		$Twig = new Twig( $Active_Skin->get_directory() . '/templates/' );
 		return $Twig->twig->render(
-			'wp-gallery-single.html', array(
+			'wp-gallery-single.twig', array(
 				'photos' => $photos_data,
 			)
 		);
