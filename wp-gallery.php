@@ -27,14 +27,14 @@ define( 'WP_GALLERY_NAME', dirname( plugin_basename( __FILE__ ) ) );
 use Wiredot\WP_GALLERY\Core;
 use Wiredot\WP_GALLERY\Activation;
 
-register_activation_hook( __FILE__, 'activate_WP_GALLERY' );
+register_activation_hook( __FILE__, 'activate_wp_gallery' );
 
-function activate_WP_GALLERY() {
+function activate_wp_gallery() {
 	return new Activation;
 }
 
-function WP_GALLERY() {
+function wp_gallery() {
 	return Core::run();
 }
 
-WP_GALLERY();
+wp_gallery();

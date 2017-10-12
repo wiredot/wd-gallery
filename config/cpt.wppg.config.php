@@ -16,10 +16,10 @@ $preamp['config']['custom_post_type']['wp-gallery'] = array(
 		'search_items'       => __( 'Search Gallery', 'wp-gallery' ),
 		'not_found'          => __( 'No Gallery found.', 'wp-gallery' ),
 		'not_found_in_trash' => __( 'No Gallery found in Trash.', 'wp-gallery' ),
-		'featured_image'	 => __( 'Gallery Cover', 'wp-gallery' ),
-		'remove_featured_image'	 => __( 'Remove Gallery Cover', 'wp-gallery' ),
-		'use_featured_image'	 => __( 'Use as Gallery Cover', 'wp-gallery' ),
-		'set_featured_image'	 => __( 'Set Gallery Cover', 'wp-gallery' ),
+		'featured_image'     => __( 'Gallery Cover', 'wp-gallery' ),
+		'remove_featured_image'  => __( 'Remove Gallery Cover', 'wp-gallery' ),
+		'use_featured_image'     => __( 'Use as Gallery Cover', 'wp-gallery' ),
+		'set_featured_image'     => __( 'Set Gallery Cover', 'wp-gallery' ),
 	),
 	'messages' => array(
 		1  => __( 'Gallery updated.', 'wp-gallery' ),
@@ -31,10 +31,10 @@ $preamp['config']['custom_post_type']['wp-gallery'] = array(
 		7  => __( 'Gallery saved.', 'wp-gallery' ),
 		8  => __( 'Gallery submitted.', 'wp-gallery' ),
 		9  => __( 'Gallery scheduled for: <strong>%date%</strong>.', 'wp-gallery' ),
-			// translators: Publish box date format, see http://php.net/date
-			// date_i18n( __( 'M j, Y @ G:i', 'wp-gallery' ), strtotime( $post->post_date ) )
-		// ),
-		10 => __( 'Gallery draft updated.', 'wp-gallery' )
+		// translators: Publish box date format, see http://php.net/date
+		// date_i18n( __( 'M j, Y @ G:i', 'wp-gallery' ), strtotime( $post->post_date ) )
+	// ),
+	10 => __( 'Gallery draft updated.', 'wp-gallery' ),
 	),
 	'description' => __( 'Description.', 'wp-gallery' ),
 	'public' => true,
@@ -65,7 +65,7 @@ $preamp['config']['meta_box']['wp-gallery-photos'] = array(
 	'active' => true,
 	'type' => 'post',
 	'name' => __( 'Photos', 'wp-gallery' ),
-	'post_type' => array('wp-gallery', 'post'),
+	'post_type' => array( 'wp-gallery', 'post' ),
 	'context' => 'normal', // normal | advanced | side
 	'priority' => 'high', // high | core | default | low
 	'fields' => array(
@@ -75,14 +75,14 @@ $preamp['config']['meta_box']['wp-gallery-photos'] = array(
 			'labels' => array(
 				'button' => __( 'Add Photos', 'wp-gallery' ),
 				'button_window' => __( 'Add Photos', 'wp-gallery' ),
-				'title' => __( 'Upload or Choose Photos', 'wp-gallery' )
+				'title' => __( 'Upload or Choose Photos', 'wp-gallery' ),
 			),
 			'attributes' => array(
 				'multiple' => true,
-				'filetype' => 'image'
-			)
+				'filetype' => 'image',
+			),
 		),
-	)
+	),
 );
 
 $preamp['config']['admin_custom_columns']['gallery'] = array(
@@ -90,6 +90,6 @@ $preamp['config']['admin_custom_columns']['gallery'] = array(
 	'columns' => array(
 		'featured_image',
 		'title',
-		'date'
-	)
+		'date',
+	),
 );

@@ -12,7 +12,7 @@ class Gallery_Single {
 
 	private $skin;
 
-	public function __construct($gallery_id) {
+	public function __construct( $gallery_id ) {
 		$this->gallery_id = $gallery_id;
 	}
 
@@ -20,55 +20,57 @@ class Gallery_Single {
 
 		$Skins = Skin_Factory::init();
 		$Active_Skin = $Skins->get_active_skin_object();
-		
-		if ( ! CORE::get_settings('hide_css') ) {
+
+		if ( ! CORE::get_settings( 'hide_css' ) ) {
 			$Active_Skin->enqueue_css();
 		}
 
-		if ( ! CORE::get_settings('hide_js') ) {
+		if ( ! CORE::get_settings( 'hide_js' ) ) {
 			$Active_Skin->enqueue_js();
 		}
 
-		$params_thumbnail = $Active_Skin->get_image_params('thumbnail');
-		$params_big_image = $Active_Skin->get_image_params('big_image');
+		$params_thumbnail = $Active_Skin->get_image_params( 'thumbnail' );
+		$params_big_image = $Active_Skin->get_image_params( 'big_image' );
 
 		$photos = get_post_meta( $this->gallery_id, 'photos', true );
 
 		$photos_data = array();
-		foreach ($photos as $photo_id) {
-			$alt = get_post_meta($photo_id, '_wp_attachment_image_alt', true);
-			$title = get_the_title($photo_id);
-			$caption = get_the_excerpt($photo_id);
+		foreach ( $photos as $photo_id ) {
+			$alt = get_post_meta( $photo_id, '_wp_attachment_image_alt', true );
+			$title = get_the_title( $photo_id );
+			$caption = get_the_excerpt( $photo_id );
 
 			$atts = array(
 				'title' => $title,
-				'alt' => $alt
+				'alt' => $alt,
 			);
 
-			$Image = new Image($photo_id, $params_thumbnail, $atts);
+			$Image = new Image( $photo_id, $params_thumbnail, $atts );
 			$thumbnail = $Image->get_image();
 
 			if ( $params_big_image ) {
-				$Image = new Image($photo_id, $params_big_image, $atts);
+				$Image = new Image( $photo_id, $params_big_image, $atts );
 				$big_image = $Image->get_url();
 			} else {
 				$big_image = null;
 			}
-			
+
 			$photos_data[] = array(
 				'id' => $photo_id,
 				'thumbnail' => $thumbnail,
 				'big_image' => $big_image,
 				'title' => $title,
 				'alt' => $alt,
-				'caption' => get_the_excerpt($photo_id)
+				'caption' => get_the_excerpt( $photo_id ),
 			);
 		}
 
-		$Twig = new Twig($Active_Skin->get_directory().'/templates/');
-		return $Twig->twig->render('wp-gallery-single.html', array(
-			'photos' => $photos_data
-		));
+		$Twig = new Twig( $Active_Skin->get_directory() . '/templates/' );
+		return $Twig->twig->render(
+			'wp-gallery-single.html', array(
+				'photos' => $photos_data,
+			)
+		);
 	}
 
 	public function get_post() {
