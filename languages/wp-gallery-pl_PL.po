@@ -1,0 +1,437 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Gallery\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-12 16:30+0000\n"
+"PO-Revision-Date: 2017-10-12 16:33+0000\n"
+"Last-Translator: psoluch <psoluch@wiredot.com>\n"
+"Language-Team: Polish\n"
+"Language: pl-PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10 >= 2 && n%10<=4 "
+"&&(n%100<10||n%100 >= 20)? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Admin.php:19
+#: ../../../../../_labs/plugins/wp-gallery/classes/Skin_Directory.php:34
+#: ../../../../../_labs/plugins/wp-gallery/classes/Skin_Directory.php:35
+#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:2
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:64
+msgid "Skins"
+msgstr "Skórki"
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Admin.php:28
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:23
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:24
+#: ../../../../../_labs/plugins/wp-gallery/classes/Welcome.php:16
+#: ../../../../../_labs/plugins/wp-gallery/classes/Welcome.php:17
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:8
+msgid "Getting Started"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Admin.php:29
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:35
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:36
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:9
+msgid "Support"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:25
+#, php-format
+msgid "Follow the instructions on <a href=\"%s\">this page</a>."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:37
+#, php-format
+msgid ""
+"If you have a question or need help, check out our <a href=\"%s\" "
+"target=\"_blank\">support page</a>."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:47
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:48
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:10
+msgid "Credits"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:49
+#, php-format
+msgid ""
+"Want to learn more about the authors of WP Gallery? Go to <a href=\"%s\">"
+"this page</a> for more info."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Settings.php:60
+msgid "Settings updated."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Skin_Directory.php:25
+msgid "Skin enabled."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:8
+msgctxt "admin menu"
+msgid "WP Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:10
+msgctxt "gallery"
+msgid "Add New Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:11
+msgid "Add New Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:12
+msgid "New Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:13
+msgid "Edit Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:14
+msgid "View Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:15
+msgid "All Galleries"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:16
+msgid "Search Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:17
+msgid "No Gallery found."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:18
+msgid "No Gallery found in Trash."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:19
+msgid "Gallery Cover"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:20
+msgid "Remove Gallery Cover"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:21
+msgid "Use as Gallery Cover"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:22
+msgid "Set Gallery Cover"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:25
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:26
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:28
+msgid "Gallery updated."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:27
+msgid "Gallery deleted."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:29
+msgid "Gallery restored to revision from %revision%"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:30
+msgid "Gallery published."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:31
+msgid "Gallery saved."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:32
+msgid "Gallery submitted."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:33
+msgid "Gallery scheduled for: <strong>%date%</strong>."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:37
+msgid "Gallery draft updated."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:39
+msgid "Description."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:67
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:74
+msgid "Photos"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:76
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:77
+msgid "Add Photos"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:78
+msgid "Upload or Choose Photos"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/media-button-content.twig:5
+msgid "Galleries List"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/media-button-content.twig:6
+#: ../../../../../_labs/plugins/wp-gallery/templates/media-button-content.twig:15
+msgid "Insert Shortcode"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/media-button-content.twig:9
+msgid "Galleries"
+msgstr ""
+
+#. Name of the plugin
+#: ../../../../../_labs/plugins/wp-gallery/templates/media-button.twig:1
+msgid "WP Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:2
+msgid "Settings"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:4
+#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:4
+msgid "Dismiss this notice."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:8
+msgid "General"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:15
+msgid "Image Quality"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:21
+msgid "CSS"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:24
+msgid "Hide standard Skin CSS Styles"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:28
+msgid "JS"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:31
+msgid "Hide standard Skin JS Scripts"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:18
+msgid "Active"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:33
+msgid "Activate"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:4
+msgid "Welcome to WP Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:5
+msgid "Thank you for installing WP Gallery."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:14
+msgid ""
+"Follow the steps below to get started using WP Gallery. Your Galleries will "
+"be ready in just few minutes!"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:17
+msgid "Creating Your First Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:23
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:64
+msgid "Photo Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:23
+msgid "Add New Photo Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:24
+msgid ""
+"On this page you can create your first Photo Gallery. Simply enter the "
+"Gallery title and click on the Add Photos button. You can chose photos from "
+"your WordPress Media Library or upload them. Then you can add a Gallery "
+"Cover if you want and Publish the Gallery."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:30
+msgid "Adding a Gallery List to a Page"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:36
+msgid ""
+"On any page click on the Add Photo Gallery button directly above the Editor. "
+"Then click on the Insert Shortcode button next to Galleries List. Save the "
+"page and you're done."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:37
+msgid "Shortcode"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:44
+msgid "Adding a Gallery to a Page"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:50
+msgid ""
+"You can display a single Gallery on a page. Click on the Add Photo Gallery "
+"button directly above the Editor. Then click on the Insert Shortcode button "
+"next to the Gallery you want to show. Save the page and that's it."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:51
+msgid "Example Shortcode (id is a post id of your Gallery)"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:58
+msgid "Selecting a Skin"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:65
+msgid ""
+"WP Gallery has several beautiful skins. Select the one you like the most on "
+"the Skns page. More skins coming soon."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:73
+msgid ""
+"We did our best to make WP Gallery as simple to use as possible. But if you "
+"have a problem or a questions, get in  touch and we will do everything to "
+"help."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:76
+msgid "Need help?"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:80
+msgid "Free Support"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:81
+#, php-format
+msgid ""
+"Visit our <a href=\"%s\" target=\"_blank\">Support page</a> and submit a "
+"ticket if you have a problem or a question. We will get back to you as soon "
+"as we can."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:84
+msgid "Premium Support"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:85
+#, php-format
+msgid ""
+"You can purchase our <a href=\"%s\" target=\"_blank\">Premium Support</a> "
+"access if you need our help right away. You will get a phone support and "
+"access to our Slack."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:91
+msgid "Learn more"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:95
+msgid "Documentation"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:96
+msgid ""
+"Visit WP Gallery website and have a look at the documentation to learn more "
+"about the plugin."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:99
+msgid "Newsletter"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:100
+#, php-format
+msgid ""
+"Get regular updates on new features, new skins and tips & tricks. Sign up "
+"for our Newsletter <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:107
+#, php-format
+msgid ""
+"WP Gallery is created and maintained by <a href=\"%s\" target=\"_blank\">"
+"WireDot Labs</a>."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:112
+msgid "Contribute"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:113
+#, php-format
+msgid ""
+"If you want to contribute go to our <a href=\"%s\" target=\"_blank\">GitHub "
+"Repository</a>, fork WP Gallery and submit a Pull Request."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:116
+msgid "Issues"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:117
+#, php-format
+msgid ""
+"If you find any problems or bugs, report them on our <a href=\"%s\" "
+"target=\"_blank\">GitHub Issues page</a>."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:122
+msgid "Libraries"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:123
+msgid "WP Gallery uses following libraries"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:133
+msgid "Inspiration"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:134
+msgid "Parts of WP Gallery have been inspired by"
+msgstr ""
+
+#. Description of the plugin
+msgid "WP Gallery plugin"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wiredot.com/wp-gallery/"
+msgstr ""
+
+#. Author of the plugin
+msgid "WireDot Labs"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wiredot.com/labs/"
+msgstr ""

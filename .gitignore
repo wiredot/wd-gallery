@@ -7,3 +7,5 @@ dist
 *.svn
 *.map
 /.gulp
+*.pot~
+*.po~
