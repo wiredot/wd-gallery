@@ -1,40 +1,40 @@
 <div class="wrap wp-gallery-settings wp-gallery-wrap">
-    <h1>{{ __("Settings", "wp-gallery") }}</h1>
+    <h1>{{ __('Settings', 'wp-gallery') }}</h1>
 	{% if get_transient('WP_GALLERY_message') %}<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
-		<p><strong>{{ get_transient('WP_GALLERY_message') }}</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">{{ __("Dismiss this notice.", "wp-gallery") }}</span></button>
+		<p><strong>{{ get_transient('WP_GALLERY_message') }}</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">{{ __('Dismiss this notice.', 'wp-gallery') }}</span></button>
 	</div>
 	{% endif %}
     <h1 class="nav-tab-wrapper">
-        <a class="nav-tab nav-tab-active" rel="general">{{__("General", "wp-gallery")}}</a>
+        <a class="nav-tab nav-tab-active" rel="general">{{__('General', 'wp-gallery')}}</a>
     </h1>
 
     <div class="tab-content tab-general active">
 	    <form action="{{ admin_url('admin-ajax.php') }}?action=WP_GALLERY_general" method="POST">
 	        <table class="form-table">
 	            <tbody><tr>
-	                <th><label for="wp-gallery-image-quality">{{__("Image Quality", "wp-gallery")}}</label></th>
+	                <th><label for="wp-gallery-image-quality">{{__('Image Quality', 'wp-gallery')}}</label></th>
 	                <td>
 	                     <input type="text" value="{{ image_quality }}" id="wp-gallery-image-quality" name="image_quality">
 	                </td>
 	            </tr>
 	            <tr>
-	                <th><label for="wp-gallery-hide-css">{{ __("CSS", "wp-gallery") }}</label></th>
+	                <th><label for="wp-gallery-hide-css">{{ __('CSS', 'wp-gallery') }}</label></th>
 	                <td>
 	                    <input type="checkbox" value="1" id="wp-gallery-hide-css" name="hide_css"{% if hide_css %} checked="checked"{% endif %}>
-	                    <span class="footnote">{{ __("Hide standard Skin CSS Styles", "wp-gallery") }}</span>
+	                    <span class="footnote">{{ __('Hide standard Skin CSS Styles', 'wp-gallery') }}</span>
 	                </td>
 	            </tr>
 	            <tr>
-	                <th><label for="wp-gallery-hide-js">{{ __("JS", "wp-gallery") }}</label></th>
+	                <th><label for="wp-gallery-hide-js">{{ __('JS', 'wp-gallery') }}</label></th>
 	                <td>
 	                    <input type="checkbox" value="1" id="wp-gallery-hide-js" name="hide_js"{% if hide_js %} checked="checked"{% endif %}>
-	                    <span class="footnote">{{ __("Hide standard Skin JS Scripts", "wp-gallery") }}</span>
+	                    <span class="footnote">{{ __('Hide standard Skin JS Scripts', 'wp-gallery') }}</span>
 	                </td>
 	            </tr>
 	        </tbody></table>
 
 	        <div class="submit">
-	            <input type="submit" class="button-primary save-settings" value="{{__("Save Changes", "wp-gallery")}}">
+	            <input type="submit" class="button-primary save-settings" value="{{__('Save Changes', 'wp-gallery')}}">
 	        </div>
 	    </form>
     </div>
