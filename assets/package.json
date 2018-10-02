@@ -1,0 +1,10 @@
+{
+  "name": "wp-gallery",
+  "version": "2.0.0",
+  "description": "frontend for wp-gallery",
+  "license": "MIT",
+  "devDependencies": {
+    "bourbon": "^5.1.0",
+    "bourbon-neat": "^3.0.0"
+  }
+}

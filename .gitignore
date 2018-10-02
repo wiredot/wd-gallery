@@ -9,3 +9,5 @@ dist
 /.gulp
 *.pot~
 *.po~
+/assets/lib
+*.lock

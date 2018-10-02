@@ -1,7 +1,0 @@
-{
-    "name":  "wp-gallery",
-    "devDependencies": {
-        "bourbon": "latest",
-        "neat": "latest"
-    }
-}
