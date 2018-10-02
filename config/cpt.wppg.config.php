@@ -1,6 +1,6 @@
 <?php
 
-$preamp['config']['custom_post_type']['wp-gallery'] = array(
+$config['custom_post_type']['wp-gallery'] = array(
 	'active' => true,
 	'labels' => array(
 		'name'               => 'WP Gallery',
@@ -61,7 +61,7 @@ $preamp['config']['custom_post_type']['wp-gallery'] = array(
 	'custom_menu_icon' => 'assets/images/wp-gallery.svg',
 );
 
-$preamp['config']['meta_box']['wp-gallery-photos'] = array(
+$config['meta_box']['wp-gallery-photos'] = array(
 	'active' => true,
 	'type' => 'post',
 	'name' => __( 'Photos', 'wp-gallery' ),
@@ -85,7 +85,7 @@ $preamp['config']['meta_box']['wp-gallery-photos'] = array(
 	),
 );
 
-$preamp['config']['admin_custom_columns']['gallery'] = array(
+$config['admin_custom_columns']['gallery'] = array(
 	'post_type' => 'wp-gallery',
 	'columns' => array(
 		'featured_image',
