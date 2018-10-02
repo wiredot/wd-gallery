@@ -3,73 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-12 16:30+0000\n"
+"POT-Creation-Date: 2018-10-02 15:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
 "Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco - https://localise.biz/"
-
-#: ../../../../../_labs/plugins/wp-gallery/classes/Admin.php:19
-#: ../../../../../_labs/plugins/wp-gallery/classes/Skin_Directory.php:34
-#: ../../../../../_labs/plugins/wp-gallery/classes/Skin_Directory.php:35
-#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:2
-#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:64
-msgid "Skins"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/classes/Admin.php:28
-#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:23
-#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:24
-#: ../../../../../_labs/plugins/wp-gallery/classes/Welcome.php:16
-#: ../../../../../_labs/plugins/wp-gallery/classes/Welcome.php:17
-#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:8
-msgid "Getting Started"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/classes/Admin.php:29
-#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:35
-#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:36
-#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:9
-msgid "Support"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:25
-#, php-format
-msgid "Follow the instructions on <a href=\"%s\">this page</a>."
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:37
-#, php-format
-msgid ""
-"If you have a question or need help, check out our <a href=\"%s\" "
-"target=\"_blank\">support page</a>."
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:47
-#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:48
-#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:10
-msgid "Credits"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:49
-#, php-format
-msgid ""
-"Want to learn more about the authors of WP Gallery? Go to <a href=\"%s\">"
-"this page</a> for more info."
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/classes/Settings.php:60
-msgid "Settings updated."
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/classes/Skin_Directory.php:25
-msgid "Skin enabled."
-msgstr ""
+"X-Generator: Loco https://localise.biz/"
 
 #: ../../../../../_labs/plugins/wp-gallery/config/cpt.wppg.config.php:8
 msgctxt "admin menu"
@@ -181,6 +124,57 @@ msgstr ""
 msgid "Upload or Choose Photos"
 msgstr ""
 
+#: ../../../../../_labs/plugins/wp-gallery/classes/Settings.php:60
+msgid "Settings updated."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:23
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:24
+#: ../../../../../_labs/plugins/wp-gallery/classes/Admin.php:28
+#: ../../../../../_labs/plugins/wp-gallery/classes/Welcome.php:16
+#: ../../../../../_labs/plugins/wp-gallery/classes/Welcome.php:17
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:8
+msgid "Getting Started"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:25
+#, php-format
+msgid "Follow the instructions on <a href=\"%s\">this page</a>."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:35
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:36
+#: ../../../../../_labs/plugins/wp-gallery/classes/Admin.php:29
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:9
+msgid "Support"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:37
+#, php-format
+msgid ""
+"If you have a question or need help, check out our <a href=\"%s\" "
+"target=\"_blank\">support page</a>."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:47
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:48
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:10
+msgid "Credits"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Help.php:49
+#, php-format
+msgid ""
+"Want to learn more about the authors of WP Gallery? Go to <a href=\"%s\">"
+"this page</a> for more info."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/classes/Admin.php:19
+#: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:64
+#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:2
+msgid "Skins"
+msgstr ""
+
 #: ../../../../../_labs/plugins/wp-gallery/templates/media-button-content.twig:5
 msgid "Galleries List"
 msgstr ""
@@ -192,52 +186,6 @@ msgstr ""
 
 #: ../../../../../_labs/plugins/wp-gallery/templates/media-button-content.twig:9
 msgid "Galleries"
-msgstr ""
-
-#. Name of the plugin
-#: ../../../../../_labs/plugins/wp-gallery/templates/media-button.twig:1
-msgid "WP Gallery"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:2
-msgid "Settings"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:4
-#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:4
-msgid "Dismiss this notice."
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:8
-msgid "General"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:15
-msgid "Image Quality"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:21
-msgid "CSS"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:24
-msgid "Hide standard Skin CSS Styles"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:28
-msgid "JS"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:31
-msgid "Hide standard Skin JS Scripts"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:18
-msgid "Active"
-msgstr ""
-
-#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:33
-msgid "Activate"
 msgstr ""
 
 #: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:4
@@ -418,6 +366,52 @@ msgstr ""
 
 #: ../../../../../_labs/plugins/wp-gallery/templates/welcome.twig:134
 msgid "Parts of WP Gallery have been inspired by"
+msgstr ""
+
+#. Name of the plugin
+#: ../../../../../_labs/plugins/wp-gallery/templates/media-button.twig:1
+msgid "WP Gallery"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:2
+msgid "Settings"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:4
+#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:4
+msgid "Dismiss this notice."
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:8
+msgid "General"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:15
+msgid "Image Quality"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:21
+msgid "CSS"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:24
+msgid "Hide standard Skin CSS Styles"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:28
+msgid "JS"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/settings.twig:31
+msgid "Hide standard Skin JS Scripts"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:18
+msgid "Active"
+msgstr ""
+
+#: ../../../../../_labs/plugins/wp-gallery/templates/skins.twig:33
+msgid "Activate"
 msgstr ""
 
 #. Description of the plugin

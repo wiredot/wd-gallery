@@ -58,7 +58,7 @@ $config['custom_post_type']['wp-gallery'] = array(
 	'query_var' => true,
 	'can_export' => true,
 	'delete_with_user' => true,
-	'custom_menu_icon' => 'assets/images/wp-gallery.svg',
+	'menu_icon' => WP_GALLERY_URL . 'assets/images/wp-gallery.svg',
 );
 
 $config['meta_box']['post']['wp-gallery-photos'] = array(
