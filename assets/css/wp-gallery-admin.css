@@ -16,7 +16,7 @@ i.mce-i-icon {
   .wp-gallery_mb > div::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
 
 .wp-gallery_mb .wp-gallery_img, .wp-gallery_mb .wp-gallery_details {
   float: left; }
@@ -113,7 +113,7 @@ i.mce-i-icon {
     .wp-gallery_media_content li::after {
       clear: both;
       content: "";
-      display: table; }
+      display: block; }
     .wp-gallery_media_content li:hover {
       background-color: #f7f7f7; }
   .wp-gallery_media_content div {
