@@ -1,5 +1,0 @@
-{% if photos %}<ul class="wp-gallery gallery-single milan">
-	{% for photo in photos %}
-		<li><a href="{{ the_permalink(photo.id) }}">{{ photo.thumbnail | raw }}</a></li>
-	{% endfor %}
-</ul>{% endif %}

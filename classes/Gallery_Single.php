@@ -9,26 +9,21 @@ class Gallery_Single {
 
 	private $gallery_id;
 
-	private $skin;
-
 	public function __construct( $gallery_id ) {
 		$this->gallery_id = $gallery_id;
 	}
 
 	public function get_single() {
-		$Skins = Skin_Factory::init();
-		$Active_Skin = $Skins->get_active_skin_object();
-
 		if ( ! WP_Gallery::get_settings( 'hide_css' ) ) {
-			$Active_Skin->enqueue_css();
+			// $Active_Skin->enqueue_css();
 		}
 
 		if ( ! WP_Gallery::get_settings( 'hide_js' ) ) {
-			$Active_Skin->enqueue_js();
+			// $Active_Skin->enqueue_js();
 		}
 
-		$params_thumbnail = $Active_Skin->get_image_params( 'thumbnail' );
-		$params_big_image = $Active_Skin->get_image_params( 'big_image' );
+		// $params_thumbnail = $Active_Skin->get_image_params( 'thumbnail' );
+		// $params_big_image = $Active_Skin->get_image_params( 'big_image' );
 
 		$photos = get_post_meta( $this->gallery_id, 'photos', true );
 

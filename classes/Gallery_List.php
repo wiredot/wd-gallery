@@ -12,18 +12,18 @@ class Gallery_List {
 
 	public function get_list() {
 		// global $WP_GALLERY_query;
-		$Skins = Skin_Factory::init();
-		$Active_Skin = $Skins->get_active_skin_object();
+		// $Skins = Skin_Factory::init();
+		// $Active_Skin = $Skins->get_active_skin_object();
 
 		if ( ! WP_Gallery::get_settings( 'hide_css' ) ) {
-			$Active_Skin->enqueue_css();
+			// $Active_Skin->enqueue_css();
 		}
 
 		if ( ! WP_Gallery::get_settings( 'hide_js' ) ) {
-			$Active_Skin->enqueue_js();
+			// $Active_Skin->enqueue_js();
 		}
 
-		$params_thumbnail = $Active_Skin->get_image_params( 'thumbnail' );
+		// $params_thumbnail = $Active_Skin->get_image_params( 'thumbnail' );
 
 		$WP_GALLERY_query = $this->get_posts();
 

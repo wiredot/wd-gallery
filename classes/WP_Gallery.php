@@ -15,8 +15,6 @@ class WP_Gallery {
 
 		$CP = CP::run( WP_GALLERY_PATH, WP_GALLERY_URL );
 
-		Skin_Factory::init();
-
 		self::$settings = get_option( 'wp-gallery' );
 
 		if ( is_admin() ) {
@@ -25,7 +23,6 @@ class WP_Gallery {
 			new Editor();
 			new Settings();
 			new Welcome();
-			new Skin_Directory();
 			new Help();
 		} else {
 			new Shortcode();
