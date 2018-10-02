@@ -1,8 +1,8 @@
 <?php
 
-namespace Wiredot\WP_GALLERY;
+namespace Wiredot\WP_Gallery;
 
-use Wiredot\Preamp\Twig;
+use Wiredot\Copernicus\Twig\Twig;
 use WP_Query;
 
 class Editor {

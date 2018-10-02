@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiredot\WP_GALLERY;
+namespace Wiredot\WP_Gallery;
 
 class Skin {
 

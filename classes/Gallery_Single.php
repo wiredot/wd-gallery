@@ -1,10 +1,9 @@
 <?php
 
-namespace Wiredot\WP_GALLERY;
+namespace Wiredot\WP_Gallery;
 
 use WP_Query;
-use Wiredot\Preamp\Twig;
-use Wiredot\Preamp\Image;
+use Wiredot\Copernicus\Twig\Twig;
 
 class Gallery_Single {
 
@@ -17,15 +16,14 @@ class Gallery_Single {
 	}
 
 	public function get_single() {
-
 		$Skins = Skin_Factory::init();
 		$Active_Skin = $Skins->get_active_skin_object();
 
-		if ( ! CORE::get_settings( 'hide_css' ) ) {
+		if ( ! WP_Gallery::get_settings( 'hide_css' ) ) {
 			$Active_Skin->enqueue_css();
 		}
 
-		if ( ! CORE::get_settings( 'hide_js' ) ) {
+		if ( ! WP_Gallery::get_settings( 'hide_js' ) ) {
 			$Active_Skin->enqueue_js();
 		}
 
@@ -45,29 +43,29 @@ class Gallery_Single {
 				'alt' => $alt,
 			);
 
-			$Image = new Image( $photo_id, $params_thumbnail, $atts );
-			$thumbnail = $Image->get_image();
+			// $Image = new Image( $photo_id, $params_thumbnail, $atts );
+			// $thumbnail = $Image->get_image();
 
 			if ( $params_big_image ) {
-				$Image = new Image( $photo_id, $params_big_image, $atts );
-				$big_image = $Image->get_url();
+				// $Image = new Image( $photo_id, $params_big_image, $atts );
+				// $big_image = $Image->get_url();
 			} else {
 				$big_image = null;
 			}
 
 			$photos_data[] = array(
 				'id' => $photo_id,
-				'thumbnail' => $thumbnail,
-				'big_image' => $big_image,
+				// 'thumbnail' => $thumbnail,
+				// 'big_image' => $big_image,
 				'title' => $title,
 				'alt' => $alt,
 				'caption' => get_the_excerpt( $photo_id ),
 			);
 		}
 
-		$Twig = new Twig( $Active_Skin->get_directory() . '/templates/' );
+		$Twig = new Twig();
 		return $Twig->twig->render(
-			'wp-gallery-single.twig', array(
+			'simple/wp-gallery-single.twig', array(
 				'photos' => $photos_data,
 			)
 		);

@@ -61,7 +61,7 @@ $config['custom_post_type']['wp-gallery'] = array(
 	'custom_menu_icon' => 'assets/images/wp-gallery.svg',
 );
 
-$config['meta_box']['wp-gallery-photos'] = array(
+$config['meta_box']['post']['wp-gallery-photos'] = array(
 	'active' => true,
 	'type' => 'post',
 	'name' => __( 'Photos', 'wp-gallery' ),

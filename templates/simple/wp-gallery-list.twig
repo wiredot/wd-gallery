@@ -1,0 +1,5 @@
+<ul class="wp-gallery gallery-list milan">
+	{% for gallery in galleries %}
+	<li><a href="{{ gallery.permalink }}">{{ gallery.thumbnail |raw }} <h2>{{ gallery.title }}</h2></a></li>
+	{% endfor %}
+</ul>

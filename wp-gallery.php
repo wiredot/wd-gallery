@@ -24,8 +24,8 @@ define( 'WP_GALLERY_URL', plugin_dir_url( __FILE__ ) );
 define( 'WP_GALLERY_BASENAME', plugin_basename( __FILE__ ) );
 define( 'WP_GALLERY_NAME', dirname( plugin_basename( __FILE__ ) ) );
 
-use Wiredot\WP_GALLERY\Core;
-use Wiredot\WP_GALLERY\Activation;
+use Wiredot\WP_Gallery\WP_Gallery;
+use Wiredot\WP_Gallery\Activation;
 
 register_activation_hook( __FILE__, 'activate_wp_gallery' );
 
@@ -34,7 +34,7 @@ function activate_wp_gallery() {
 }
 
 function wp_gallery() {
-	return Core::run();
+	return WP_Gallery::run();
 }
 
 wp_gallery();

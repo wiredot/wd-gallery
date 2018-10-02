@@ -1,10 +1,9 @@
 <?php
 
-namespace Wiredot\WP_GALLERY;
+namespace Wiredot\WP_Gallery;
 
 use WP_Query;
-use Wiredot\Preamp\Twig;
-use Wiredot\Preamp\Image;
+use Wiredot\Copernicus\Twig\Twig;
 
 class Gallery_List {
 
@@ -16,11 +15,11 @@ class Gallery_List {
 		$Skins = Skin_Factory::init();
 		$Active_Skin = $Skins->get_active_skin_object();
 
-		if ( ! CORE::get_settings( 'hide_css' ) ) {
+		if ( ! WP_Gallery::get_settings( 'hide_css' ) ) {
 			$Active_Skin->enqueue_css();
 		}
 
-		if ( ! CORE::get_settings( 'hide_js' ) ) {
+		if ( ! WP_Gallery::get_settings( 'hide_js' ) ) {
 			$Active_Skin->enqueue_js();
 		}
 
@@ -40,20 +39,20 @@ class Gallery_List {
 				'alt' => $alt,
 			);
 
-			$Image = new Image( $photo_id, $params_thumbnail, $atts );
-			$thumbnail = $Image->get_image();
+			// $Image = new Image( $photo_id, $params_thumbnail, $atts );
+			// $thumbnail = $Image->get_image();
 
 			$gallery_data[] = array(
 				'id' => $gallery->ID,
-				'thumbnail' => $thumbnail,
+				// 'thumbnail' => $thumbnail,
 				'permalink' => get_permalink( $gallery->ID ),
 				'title' => $gallery->post_title,
 			);
 		}
 
-		$Twig = new Twig( $Active_Skin->get_directory() . '/templates/' );
+		$Twig = new Twig();
 		return $Twig->twig->render(
-			'wp-gallery-list.twig', array(
+			'simple/wp-gallery-list.twig', array(
 				'galleries' => $gallery_data,
 			)
 		);

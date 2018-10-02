@@ -1,10 +1,10 @@
 {
     "require": {
-        "wiredot/preamp": "dev-master"
+        "wiredot/copernicus": "dev-master"
     },
     "autoload": {
 		"psr-4": {
-			"Wiredot\\WP_GALLERY\\": "classes/"
+			"Wiredot\\WP_Gallery\\": "classes/"
 		}
 	}
 }

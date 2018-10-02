@@ -1,8 +1,6 @@
 <?php
 
-namespace Wiredot\WP_GALLERY;
-
-use Wiredot\Preamp\Core as Preamp;
+namespace Wiredot\WP_Gallery;
 
 class Activation {
 

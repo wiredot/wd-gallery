@@ -1,10 +1,10 @@
 <?php
 
-namespace Wiredot\WP_GALLERY;
+namespace Wiredot\WP_Gallery;
 
-use Wiredot\Preamp\Core as Preamp;
+use Wiredot\Copernicus\CP;
 
-class Core {
+class WP_Gallery {
 
 	private static $instance = null;
 
@@ -13,7 +13,7 @@ class Core {
 	private function __construct() {
 		add_action( 'plugins_loaded', array( $this, 'load_plugin_textdomain' ) );
 
-		$Preamp = Preamp::run( WP_GALLERY_PATH, WP_GALLERY_URL );
+		$CP = CP::run( WP_GALLERY_PATH, WP_GALLERY_URL );
 
 		Skin_Factory::init();
 
@@ -33,8 +33,8 @@ class Core {
 	}
 
 	public static function run() {
-		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof Core ) ) {
-			self::$instance = new Core;
+		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof WP_Gallery ) ) {
+			self::$instance = new WP_Gallery;
 		}
 		return self::$instance;
 	}
@@ -54,5 +54,4 @@ class Core {
 
 		return null;
 	}
-
 }
